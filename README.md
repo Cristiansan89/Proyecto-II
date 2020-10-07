@@ -1,6 +1,6 @@
 <p> <h1> 
   
-  Programación Orientada a Objeto II
+ <center> Programación Orientada a Objeto II </center>
   
   Titular de Cátedra: Claudio Omar Biale
   
@@ -15,14 +15,14 @@
 
 ### Proyecto: Gestión de Distribución de Producto
   
-  Se ha decidido sistematizar los procesos de pedidos y entregas de la distribución de producto de mercadería. Para ellos se tienen la siguiente información:
+  Se ha decidido sistematizar los procesos de pedidos de la distribución de producto de mercadería. Para ellos se tienen la siguiente información:
  * Los **Pedidos** tiene asignado un **Cliente** del cual se conoce sus datos personales, dirección y teléfono, además el o los productos solicitados, fecha y hora del pedido. 
  * Cada **Producto** tiene su precio, el precio total del pedido se obtiene de la suma de los precios de los productos solicitados. 
  * A modo de mantener la fidelidad de los clientes, a los **Clientes Preferenciales** se le realiza un descuento que se especifica en particular para cada cliente de acuerdo a su historial de compras.
 
 ### Objetivo
 
-El Sistema debe brindar las funcionalidades básica al cliente y automatizar los pedidos y entrega de productos.
+El Sistema debe brindar las funcionalidades básica al cliente y automatizar los pedidos de productos.
 
 
 
