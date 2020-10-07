@@ -1,13 +1,18 @@
 <h1> Programación Orientada a Objeto II
   
+
 Titular de Cátedra: Claudio Omar Biale
+
 
 Grupo N° 2
 
+
 Alumnos: Cristian Fabián Sánchez - Enrique Gauto Sand
 
-## Año: 2020
-             
+
+Año: 2020
+
+
 ### Proyecto: Gestión de Distribución de Producto
   
   Se ha decidido sistematizar los procesos de pedidos y entregas de la distribución de producto de mercadería. Para ellos se tienen la siguiente información:
