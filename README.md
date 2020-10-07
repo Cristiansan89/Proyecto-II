@@ -1,12 +1,8 @@
- <h1> Programación Orientada a Objeto II
-* * * * *
+<p><h1> Programación Orientada a Objeto II
   Titular de Cátedra: Claudio Omar Biale
-* * * * *
   Grupo N° 2
-* * * * *
   Alumnos: Cristian Fabián Sánchez - Enrique Gauto Sand
-* * * * *
-  Año: 2020 </h1>
+  Año: 2020 </h1></p>
 
 
 ### Proyecto: Gestión de Distribución de Producto
