@@ -12,20 +12,24 @@
 
  <h3> Requisitos Funcionales</h3>
  <p>
-Permitir registrar, modificar y borrar un producto.
+ * Permitir registrar, modificar y borrar un producto.
  
-Permitir registrar, modificar y borrar las fecha y horas de los pedidos en el sistema.
+ * Permitir registrar, modificar y borrar las fecha y horas de los pedidos en el sistema.
 
-Permitir registrar, modificar y borrar un detalle del pedido de producto.
+ * Permitir registrar, modificar y borrar un detalle del pedido de producto.
 
-Permitir registrar, modificar y borrar un cliente en el sistema.
+ * Permitir registrar, modificar y borrar un cliente en el sistema.
 
-Permitir es un proceso inteligente el cual realiza descuento de producto al cliente. </p>
+ * Permitir es un proceso inteligente el cual realiza descuento de producto al cliente. </p>
+ 
  <h3>Requisitos No Funcionales </h3> <p>
-Este módulo registrar, modificar y borrar los datos de usuario.
-
+ 
+ * Este módulo registrar, modificar y borrar los datos de usuario.
 </p>
 <h2> Arquitectura de software</h2>
+
 <p>Sera una aplicacion web basado en java que se ajustara a la arquitectura de software Cliente-Servidor</p>
+
 <h2> Wireframes</h2>
+
 <p>Pencil</p>
