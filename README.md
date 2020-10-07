@@ -1,4 +1,4 @@
-Programación Orientada a Objeto II
+<h1> Programación Orientada a Objeto II
 Titular de Cátedra: Claudio Omar Biale
 Grupo N° 2
 Alumnos: Cristian Fabián Sánchez - Enrique Gauto Sand
