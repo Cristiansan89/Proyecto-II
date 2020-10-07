@@ -9,7 +9,21 @@
 <h2> Clientes potenciales</h2>
 <p> Toda Empresa o Entidad relacionada a la venta y distribucion de prodcutos.</p>
 <h2> Solución propuesta</h2>
-<p>El Sistema debe brindar las funcionalidades básica al cliente y automatizar los pedido de productos.</p>
+
+ <h3> Requisitos Funcionales</h3>
+ <p>
+  Permitir registrar, modificar y borrar un producto.
+	Este módulo permitirá registrar, modificar y borrar las fecha y horas de los pedidos en el sistema.
+
+Este módulo permite registrar, modificar y borrar un detalle del pedido de producto.
+
+Este módulo permite registrar, modificar y borrar un cliente en el sistema.
+
+Este módulo es un proceso inteligente el cual realiza descuento de producto al cliente.
+Requisitos No Funcionales
+Este módulo registrar, modificar y borrar los datos empleado.
+
+</p>
 <h2> Arquitectura de software</h2>
 <p>Sera una aplicacion web basado en java que se ajustara a la arquitectura de software Cliente-Servidor</p>
 <h2> Wireframes</h2>
