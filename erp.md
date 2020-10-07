@@ -19,8 +19,8 @@ Este módulo permite registrar, modificar y borrar un detalle del pedido de prod
 
 Este módulo permite registrar, modificar y borrar un cliente en el sistema.
 
-Este módulo es un proceso inteligente el cual realiza descuento de producto al cliente.
-Requisitos No Funcionales
+Este módulo es un proceso inteligente el cual realiza descuento de producto al cliente. </p>
+ <h3>Requisitos No Funcionales </h3> <p>
 Este módulo registrar, modificar y borrar los datos empleado.
 
 </p>
