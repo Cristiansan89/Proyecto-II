@@ -22,5 +22,7 @@
 
 ### Objetivo
 
-El Sistema debe brindar las funcionalidades básica al cliente y automatizar los pedidos y entrega de productos. Y deberá asignar un repartidor por zona para la entrega de la misma.
+El Sistema debe brindar las funcionalidades básica al cliente y automatizar los pedidos y entrega de productos.
+
+
 
