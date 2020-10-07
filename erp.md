@@ -21,7 +21,7 @@ Permitir registrar, modificar y borrar un cliente en el sistema.
 
 Permitir es un proceso inteligente el cual realiza descuento de producto al cliente. </p>
  <h3>Requisitos No Funcionales </h3> <p>
-Este módulo registrar, modificar y borrar los datos empleado.
+Este módulo registrar, modificar y borrar los datos de usuario.
 
 </p>
 <h2> Arquitectura de software</h2>
