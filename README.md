@@ -10,7 +10,7 @@
   
   Año: 2020 
   </h1> </p>
-<br>
+  
 <h2> Proyecto: Gestión de Distribución de Producto </h2>
 
   Se ha decidido sistematizar los procesos de pedidos de la distribución de producto de mercadería. Para ellos se tienen la siguiente información:
