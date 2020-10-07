@@ -13,13 +13,13 @@
  <h3> Requisitos Funcionales</h3>
  <p>
   Permitir registrar, modificar y borrar un producto.
-	Este módulo permitirá registrar, modificar y borrar las fecha y horas de los pedidos en el sistema.
+Este módulo permitirá registrar, modificar y borrar las fecha y horas de los pedidos en el sistema.
 
-Este módulo permite registrar, modificar y borrar un detalle del pedido de producto.
+Permitir registrar, modificar y borrar un detalle del pedido de producto.
 
-Este módulo permite registrar, modificar y borrar un cliente en el sistema.
+Permitir registrar, modificar y borrar un cliente en el sistema.
 
-Este módulo es un proceso inteligente el cual realiza descuento de producto al cliente. </p>
+Permitir es un proceso inteligente el cual realiza descuento de producto al cliente. </p>
  <h3>Requisitos No Funcionales </h3> <p>
 Este módulo registrar, modificar y borrar los datos empleado.
 
