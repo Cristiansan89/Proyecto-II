@@ -1,6 +1,6 @@
 <p> <h1> 
   
-                        Programación Orientada a Objeto II
+                   <font size= "20pt">     Programación Orientada a Objeto II </font>
   
   Titular de Cátedra: Claudio Omar Biale
   
