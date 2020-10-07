@@ -1,6 +1,6 @@
 <p> <h1> Programación Orientada a Objeto II
   
- \n Titular de Cátedra: Claudio Omar Biale
+  <h1> Titular de Cátedra: Claudio Omar Biale
   
   Grupo N° 2
   
