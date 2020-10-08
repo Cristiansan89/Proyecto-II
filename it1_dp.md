@@ -1,4 +1,4 @@
-# Diseño Orientado a Objetos
+# Diseño Orientado a Objeto
 
 
 # Backlog de Iteración
