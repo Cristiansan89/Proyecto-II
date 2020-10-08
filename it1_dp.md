@@ -1,7 +1,7 @@
-# Diseño orientado a objetos
+# Diseño Orientado a Objetos
 
 
-# Backlog de iteración
+# Backlog de Iteración
 
 
 # Tareas
