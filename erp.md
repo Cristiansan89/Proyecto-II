@@ -25,7 +25,7 @@
  
  <h3>Requisitos No Funcionales </h3> <p>
  
- * Este módulo registrar, modificar y borrar los datos de usuario.
+ * Este módulo debe registrar, modificar y borrar los datos de usuario.
 </p>
 <h2> Arquitectura de software</h2>
 
