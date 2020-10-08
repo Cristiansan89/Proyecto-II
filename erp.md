@@ -33,4 +33,4 @@
 
 <h2> Wireframes</h2>
 
-<p>Pencil</p>
+>La herramienta para los bocetos de interfaces se usará **Pencil Project**.
