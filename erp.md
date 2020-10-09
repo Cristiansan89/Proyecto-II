@@ -7,7 +7,7 @@
 
 
 <h2> Clientes potenciales</h2>
-<p> Todas Empresas o Entidades relacionada a la venta y distribucion de producto.</p>
+<p> Todas Empresas o Entidades relacionada a la venta y distribucion de producto alimenticio.</p>
 <h2> Solución propuesta</h2>
 
  <h3> Requisitos Funcionales</h3>
