@@ -37,8 +37,8 @@
 
 <h4>Pantalla ABM del Producto</h4>
 
-![ABM Producto](Documentos/Wireframe/ABM - Producto.png "ABM del Producto")
+![ABM Producto](Documentos/Wireframe/Producto.png "ABM del Producto")
 
 <h4>Pantalla ABM del Cliente</h4>
 
-![ABM Cliente](Documentos/Wireframe/ABM - Cliente.png "ABM del Cliente")
+![ABM Cliente](Documentos/Wireframe/Cliente.png "ABM del Cliente")
