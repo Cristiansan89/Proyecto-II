@@ -30,7 +30,7 @@
 # Tareas
 <h2>Gestión de Producto</h2>
 <h4>Alta de Producto</h4>
-<br>
+<br><br>
 
 ![HU-01](Documentos/HistoriaUsuario/HU-01CrearProducto.png "Crear Producto")
 <br>
@@ -42,7 +42,7 @@
 <br>
 
 <h4>Modificación de Producto</h4>
-<br>
+<br><br>
 
 ![HU-03](Documentos/HistoriaUsuario/HU-03SeleccionarProducto.png "Seleccionar Producto")
 <br>
@@ -54,7 +54,7 @@
 <br>
 
 <h4>Baja de Producto</h4>
-<br>
+<br><br>
 
 ![HU-05](Documentos/HistoriaUsuario/HU-05SeleccionarProducto.png "Seleccionar Producto")
 <br>
@@ -67,7 +67,7 @@
 
 <h2>Gestión de Cliente</h2>
 <h4>Alta de Cliente</h4>
-<br>
+<br><br>
 
 ![HU-07](Documentos/HistoriaUsuario/HU-07CrearCliente.png "Crear Cliente")
 <br>
@@ -79,7 +79,7 @@
 <br>
 
 <h4>Modificación de Cliente</h4>
-<br>
+<br><br>
 
 ![HU-09](Documentos/HistoriaUsuario/HU-09SeleccionarModificación.png "Seleccionar Modificación")
 <br>
@@ -91,7 +91,7 @@
 <br>
 
 <h4>Baja de Cliente</h4>
-<br>
+<br><br>
 
 ![HU-11](Documentos/HistoriaUsuario/HU-11SolicitarBajaCliente.png "Solicitar Baja de Cliente")
 <br>
