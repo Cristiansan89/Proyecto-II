@@ -35,9 +35,12 @@
 
 >La herramienta para los bocetos de interfaces se usará el **Pencil Project**.
 
+
 <h4>Pantalla ABM del Producto</h4>
 
 ![ABM Producto](Documentos/Wireframe/Producto.png "ABM del Producto")
+
+
 
 <h4>Pantalla ABM del Cliente</h4>
 
