@@ -37,10 +37,10 @@
 <br>
 
 <h4>Pantalla ABM del Producto</h4>
-<br>
+
 ![ABM Producto](Documentos/Wireframe/Producto.png "ABM del Producto")
 
 <br><br>
 <h4>Pantalla ABM del Cliente</h4>
-<br>
+
 ![ABM Cliente](Documentos/Wireframe/Cliente.png "ABM del Cliente")
