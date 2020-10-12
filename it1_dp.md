@@ -2,43 +2,17 @@
 
 <h2>Diagrama de Secuencia del Sistema</h2>
 
-<<<<<<< HEAD
-![Alta Producto](Documentos/DSS/DSS Alta Producto.png "Alta de Producto")
-
-![Modificación Producto](Documentos/DSS/DSS Modificación Producto.png "Modificación del Producto")
-
-![Baja Producto](Documentos/DSS/DSS Baja Producto.png "Baja de Producto")
-
-![Alta Cliente](Documentos/DSS/DSS Alta Cliente.png "Alta de Cliente")
-
-![Modificación Cliente](Documentos/DSS/DSS Modificación Cliente.png "Modificación del Cliente")
-
-![Baja Cliente](Documentos/DSS/DSS Baja Cliente.png "Baja del Cliente")
-=======
-**DSS Alta de Producto**
-
 ![Alta Producto](Documentos/DSS/DSSAltaProducto.png "Alta de Producto")
-
-**DSS Modificación de Producto**
 
 ![Modificación Producto](Documentos/DSS/DSSModificaciónProducto.png "Modificación del Producto")
 
-**DSS Baja de Producto**
-
 ![Baja Producto](Documentos/DSS/DSSBajaProducto.png "Baja de Producto")
-
-**DSS Alta de Cliente**
 
 ![Alta Cliente](Documentos/DSS/DSSAltaCliente.png "Alta de Cliente")
 
-**DSS Modificación del Cliente**
-
 ![Modificación Cliente](Documentos/DSS/DSSModificaciónCliente.png "Modificación del Cliente")
 
-**DSS Baja del Cliente**
-
 ![Baja Cliente](Documentos/DSS/DSSBajaCliente.png "Baja del Cliente")
->>>>>>> fb50f4ba894a33d3f7c968a27f606e055f280795
 
 <h2>Modelo de Dominio</h2>
 
