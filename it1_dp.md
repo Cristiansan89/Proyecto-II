@@ -29,8 +29,9 @@
 
 # Tareas
 <h2>Gestión de Producto</h2>
+<br>
 <h4>Alta de Producto</h4>
-<br><br>
+<br>
 
 ![HU-01](Documentos/HistoriaUsuario/HU-01CrearProducto.png "Crear Producto")
 <br>
@@ -39,10 +40,10 @@
 <br>
 
 ![Confirmar](Documentos/HistoriaUsuario/ConfirmarAltaProducto.png "Confirmar Alta de Producto")
-<br>
+<br><br>
 
 <h4>Modificación de Producto</h4>
-<br><br>
+<br>
 
 ![HU-03](Documentos/HistoriaUsuario/HU-03SeleccionarProducto.png "Seleccionar Producto")
 <br>
@@ -51,10 +52,10 @@
 <br>
 
 ![Confirmar](Documentos/HistoriaUsuario/ConfirmarModificaciónProducto.png "Confirmar Modificación de Producto")
-<br>
+<br><br>
 
 <h4>Baja de Producto</h4>
-<br><br>
+<br>
 
 ![HU-05](Documentos/HistoriaUsuario/HU-05SeleccionarProducto.png "Seleccionar Producto")
 <br>
@@ -66,8 +67,9 @@
 <br>
 
 <h2>Gestión de Cliente</h2>
+<br>
 <h4>Alta de Cliente</h4>
-<br><br>
+<br>
 
 ![HU-07](Documentos/HistoriaUsuario/HU-07CrearCliente.png "Crear Cliente")
 <br>
@@ -76,10 +78,10 @@
 <br>
 
 ![Confirmar](Documentos/HistoriaUsuario/ConfirmarAltaCliente.png "Confirmar Alta de Cliente")
-<br>
+<br><br>
 
 <h4>Modificación de Cliente</h4>
-<br><br>
+<br>
 
 ![HU-09](Documentos/HistoriaUsuario/HU-09SeleccionarModificación.png "Seleccionar Modificación")
 <br>
@@ -88,10 +90,10 @@
 <br>
 
 ![Confirmar](Documentos/HistoriaUsuario/ConfirmarModificaciónCliente.png "Confirmar Modificación de Cliente")
-<br>
+<br><br>
 
 <h4>Baja de Cliente</h4>
-<br><br>
+<br>
 
 ![HU-11](Documentos/HistoriaUsuario/HU-11SolicitarBajaCliente.png "Solicitar Baja de Cliente")
 <br>
