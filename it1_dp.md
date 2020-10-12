@@ -29,7 +29,6 @@
 
 # Tareas
 <h2>Gestión de Producto</h2>
-<br>
 <h4>Alta de Producto</h4>
 <br>
 
@@ -67,7 +66,6 @@
 <br>
 
 <h2>Gestión de Cliente</h2>
-<br>
 <h4>Alta de Cliente</h4>
 <br>
 
