@@ -29,44 +29,83 @@
 # Tareas
 <h2>Gestión de Producto</h2>
 <h4>Alta de Producto</h4>
+
 ![HU-01](Documentos/Historia de Usuario/HU-01CrearProducto.png "Crear Producto")
+
 <br>
+
 ![HU-02](Documentos/Historia de Usuario/HU-02CargarDatosProducto.png "Cargar Datos del Producto")
+
 <br>
+
 ![Confirmar](Documentos/Historia de Usuario/ConfirmarAltaProducto.png "Confirmar Alta de Producto")
+
 <br>
+
 <h4>Modificación de Producto</h4>
+
 ![HU-03](Documentos/Historia de Usuario/HU-03SeleccionarProducto.png "Seleccionar Producto")
+
 <br>
+
 ![HU-04](Documentos/Historia de Usuario/HU-04ModificarDatosProducto.png "Modificar Datos del Producto")
+
 <br>
+
 ![Confirmar](Documentos/Historia de Usuario/ConfirmarModificaciónProducto.png "Confirmar Modificación de Producto")
+
 <br>
+
 <h4>Baja de Producto</h4>
+
 ![HU-05](Documentos/Historia de Usuario/HU-05SeleccionarProducto.png "Seleccionar Producto")
+
 <br>
+
 ![HU-06](Documentos/Historia de Usuario/HU-06EliminarProducto.png "Eliminar Producto")
+
 <br>
+
 ![Confirmar](Documentos/Historia de Usuario/ConfirmarBajaProducto.png "Confirmar Baja de Producto")
+
 <br>
 
 <h2>Gestión de Cliente</h2>
+
 <h4>Alta de Cliente</h4>
+
 ![HU-07](Documentos/Historia de Usuario/HU-07CrearCliente.png "Crear Cliente")
+
 <br>
+
 ![HU-08](Documentos/Historia de Usuario/HU-08CrearDatosPersonales.png "Cargar Datos Personales")
+
 <br>
+
 ![Confirmar](Documentos/Historia de Usuario/ConfirmarAltaCliente.png "Confirmar Alta de Cliente")
+
 <br>
+
 <h4>Modificación de Cliente</h4>
+
 ![HU-09](Documentos/Historia de Usuario/HU-09SeleccionarModificación.png "Seleccionar Modificación")
+
 <br>
+
 ![HU-10](Documentos/Historia de Usuario/HU-10ModificarDatosPersonales.png "Modificar Datos Personales")
+
 <br>
+
 ![Confirmar](Documentos/Historia de Usuario/ConfirmarModificaciónCliente.png "Confirmar Modificación de Cliente")
+
 <br>
+
 <h4>Baja de Cliente</h4>
+
 ![HU-11](Documentos/Historia de Usuario/HU-11SolicitarBajaCliente.png "Solicitar Baja de Cliente")
+
 <br>
+
 ![HU-12](Documentos/Historia de Usuario/HU-12ConfirmarBajaCliente.png "Confirmar Baja de Cliente")
+
 <br>
