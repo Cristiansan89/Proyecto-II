@@ -22,9 +22,9 @@
 
 <h2>Mapa de Historia de Usuario</h2>
 <br>
-![Mapa H.U. Producto](Documentos/HistoriaUsuario/MapaHU-Producto.png "Mapa Historia de Usuario del Producto")
+![Mapa H.U. Producto](Documentos/HistoriaUsuario/MapaProducto.png "Mapa Historia de Usuario del Producto")
 <br>
-![Mapa H.U. Cliente](Documentos/HistoriaUsuario/MapaHU-Cliente.png "Mapa Historia de Usuario del Cliente")
+![Mapa H.U. Cliente](Documentos/HistoriaUsuario/MapaCliente.png "Mapa Historia de Usuario del Cliente")
 <br>
 
 # Tareas
