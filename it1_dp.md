@@ -20,10 +20,9 @@
 
 <h2>Modelo CRC</h2>
 <br>
-
 <table>
   <tr>
-    <th  colspan="2">Producto</th>
+    <th  colspan="2">Gestión de Producto</th>
   </tr>
   <tr>
     <th>Funcionalidades</th>
@@ -34,9 +33,21 @@
     <th>X</th>
   </tr>
 </table>
-
 <br>
-
+<table>
+  <tr>
+    <th  colspan="2">Gestión de Cliente</th>
+  </tr>
+  <tr>
+    <th>Funcionalidades</th>
+    <th>Colaboradores</th>
+  </tr>
+  <tr>
+    <th>N</th>
+    <th>X</th>
+  </tr>
+</table>
+<br>
 # Backlog de Iteración
 
 <h2>Mapa de Historia de Usuario</h2>
