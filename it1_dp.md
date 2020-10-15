@@ -18,6 +18,19 @@
 
 ![Modelo Dominio](Documentos/ModeloDominio/ModeloDominio.png "Modelo de Dominio")
 
+<h2>Modelo CRC</h2>
+<br>
+
+|-----------------------------------------|
+|                 Producto                |
+|--------------------|--------------------|
+|  Funcionalidades   |   Colaboradores    |
+|--------------------|--------------------|
+|  123               |  231               |
+|--------------------|--------------------|
+
+<br>
+
 # Backlog de Iteración
 
 <h2>Mapa de Historia de Usuario</h2>

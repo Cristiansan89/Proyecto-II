@@ -58,8 +58,10 @@ public class Cliente {
         this.telefono = telefono;
     }
 
- 
-
-    
+    @Override
+    public String toString() {
+        return "Cliente [cuil=" + cuil + ", domicilio=" + domicilio + ", idCliente=" + idCliente + ", nombre=" + nombre
+                + ", telefono=" + telefono + "]";
+    }
 
 }
