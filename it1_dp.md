@@ -22,6 +22,7 @@
 <br>
 
 |                 Producto                |
+
 |  Funcionalidades   |   Colaboradores    |
 |--------------------|--------------------|
 |  123               |  231               |
