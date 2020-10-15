@@ -18,7 +18,7 @@
 
 ![Modelo Dominio](Documentos/ModeloDominio/ModeloDominio.png "Modelo de Dominio")
 
-<h2>Modelo CRC</h2>
+<h2>Modelo de CRC</h2>
 <br>
 <table>
   <tr>
