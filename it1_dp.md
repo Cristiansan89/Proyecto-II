@@ -23,15 +23,15 @@
 
 <table>
   <tr>
-    <th>Producto</th>
+    <th  colspan="2">Producto</th>
   </tr>
   <tr>
-    <th colspan="2">Funcionalidades</th>
-    <th colspan="2">Colaboradores</th>
+    <th>Funcionalidades</th>
+    <th>Colaboradores</th>
   </tr>
   <tr>
-    <th colspan="2">N</th>
-    <th colspan="2">X</th>
+    <th>N</th>
+    <th>X</th>
   </tr>
 </table>
 
