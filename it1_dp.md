@@ -23,7 +23,7 @@
 
 <table>
   <tr>
-    <th colspan="2">Producto</th>
+    <th>Producto</th>
   </tr>
   <tr>
     <th colspan="2">Funcionalidades</th>
