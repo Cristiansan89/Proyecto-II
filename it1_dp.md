@@ -21,11 +21,19 @@
 <h2>Modelo CRC</h2>
 <br>
 
-|                 Producto                |
-|:-------------------|-------------------:|
-|  Funcionalidades   |   Colaboradores    |
-|--------------------|--------------------|
-|  123               |  231               |
+<table>
+  <tr>
+    <th colspan="2">Producto</th>
+  </tr>
+  <tr>
+    <th colspan="2">Funcionalidades</th>
+    <th colspan="2">Colaboradores</th>
+  </tr>
+  <tr>
+    <th colspan="2">N</th>
+    <th colspan="2">X</th>
+  </tr>
+</table>
 
 <br>
 
