@@ -22,7 +22,7 @@
 <br>
 <table>
   <tr>
-    <th  colspan="2">Gestión de Producto</th>
+    <th colspan="2">Gestión de Producto</th>
   </tr>
   <tr>
     <th>Funcionalidades</th>
@@ -36,7 +36,7 @@
 <br>
 <table>
   <tr>
-    <th  colspan="2">Gestión de Cliente</th>
+    <th colspan="2">Gestión de Cliente</th>
   </tr>
   <tr>
     <th>Funcionalidades</th>
@@ -48,6 +48,7 @@
   </tr>
 </table>
 <br>
+
 # Backlog de Iteración
 
 <h2>Mapa de Historia de Usuario</h2>
