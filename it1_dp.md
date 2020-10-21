@@ -36,7 +36,7 @@
         - Modificar Datos del producto <br>
         - Eliminar Producto <br>
     </th>
-    <th>Administrador del Sistema</th>
+    <th>-------</th>
   </tr>
 </table>
 <br>
@@ -57,7 +57,7 @@
       - Solicitar Baja Cliente <br>
       - Confirmar Baja Cliente <br>
     </th>
-    <th>Clientes</th>
+    <th>-------</th>
   </tr>
 </table>
 <br>
