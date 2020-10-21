@@ -49,7 +49,7 @@
     <th>Colaboradores</th>
   </tr>
   <tr>
-    <th aling= "left">
+    <th align= "left">
       - Crear Cliente <br>
       - Cargar Datos Personales <br>
       - Seleccionar Modificar <br>
