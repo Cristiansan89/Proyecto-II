@@ -22,29 +22,35 @@
 <br>
 <table>
   <tr>
-    <th colspan="2">Gestión de Producto</th>
+    <th colspan="2">Producto</th>
   </tr>
   <tr>
-    <th>Funcionalidades</th>
+    <th>Responsabilidades</th>
     <th>Colaboradores</th>
   </tr>
   <tr>
-    <th>N</th>
-    <th>X</th>
+    <th>
+        - Crear Producto \n
+        - Cargar Datos del producto \n
+        - Seleccionar Producto \n
+        - Modificar Datos del producto \n
+        - Eliminar Producto \n
+    </th>
+    <th>Administrador del Sistema</th>
   </tr>
 </table>
 <br>
 <table>
   <tr>
-    <th colspan="2">Gestión de Cliente</th>
+    <th colspan="2">Cliente</th>
   </tr>
   <tr>
-    <th>Funcionalidades</th>
+    <th>Responsabilidades</th>
     <th>Colaboradores</th>
   </tr>
   <tr>
     <th>N</th>
-    <th>X</th>
+    <th>Clientes</th>
   </tr>
 </table>
 <br>
