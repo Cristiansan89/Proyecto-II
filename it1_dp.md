@@ -30,11 +30,11 @@
   </tr>
   <tr>
     <th>
-        - Crear Producto \n
-        - Cargar Datos del producto \n
-        - Seleccionar Producto \n
-        - Modificar Datos del producto \n
-        - Eliminar Producto \n
+        - Crear Producto <br>
+        - Cargar Datos del producto <br>
+        - Seleccionar Producto <br>
+        - Modificar Datos del producto <br>
+        - Eliminar Producto <br>
     </th>
     <th>Administrador del Sistema</th>
   </tr>
