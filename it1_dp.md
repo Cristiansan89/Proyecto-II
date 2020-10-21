@@ -29,7 +29,7 @@
     <th>Colaboradores</th>
   </tr>
   <tr>
-    <th align: left;>
+    <th align= "left">
         - Crear Producto <br>
         - Cargar Datos del producto <br>
         - Seleccionar Producto <br>
@@ -49,11 +49,11 @@
     <th>Colaboradores</th>
   </tr>
   <tr>
-    <th aling: left; >
+    <th aling= "left">
       - Crear Cliente <br>
       - Cargar Datos Personales <br>
       - Seleccionar Modificar <br>
-      - Modificar Datos 08CargarDatosPersonales <br>
+      - Modificar Datos Personales <br>
       - Solicitar Baja Cliente <br>
       - Confirmar Baja Cliente <br>
     </th>
