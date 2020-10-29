@@ -3,49 +3,6 @@
 <h2>Modelo de Dominio</h2>
 
 ![Modelo Dominio](Documentos/ModeloDominio/ModeloDominio.png "Modelo de Dominio")
-
-<h2>Modelo de CRC</h2>
-<br>
-<table>
-  <tr>
-    <th colspan="2">Producto</th>
-  </tr>
-  <tr>
-    <th>Responsabilidades</th>
-    <th>Colaboradores</th>
-  </tr>
-  <tr>
-    <th align= "left">
-        - Crear Producto <br>
-        - Cargar Datos del producto <br>
-        - Seleccionar Producto <br>
-        - Modificar Datos del producto <br>
-        - Eliminar Producto <br>
-    </th>
-    <th>-------</th>
-  </tr>
-</table>
-<br>
-<table>
-  <tr>
-    <th colspan="2">Cliente</th>
-  </tr>
-  <tr>
-    <th>Responsabilidades</th>
-    <th>Colaboradores</th>
-  </tr>
-  <tr>
-    <th align= "left">
-      - Crear Cliente <br>
-      - Cargar Datos Personales <br>
-      - Seleccionar Modificar <br>
-      - Modificar Datos Personales <br>
-      - Solicitar Baja Cliente <br>
-      - Confirmar Baja Cliente <br>
-    </th>
-    <th>-------</th>
-  </tr>
-</table>
 <br>
 
 # Backlog de Iteración
