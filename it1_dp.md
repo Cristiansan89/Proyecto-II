@@ -1,19 +1,5 @@
 # Diseño Orientado a Objeto
 
-<h2>Diagrama de Secuencia del Sistema</h2>
-
-![Alta Producto](Documentos/DSS/DSSAltaProducto.png "Alta de Producto")
-
-![Modificación Producto](Documentos/DSS/DSSModificaciónProducto.png "Modificación del Producto")
-
-![Baja Producto](Documentos/DSS/DSSBajaProducto.png "Baja de Producto")
-
-![Alta Cliente](Documentos/DSS/DSSAltaCliente.png "Alta de Cliente")
-
-![Modificación Cliente](Documentos/DSS/DSSModificaciónCliente.png "Modificación del Cliente")
-
-![Baja Cliente](Documentos/DSS/DSSBajaCliente.png "Baja del Cliente")
-
 <h2>Modelo de Dominio</h2>
 
 ![Modelo Dominio](Documentos/ModeloDominio/ModeloDominio.png "Modelo de Dominio")
