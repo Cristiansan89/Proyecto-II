@@ -1,9 +1,7 @@
 package edu.unam.integrador.paginas;
 
+import edu.unam.integrador.modelo.Cliente;
+
 public class ModeloCliente {
-    private int idCliente;
-    private String nombre;
-    private int cuil;
-    private String domicilio;
-    private int telefono;
+    public Cliente cliente;
 }
