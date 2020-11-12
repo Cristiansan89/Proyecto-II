@@ -21,7 +21,7 @@
 
  * Permitir registrar, modificar y borrar un cliente en el sistema.
 
- * Permitir es un proceso inteligente el cual realizá descuento de producto al cliente. </p>
+ * Permitir un proceso inteligente, el cual se realizará descuento de producto al cliente. </p>
 
  <h3>Requisitos No Funcionales </h3> <p>
 
