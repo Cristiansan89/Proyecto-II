@@ -2,6 +2,9 @@
 
 <h2>Modelo de Dominio</h2>
 
+![Modelo Dominio](Documentos/IteracionII/ModeloDominio/ModeloDominio.png "Modelo de Dominio")
+<br>
+
 # Backlog de Iteración
 
 <h2>Mapa de Historia de Usuario</h2>
