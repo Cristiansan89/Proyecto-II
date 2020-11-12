@@ -104,7 +104,7 @@
 
 <h4>Modificación de Detalle Pedido</h4>
 <br>
-![HU-29](Documentos/IteracionII/HistoriaUsuario/SeleModDetallePedido.png "Seleccionar Modificación de Detalle Pedido")
+![HU-29](Documentos/IteracionII/HistoriaUsuario/SeleccionarModificacionDetallePedido.png "Seleccionar Modificación de Detalle Pedido")
 <br>
 
 ![HU-30](Documentos/IteracionII/HistoriaUsuario/ModificarDetallePedido.png "Modificar Datos de Detalle de Pedido")
