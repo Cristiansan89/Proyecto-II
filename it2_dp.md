@@ -49,7 +49,7 @@
 <h4>Modificación de Cliente</h4>
 <br>
 
-![HU-17](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificaciónCliente.png "Confirmar Modificación de Cliente")
+![HU-17](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificacionCliente.png "Confirmar Modificación de Cliente")
 <br><br>
 
 <h2>Gestión de Pedido</h2>
