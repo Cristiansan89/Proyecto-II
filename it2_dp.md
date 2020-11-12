@@ -107,7 +107,7 @@
 ![HU-29](Documentos/IteracionII/HistoriaUsuario/SeleccionarModificacionDetallePedido.png "Seleccionar Modificación de Detalle Pedido")
 <br>
 
-![HU-30](Documentos/IteracionII/HistoriaUsuario/ModificarDatosDetallePedido.png "Modificar Datos de Detalle de Pedido")
+![HU-30](Documentos/IteracionII/HistoriaUsuario/ModificarDetallePedido.png "Modificar Datos de Detalle de Pedido")
 <br>
 
 ![HU-31](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificacionDetallePedido.png "Confirmar Modificación de Detalle Pedido")
