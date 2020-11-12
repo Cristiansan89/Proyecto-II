@@ -23,27 +23,32 @@
 <h2>Gestión de Producto</h2>
 <h4>Alta de Producto</h4>
 <br>
+
 ![HU-13](Documentos/IteracionII/HistoriaUsuario/ConfirmarAltaProducto.png "Confirmar Alta de Producto")
 <br><br>
 
 <h4>Modificación de Producto</h4>
 <br>
+
 ![HU-14](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificacionProducto.png "Confirmar Modificación de Producto")
 <br><br>
 
 <h4>Baja de Producto</h4>
 <br>
+
 ![HU-15](Documentos/IteracionII/HistoriaUsuario/ConfirmarBajaProducto.png "Confirmar Baja de Producto")
 <br><br>
 
 <h2>Gestión de Cliente</h2>
 <h4>Alta de Cliente</h4>
 <br>
+
 ![HU-16](Documentos/IteracionII/HistoriaUsuario/ConfirmarAltaCliente.png "Confirmar Alta de Cliente")
 <br><br>
 
 <h4>Modificación de Cliente</h4>
 <br>
+
 ![HU-17](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificaciónCliente.png "Confirmar Modificación de Cliente")
 <br><br>
 
