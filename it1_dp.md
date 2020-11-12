@@ -21,7 +21,7 @@
 <h4>Alta de Producto</h4>
 <br>
 
-![HU-01](Documentos/HistoriaUsuario/IteracionI/HU-01CrearProducto.png "Crear Producto")
+![HU-01](Documentos/IteracionI/HistoriaUsuario/HU-01CrearProducto.png "Crear Producto")
 <br>
 
 ![HU-02](Documentos/IteracionI/HistoriaUsuario/HU-02CargarDatosProducto.png "Cargar Datos del Producto")
