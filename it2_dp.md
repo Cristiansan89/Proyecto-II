@@ -23,57 +23,94 @@
 <h2>Gestión de Producto</h2>
 <h4>Alta de Producto</h4>
 <br>
-![HU-13](Documentos/IteracionII/HistoriaUsuario/[HU-13] ConfirmarAltaProducto.png "Confirmar Alta de Producto")
+![HU-13](Documentos/IteracionII/HistoriaUsuario/ConfirmarAltaProducto.png "Confirmar Alta de Producto")
 <br><br>
 
 <h4>Modificación de Producto</h4>
 <br>
-![HU-14](Documentos/IteracionII/HistoriaUsuario/[HU-14] ConfirmarModificacionProducto.png "Confirmar Modificación de Producto")
+![HU-14](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificacionProducto.png "Confirmar Modificación de Producto")
 <br><br>
 
 <h4>Baja de Producto</h4>
 <br>
-![HU-15](Documentos/IteracionII/HistoriaUsuario/[HU-15] ConfirmarBajaProducto.png "Confirmar Baja de Producto")
+![HU-15](Documentos/IteracionII/HistoriaUsuario/ConfirmarBajaProducto.png "Confirmar Baja de Producto")
 <br><br>
 
 <h2>Gestión de Cliente</h2>
 <h4>Alta de Cliente</h4>
 <br>
-![HU-16](Documentos/IteracionII/HistoriaUsuario/[HU-16] ConfirmarAltaCliente.png "Confirmar Alta de Cliente")
+![HU-16](Documentos/IteracionII/HistoriaUsuario/ConfirmarAltaCliente.png "Confirmar Alta de Cliente")
 <br><br>
 
 <h4>Modificación de Cliente</h4>
 <br>
-![HU-17](Documentos/IteracionII/HistoriaUsuario/[HU-17] ConfirmarModificaciónCliente.png "Confirmar Modificación de Cliente")
+![HU-17](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificaciónCliente.png "Confirmar Modificación de Cliente")
 <br><br>
 
 <h2>Gestión de Pedido</h2>
 <h4>Alta de Pedido</h4>
 <br>
 
-![HU-18](Documentos/IteracionII/HistoriaUsuario/[HU-18] CrearPedido.png "Crear Pedido")
+![HU-18](Documentos/IteracionII/HistoriaUsuario/CrearPedido.png "Crear Pedido")
 <br>
 
-![HU-19](Documentos/IteracionII/HistoriaUsuario/[HU-19] CargarDatosPedido.png "Cargar Datos Pedido")
+![HU-19](Documentos/IteracionII/HistoriaUsuario/CargarDatosPedido.png "Cargar Datos Pedido")
 <br>
 
-![HU-20](Documentos/IteracionII/HistoriaUsuario/[HU-20] ConfirmarAltaPedido.png "Confirmar Alta Pedido")
+![HU-20](Documentos/IteracionII/HistoriaUsuario/ConfirmarAltaPedido.png "Confirmar Alta Pedido")
 <br><br>
 
 <h4>Modificación de Pedido</h4>
 <br>
 
+![HU-21](Documentos/IteracionII/HistoriaUsuario/SeleccionarPedido.png "Seleccionar Pedido")
+<br>
+
+![HU-22](Documentos/IteracionII/HistoriaUsuario/ModificarDatosPedido.png "Modificar Datos Pedido")
+<br>
+
+![HU-23](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificacionPedido.png "Confirmar Modificacion Pedido")
+<br><br>
+
 <h4>Baja de Pedido</h4>
 <br>
+
+![HU-24](Documentos/IteracionII/HistoriaUsuario/SolicitarBajaPedido.png "Solicitar Baja Pedido")
+<br>
+
+![HU-25](Documentos/IteracionII/HistoriaUsuario/ConfirmarBajaPedido.png "Confirmar Baja Pedido")
+<br><br>
 
 <h2>Gestión de Detalle Pedido</h2>
 <h4>Alta de Detalle Pedido</h4>
 <br>
 
+![HU-26](Documentos/IteracionII/HistoriaUsuario/CrearDetallePedido.png "Crear Detalle Pedido")
+<br>
+
+![HU-27](Documentos/IteracionII/HistoriaUsuario/CargarDatosDetallePedido.png "Cargar Datos Pedido")
+<br>
+
+![HU-28](Documentos/IteracionII/HistoriaUsuario/ConfirmarAltaDetallePedido.png "Confirmar Alta Pedido")
+<br><br>
+
 <h4>Modificación de Detalle Pedido</h4>
 <br>
+![HU-29](Documentos/IteracionII/HistoriaUsuario/SeleccionarModificacionDetallePedido.png "Seleccionar Modificación de Detalle Pedido")
+<br>
+
+![HU-30](Documentos/IteracionII/HistoriaUsuario/ModificarDatosDetallePedido.png "Modificar Datos de Detalle de Pedido")
+<br>
+
+![HU-31](Documentos/IteracionII/HistoriaUsuario/ConfirmarModificacionDetallePedido.png "Confirmar Modificación de Detalle Pedido")
+<br><br>
 
 <h4>Baja de Detalle Pedido</h4>
 <br>
 
+![HU-32](Documentos/IteracionII/HistoriaUsuario/BajaDetallePedido.png "Baja de un Detalle de Pedido")
+<br>
+
+![HU-33](Documentos/IteracionII/HistoriaUsuario/ConfirmarBajaDetallePedido.png "Confirmar Baja de un Detalle Pedido")
+<br><br>
 
