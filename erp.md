@@ -46,6 +46,11 @@
 ![ABM Cliente](Documentos/Wireframe/Cliente.png "ABM del Cliente")
 
 <br><br>
+<h4>Pantalla Aprobar Baja del Cliente</h4>
+
+![ABC Cliente](Documentos/Wireframe/BajaCliente.png "Aprobar Baja del Cliente")
+<br><br>
+
 <h4>Pantalla ABM del Pedido y Detalle Pedido</h4>
 
 ![ABM Pedido y Detalle Pedido](Documentos/Wireframe/Pedido&DetallePedido.png "ABM del Pedido y Detalle Pedido")
