@@ -44,3 +44,10 @@
 <h4>Pantalla ABM del Cliente</h4>
 
 ![ABM Cliente](Documentos/Wireframe/Cliente.png "ABM del Cliente")
+
+<br><br>
+<h4>Pantalla ABM del Pedido y Detalle Pedido</h4>
+
+![ABM Pedido y Detalle Pedido](Documentos/Wireframe/Pedido&DetallePedido.png "ABM del Pedido y Detalle Pedido")
+
+<br>
