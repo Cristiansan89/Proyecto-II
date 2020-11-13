@@ -1,18 +1,18 @@
 package edu.unam.integrador.modelo;
 
 public class Cliente {
-    
+
     private int idCliente;
     private String nombre;
-    private int cuil;
+    private float cuil;
     private String domicilio;
-    private int telefono;
+    private float telefono;
 
     public Cliente() {
     }
 
-    public Cliente(int idCliente, String nombre, int cuil, String domicilio, int telefono) {
-        this.idCliente = idCliente;
+    public Cliente(String nombre, float cuil, String domicilio, float telefono) {
+
         this.nombre = nombre;
         this.cuil = cuil;
         this.domicilio = domicilio;
@@ -25,6 +25,7 @@ public class Cliente {
 
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
+
     }
 
     public String getNombre() {
@@ -35,11 +36,11 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public int getCuil() {
+    public float getCuil() {
         return cuil;
     }
 
-    public void setCuil(int cuil) {
+    public void setCuil(float cuil) {
         this.cuil = cuil;
     }
 
@@ -51,11 +52,11 @@ public class Cliente {
         this.domicilio = domicilio;
     }
 
-    public int getTelefono() {
+    public float getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(float telefono) {
         this.telefono = telefono;
     }
 
@@ -64,5 +65,5 @@ public class Cliente {
         return "Cliente [cuil=" + cuil + ", domicilio=" + domicilio + ", idCliente=" + idCliente + ", nombre=" + nombre
                 + ", telefono=" + telefono + "]";
     }
-    
+
 }

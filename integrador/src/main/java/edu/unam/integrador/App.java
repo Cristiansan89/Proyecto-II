@@ -11,37 +11,35 @@ import edu.unam.integrador.repositorio.Sql2oClientesRepositorio;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-
 public class App {
-    public static void main( String[] args ){
+    public static void main(String[] args) {
 
         // Conexión de sql2o
-        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "gpl");
+        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "410556");
 
-        //Repositorio y Controladores
-        
+        // Repositorio y Controladores
+
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
         var clientesControlador = new ClientesControlador(clientesRepositorio);
-    
 
-        // Crear Servidor    
+        // Crear Servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public");
-        })
-        .exception(RepositorioException.class, (e, ctx) -> { ctx.status(404); })
-        .start(8000);
-
+        }).exception(RepositorioException.class, (e, ctx) -> {
+            ctx.status(404);
+        }).start(8000);
 
         app.get("/", App::mostrarIndex); // muestra el index
         app.post("/", App::validarUsuario);
         app.get("/clientes", clientesControlador::listar);
         app.get("/clientes/nuevo", clientesControlador::nuevo);
-        app.post("/cliente", clientesControlador::crear);
-        app.get("/clientes/:id", clientesControlador::modificar);
-        app.delete("/cliente/:id", clientesControlador::borrar);
-        
+        app.post("/cliente/crear", clientesControlador::crear);
+        app.post("/cliente/", clientesControlador::crear);
+        app.get("/clientes/editar/:id", clientesControlador::modificar);
+        app.get("/cliente/:id/borrar", clientesControlador::borrar);
+
     }
-    
+
     private static void mostrarIndex(Context ctx) {
         var modelo = new ModeloIndex();
         // controlo por cookie

@@ -21,27 +21,28 @@ public class ClientesControlador {
     public void listar(Context ctx) throws SQLException {
         var modelo = new ModeloClientes();
         modelo.clientes = clientesRepositorio.listar();
-        ctx.render("cliente.jte", Collections.singletonMap("modelo", modelo));
+        ctx.render("clientes.jte", Collections.singletonMap("modelo", modelo));
     }
 
     public void nuevo(Context ctx) throws SQLException {
-        ctx.render("crearCliente.jte", Collections.singletonMap("modelo", null));
-        
+        ctx.render("crearCliente.jte");
+
     }
 
     public void crear(Context ctx) throws SQLException {
-        var clienteId = ctx.pathParam("id", Integer.class).get();
-        var nombre = ctx.pathParam("nombre", String.class).get();
-        var cuil = ctx.pathParam("cuil", Integer.class).get();
-        var domicilio = ctx.pathParam("domicilio", String.class).get();
-        var telefono = ctx.pathParam("telefono", Integer.class).get();
-        var cliente = new Cliente(clienteId, nombre, cuil, domicilio, telefono);
+        var cuil = ctx.formParam("cuil", Float.class).get();
+        var nombre = ctx.formParam("nombre", String.class).get();
+        var domicilio = ctx.formParam("domicilio", String.class).get();
+        var telefono = ctx.formParam("telefono", Float.class).get();
+        var cliente = new Cliente(nombre, cuil, domicilio, telefono);
         this.clientesRepositorio.crear(cliente);
-        ctx.redirect("/clientes");
+        ctx.redirect("/");
     }
 
     public void borrar(Context ctx) throws SQLException, RepositorioException {
         System.out.println(ctx.pathParam("id", Integer.class).get());
+        System.out.println(this.clientesRepositorio
+                .borrar(this.clientesRepositorio.obtener(ctx.pathParam("id", Integer.class).get())));
         this.clientesRepositorio.borrar(this.clientesRepositorio.obtener(ctx.pathParam("id", Integer.class).get()));
         ctx.redirect("/clientes");
     }
