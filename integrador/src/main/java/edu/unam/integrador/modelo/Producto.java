@@ -13,9 +13,7 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(int codProducto, String categoria, String marca, String medida, String unidad, int stock,
-            String detalle) {
-
+    public Producto(int codProducto, String categoria, String marca, String medida, String unidad, int stock, String detalle) {
         this.CodProducto = codProducto;
         this.categoria = categoria;
         this.marca = marca;
@@ -95,5 +93,6 @@ public class Producto {
                 + ", idProducto=" + idProducto + ", marca=" + marca + ", medida=" + medida + ", stock=" + stock
                 + ", unidad=" + unidad + "]";
     }
+
 
 }
