@@ -5,9 +5,11 @@ import io.javalin.http.Context;
 import java.util.Collections;
 import org.sql2o.Sql2o;
 import edu.unam.integrador.controladores.ClientesControlador;
+import edu.unam.integrador.controladores.ProductosControlador;
 import edu.unam.integrador.paginas.*;
 import edu.unam.integrador.repositorio.RepositorioException;
 import edu.unam.integrador.repositorio.Sql2oClientesRepositorio;
+import edu.unam.integrador.repositorio.Sql2oProductosRepositorio;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
@@ -15,13 +17,16 @@ public class App {
     public static void main(String[] args) {
 
         // Conexión de sql2o
-        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "410556");
+        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "gpl");
 
         // Repositorio y Controladores
 
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
         var clientesControlador = new ClientesControlador(clientesRepositorio);
 
+        var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
+        var productosControlador = new ProductosControlador(productosRepositorio);
+        
         // Crear Servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public");
@@ -31,12 +36,23 @@ public class App {
 
         app.get("/", App::mostrarIndex); // muestra el index
         app.post("/", App::validarUsuario);
+
+        // Cliente
         app.get("/clientes", clientesControlador::listar);
         app.get("/clientes/nuevo", clientesControlador::nuevo);
-        app.post("/cliente/crear", clientesControlador::crear);
-        app.post("/cliente/", clientesControlador::crear);
-        app.get("/clientes/editar/:id", clientesControlador::modificar);
-        app.get("/cliente/:id/borrar", clientesControlador::borrar);
+        app.post("/clientes/crear", clientesControlador::crear);
+        app.post("/clientes/", clientesControlador::crear);
+        app.get("/clientes/:id", clientesControlador::modificar);
+        app.delete("/clientes/borrar/:id", clientesControlador::borrar);
+
+        // Producto
+        app.get("/productos", productosControlador::listar);
+        app.get("/productos/nuevo", productosControlador::nuevo);
+        app.post("/productos/crear", productosControlador::crear);
+        app.post("/productos/", productosControlador::crear);
+        app.get("/productos/:id", productosControlador::modificar);
+        app.delete("/productos/borrar/:id", productosControlador::borrar);
+
 
     }
 

@@ -2,7 +2,7 @@ package edu.unam.integrador.modelo;
 
 public class Producto {
     private int idProducto;
-    private int CodProducto;
+    private int codProducto;
     private String categoria;
     private String marca;
     private String medida;
@@ -14,7 +14,7 @@ public class Producto {
     }
 
     public Producto(int codProducto, String categoria, String marca, String medida, String unidad, int stock, String detalle) {
-        this.CodProducto = codProducto;
+        this.codProducto = codProducto;
         this.categoria = categoria;
         this.marca = marca;
         this.medida = medida;
@@ -32,12 +32,13 @@ public class Producto {
     }
 
     public int getCodProducto() {
-        return CodProducto;
+        return codProducto;
     }
 
     public void setCodProducto(int codProducto) {
-        CodProducto = codProducto;
+        this.codProducto = codProducto;
     }
+
 
     public String getCategoria() {
         return categoria;
@@ -89,10 +90,9 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto [CodProducto=" + CodProducto + ", categoria=" + categoria + ", detalle=" + detalle
-                + ", idProducto=" + idProducto + ", marca=" + marca + ", medida=" + medida + ", stock=" + stock
+        return "Producto [categoria=" + categoria + ", codProducto=" + codProducto + ", detalle=" + detalle
+                + ", marca=" + marca + ", medida=" + medida + ", stock=" + stock
                 + ", unidad=" + unidad + "]";
     }
-
 
 }

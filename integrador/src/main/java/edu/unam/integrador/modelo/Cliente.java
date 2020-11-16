@@ -4,6 +4,7 @@ public class Cliente {
 
     private int idCliente;
     private String nombre;
+    private String apellido;
     private float cuil;
     private String domicilio;
     private float telefono;
@@ -11,9 +12,9 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(String nombre, float cuil, String domicilio, float telefono) {
-
+    public Cliente(String nombre, String apellido, float cuil, String domicilio, float telefono) {
         this.nombre = nombre;
+        this.apellido = apellido;
         this.cuil = cuil;
         this.domicilio = domicilio;
         this.telefono = telefono;
@@ -25,7 +26,6 @@ public class Cliente {
 
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
-
     }
 
     public String getNombre() {
@@ -34,6 +34,14 @@ public class Cliente {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public float getCuil() {
@@ -62,8 +70,10 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente [cuil=" + cuil + ", domicilio=" + domicilio + ", idCliente=" + idCliente + ", nombre=" + nombre
-                + ", telefono=" + telefono + "]";
+        return "Cliente [nombre=" + nombre + ", apellido=" + apellido + ", cuil=" + cuil + ", domicilio=" + domicilio + ", telefono=" + telefono + "]";
     }
+
+    
+
 
 }

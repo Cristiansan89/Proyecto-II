@@ -1,5 +1,7 @@
 package edu.unam.integrador.controladores;
 
+import io.javalin.http.Context;
+
 import java.sql.SQLException;
 import java.util.Collections;
 
@@ -8,7 +10,6 @@ import edu.unam.integrador.modelo.Cliente;
 import edu.unam.integrador.paginas.ModeloClientes;
 import edu.unam.integrador.repositorio.ClientesRepositorio;
 import edu.unam.integrador.repositorio.RepositorioException;
-import io.javalin.http.Context;
 
 public class ClientesControlador {
 
@@ -30,19 +31,18 @@ public class ClientesControlador {
     }
 
     public void crear(Context ctx) throws SQLException {
-        var cuil = ctx.formParam("cuil", Float.class).get();
         var nombre = ctx.formParam("nombre", String.class).get();
+        var apellido = ctx.formParam("apellido", String.class).get();
+        var cuil = ctx.formParam("cuil", Float.class).get();
         var domicilio = ctx.formParam("domicilio", String.class).get();
         var telefono = ctx.formParam("telefono", Float.class).get();
-        var cliente = new Cliente(nombre, cuil, domicilio, telefono);
+        var cliente = new Cliente(nombre, apellido, cuil, domicilio, telefono);
         this.clientesRepositorio.crear(cliente);
         ctx.redirect("/");
     }
 
     public void borrar(Context ctx) throws SQLException, RepositorioException {
         System.out.println(ctx.pathParam("id", Integer.class).get());
-        System.out.println(this.clientesRepositorio
-                .borrar(this.clientesRepositorio.obtener(ctx.pathParam("id", Integer.class).get())));
         this.clientesRepositorio.borrar(this.clientesRepositorio.obtener(ctx.pathParam("id", Integer.class).get()));
         ctx.redirect("/clientes");
     }

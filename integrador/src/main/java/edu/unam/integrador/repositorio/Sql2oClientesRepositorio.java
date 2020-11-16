@@ -30,7 +30,7 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     @Override
     public int crear(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Cliente(nombre, cuil, domicilio, telefono) VALUES (:nombre, :cuil, :domicilio, :telefono);";
+            String sql = "INSERT INTO Cliente(nombre, apellido, cuil, domicilio, telefono) VALUES (:nombre, :apellido, :cuil, :domicilio, :telefono);";
             return (int) conn.createQuery(sql).bind(cliente).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -40,8 +40,8 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     @Override
     public Cliente obtener(int idCliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM Cliente WHERE idCliente = :id;";
-            return conn.createQuery(sql).addParameter("id", idCliente).throwOnMappingFailure(false)
+            String sql = "SELECT * FROM Cliente WHERE \"idCliente\" = :idCliente;";
+            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false)
                     .executeAndFetchFirst(Cliente.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -51,9 +51,11 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     @Override
     public boolean borrar(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "DELETE FROM Cliente WHERE idCliente = :idCliente;";
-            int filas = (int) conn.createQuery(sql).addParameter("idCliente", cliente.getIdCliente()).executeUpdate()
-                    .getResult();
+            String sql = "DELETE FROM Cliente WHERE \"idCliente\" = :idCliente;";
+            int filas = (int) conn.createQuery(sql)
+                .addParameter("idCliente", cliente.getIdCliente())
+                .executeUpdate()
+                .getResult();
             return filas > 0;
         } catch (Sql2oException e) {
             throw new RepositorioException();

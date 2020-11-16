@@ -1,23 +1,26 @@
 package edu.unam.integrador.controladores;
-import edu.unam.integrador.repositorio.ProductosRepositorio;
-import edu.unam.integrador.repositorio.RepositorioException;
+
 import io.javalin.http.Context;
 import java.sql.SQLException;
 import java.util.Collections;
-import edu.unam.integrador.paginas.ModeloProductos;
-import edu.unam.integrador.modelo.Producto;
-import edu.unam.integrador.paginas.ModeloProducto;
-public class ProductosControlador {
-    private final ProductosRepositorio productoRepositorio;
 
-    public ProductosControlador(ProductosRepositorio productoRepositorio) {
-        this.productoRepositorio = productoRepositorio;
+import edu.unam.integrador.paginas.ModeloProducto;
+import edu.unam.integrador.modelo.Producto;
+import edu.unam.integrador.paginas.ModeloProductos;
+import edu.unam.integrador.repositorio.ProductosRepositorio;
+import edu.unam.integrador.repositorio.RepositorioException;
+
+public class ProductosControlador {
+    private final ProductosRepositorio productosRepositorio;
+
+    public ProductosControlador(ProductosRepositorio productosRepositorio) {
+        this.productosRepositorio = productosRepositorio;
     }
 
     public void listar(Context ctx) throws SQLException {
         var modelo = new ModeloProductos();
-        modelo.productos = productoRepositorio.listar();
-        ctx.render("producto.jte", Collections.singletonMap("modelo", modelo));
+        modelo.productos = productosRepositorio.listar();
+        ctx.render("productos.jte", Collections.singletonMap("modelo", modelo));
     }
 
     public void nuevo(Context ctx) throws SQLException {
@@ -26,7 +29,7 @@ public class ProductosControlador {
     }
 
     public void crear(Context ctx) throws SQLException {
-        var codproducto = ctx.formParam("codproducto", Integer.class).get();
+        var codproducto = ctx.formParam("codProducto", Integer.class).get();
         var categoria = ctx.formParam("categoria", String.class).get();
         var marca = ctx.formParam("marca", String.class).get();
         var medida = ctx.formParam("medida", String.class).get();
@@ -34,19 +37,19 @@ public class ProductosControlador {
         var stock = ctx.formParam("stock", Integer.class).get();
         var detalle = ctx.formParam("detalle", String.class).get();
         var producto = new Producto(codproducto, categoria, marca, medida, unidad, stock , detalle);
-        this.productoRepositorio.crear(producto);
+        this.productosRepositorio.crear(producto);
         ctx.redirect("/");
     }
 
     public void borrar(Context ctx) throws SQLException, RepositorioException {
         System.out.println(ctx.pathParam("id", Integer.class).get());
-        this.productoRepositorio.borrar(this.productoRepositorio.obtener(ctx.pathParam("id", Integer.class).get()));
+        this.productosRepositorio.borrar(this.productosRepositorio.obtener(ctx.pathParam("id", Integer.class).get()));
         ctx.redirect("/productos");
     }
 
     public void modificar(Context ctx) throws SQLException, RepositorioException {
         var modelo = new ModeloProducto();
-        modelo.producto = this.productoRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
-        ctx.render("editarCliente.jte", Collections.singletonMap("modelo", modelo));
+        modelo.producto = this.productosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
+        ctx.render("editarProducto.jte", Collections.singletonMap("modelo", modelo));
     }
 }

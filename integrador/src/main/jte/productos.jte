@@ -1,0 +1,46 @@
+@param edu.unam.integrador.paginas.ModeloProductos modelo
+
+@tag.header()
+
+<div style="margin-top: 6em; margin-left: 15em; margin-right: 15em;">
+    <h2><b>Producto</b></h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>ID Producto</th>
+                    <th>C&oacute;digo Producto</th>
+                    <th>Categor&iacute;a</th>
+                    <th>Marca</th>
+                    <th>Medida</th>
+                    <th>Unidad</th>
+                    <th>Stock</th>
+                    <th>Detalle</th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var producto : modelo.productos)
+                    <tr>
+                        <td>${producto.getIdProducto()}</td>
+                        <td>${producto.getCodProducto()}</td>
+                        <td>${producto.getCategoria()}</td>
+                        <td>${producto.getMarca()}</td>
+                        <td>${producto.getMedida()}</td>
+                        <td>${producto.getUnidad()}</td>
+                        <td>${producto.getStock()}</td>
+                        <td>${producto.getDetalle()}</td>
+                        <td> <a type="button" class="btn btn-info no-gutters" href="/productos/${producto.getIdProducto()}"> Editar </a></td>
+                        <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${producto.getIdProducto()})"> Eliminar </button></td>
+                    </tr>
+                @endfor
+            </tbody>
+        </table>
+    </div>
+    <a href="/" style="float: right;" type="button" class="btn btn-primary"> Volver </a>
+</div>
+
+<script src="/js/producto.js"></script>
+
+@tag.footer()

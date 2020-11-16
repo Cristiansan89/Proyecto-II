@@ -1,13 +1,12 @@
 #fondo_inicio{
-    background-color: #616161;
+    background-color: #EDEDED;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     margin-top: 0px;
     display: block;
-    z-index: 1;
-    color: rgb(255, 255, 255);
+    z-index: 1; 
 }
 
 #fondo_text{
@@ -17,6 +16,7 @@
     font-family:cursive;
     line-height: 50px;
     font-size: 45px;
+    margin-top: 10px;
 }
 
 #user_text{
@@ -24,17 +24,20 @@
     margin-right: 15px;
     font-size: 16px;
     text-align: end;
-    
 }
 
 #bar_menu{
     margin-top:auto;
-    padding-top: 4.3em;
+    padding-top: 5em;
     padding-right: 0px;
     padding-bottom: 5em;
     padding-left: 0px;
 }
 
-#right{
-    align: right;
+#bar_principal{
+    margin-top:auto;
+    padding-top: 5em;
+    padding-right: 0px;
+    padding-bottom: 3em;
+    padding-left: 0px;
 }
