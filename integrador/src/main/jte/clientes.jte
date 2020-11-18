@@ -27,7 +27,7 @@
                         <td>${cliente.getCuil()}</td>
                         <td>${cliente.getDomicilio()}</td>
                         <td>${cliente.getTelefono()}</td>
-                        <td> <a type="button" class="btn btn-info no-gutters" href="/clientes/${cliente.getIdCliente()}"> Editar </a></td>
+                        <td> <a type="button" class="btn btn-info no-gutters" href="/clientes/modificar/${cliente.getIdCliente()}"> Editar </a></td>
                         <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${cliente.getIdCliente()})"> Eliminar </button></td>
                     </tr>
                 @endfor

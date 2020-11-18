@@ -1,3 +1,4 @@
+
 package edu.unam.integrador.repositorio;
 
 import java.util.List;
@@ -41,8 +42,7 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     public Cliente obtener(int idCliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "SELECT * FROM Cliente WHERE \"idCliente\" = :idCliente;";
-            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false)
-                    .executeAndFetchFirst(Cliente.class);
+            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false).executeAndFetchFirst(Cliente.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
@@ -52,10 +52,7 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     public boolean borrar(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "DELETE FROM Cliente WHERE \"idCliente\" = :idCliente;";
-            int filas = (int) conn.createQuery(sql)
-                .addParameter("idCliente", cliente.getIdCliente())
-                .executeUpdate()
-                .getResult();
+            int filas = (int) conn.createQuery(sql).addParameter("idCliente", cliente.getIdCliente()).executeUpdate().getResult();
             return filas > 0;
         } catch (Sql2oException e) {
             throw new RepositorioException();

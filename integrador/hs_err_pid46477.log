@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f76fb50b231, pid=46477, tid=46487
+#
+# JRE version: Java(TM) SE Runtime Environment (14.0+36) (build 14+36-1461)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14+36-1461, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x4231]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x71
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/lib/systemd/systemd-coredump %P %u %g %s %t 9223372036854775808 %h" (or dumping to /home/cristian/Proyecto-II/integrador/core.46477)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:38229 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 edu.unam.integrador.App
+
+Host: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz, 4 cores, 5G, Linux Mint 20 Ulyana
+Time: Wed Nov 18 20:45:53 2020 -03 elapsed time: 3898 seconds (0d 1h 4m 58s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f76f410b800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=46487, stack(0x00007f76f807e000,0x00007f76f817f000)]
+
+Stack: [0x00007f76f807e000,0x00007f76f817f000],  sp=0x00007f76f817c1d0,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x4231]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x71
+C  [libjimage.so+0x4d7a]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x3a
+C  [libjimage.so+0x5271]  JIMAGE_FindResource+0xf1
+V  [libjvm.so+0x50f4c3]

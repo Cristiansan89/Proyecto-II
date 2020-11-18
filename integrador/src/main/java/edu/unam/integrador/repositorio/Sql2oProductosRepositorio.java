@@ -29,7 +29,7 @@ public class Sql2oProductosRepositorio implements ProductosRepositorio {
     @Override
     public int crear(Producto producto) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Producto(codProducto, categoria, marca, medida, unidad, stock , detalle) VALUES (:codProducto, :categoria, :marca, :medida, :unidad, :stock , :detalle);";
+            String sql = "INSERT INTO Producto VALUES (:codProducto, :categoria, :marca, :medida, :unidad, :stock , :detalle);";
             return (int) conn.createQuery(sql).bind(producto).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -40,8 +40,7 @@ public class Sql2oProductosRepositorio implements ProductosRepositorio {
     public Producto obtener(int idProducto) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "SELECT * FROM Producto WHERE \"idProducto\" = :idProducto;";
-            return conn.createQuery(sql).addParameter("idProducto", idProducto).throwOnMappingFailure(false)
-                    .executeAndFetchFirst(Producto.class);
+            return conn.createQuery(sql).addParameter("idProducto", idProducto).throwOnMappingFailure(false).executeAndFetchFirst(Producto.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
@@ -51,8 +50,7 @@ public class Sql2oProductosRepositorio implements ProductosRepositorio {
     public boolean borrar(Producto producto) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "DELETE FROM Producto WHERE \"idProducto\" = : idProducto;";
-            int filas = (int) conn.createQuery(sql).addParameter("idProducto", producto.getIdProducto()).executeUpdate()
-                    .getResult();
+            int filas = (int) conn.createQuery(sql).addParameter("idProducto", producto.getIdProducto()).executeUpdate().getResult();
             return filas > 0;
         } catch (Sql2oException e) {
             throw new RepositorioException();

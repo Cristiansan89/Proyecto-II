@@ -42,8 +42,8 @@ public class App {
         app.get("/clientes/nuevo", clientesControlador::nuevo);
         app.post("/clientes/crear", clientesControlador::crear);
         app.post("/clientes/", clientesControlador::crear);
-        app.get("/clientes/:id", clientesControlador::modificar);
-        app.post("/clientes/actualizar", clientesControlador::actualizar);
+        app.get("/clientes/modificar/:id", clientesControlador::modificar);
+        app.post("/clientes/actualizar/:id", clientesControlador::actualizar);
         app.delete("/clientes/borrar/:id", clientesControlador::borrar);
 
         // Producto
@@ -51,7 +51,7 @@ public class App {
         app.get("/productos/nuevo", productosControlador::nuevo);
         app.post("/productos/crear", productosControlador::crear);
         app.post("/productos/", productosControlador::crear);
-        app.get("/productos/:id", productosControlador::modificar);
+        app.get("/productos/modificar/:id", productosControlador::modificar);
         app.delete("/productos/borrar/:id", productosControlador::borrar);
 
 
