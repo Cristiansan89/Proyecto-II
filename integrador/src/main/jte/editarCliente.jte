@@ -9,7 +9,7 @@
         <div style="margin-left: 3em; ">
             <h2><b>Editar Cliente</b></h2>
             <br>
-            <form action="/clientes" method="post">
+            <form action="/clientes/actualizar/${modelo.cliente.getIdCliente()}" method="post">
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label font-weight-bold"> Nombre </label>
                     <div class="col-sm-8">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary"> Modificar </button>
-                    <a href="/clientes" type="button" class="btn btn-secondary"> Volver </a>
+                    
                 </div>
             </form>
         </div>
