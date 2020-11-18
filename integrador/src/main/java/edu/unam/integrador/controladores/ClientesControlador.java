@@ -54,12 +54,19 @@ public class ClientesControlador {
     }
 
     public void actualizar(Context ctx) throws SQLException {
+        var id = ctx.pathParam("id", Integer.class).get();
+        Cliente cliente = this.clientesRepositorio.obtener(id);
         var nombre = ctx.formParam("nombre", String.class).get();
         var apellido = ctx.formParam("apellido", String.class).get();
         var cuil = ctx.formParam("cuil", Float.class).get();
         var domicilio = ctx.formParam("domicilio", String.class).get();
         var telefono = ctx.formParam("telefono", Float.class).get();
-        var cliente = new Cliente(nombre, apellido, cuil, domicilio, telefono); // HAY HACER COMO ACTUALIZAR Y NO UNO NUEVO
+        cliente.setApellido(apellido);
+        cliente.setCuil(cuil);
+        cliente.setDomicilio(domicilio);
+        cliente.setTelefono(telefono);
+        cliente.setNombre(nombre);
+        System.out.println(cliente.toString());
         this.clientesRepositorio.actualizar(cliente);
         ctx.redirect("/clientes");
     }

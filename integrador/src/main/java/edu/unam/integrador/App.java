@@ -17,7 +17,7 @@ public class App {
     public static void main(String[] args) {
 
         // Conexión de sql2o
-        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "gpl");
+        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "410556");
 
         // Repositorio y Controladores
 
@@ -26,7 +26,7 @@ public class App {
 
         var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
         var productosControlador = new ProductosControlador(productosRepositorio);
-        
+
         // Crear Servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public");
@@ -43,7 +43,7 @@ public class App {
         app.post("/clientes/crear", clientesControlador::crear);
         app.post("/clientes/", clientesControlador::crear);
         app.get("/clientes/:id", clientesControlador::modificar);
-        app.post("/clientes/actualizar", clientesControlador::actualizar);
+        app.post("/clientes/actualizar/:id", clientesControlador::actualizar);
         app.delete("/clientes/borrar/:id", clientesControlador::borrar);
 
         // Producto
@@ -53,7 +53,6 @@ public class App {
         app.post("/productos/", productosControlador::crear);
         app.get("/productos/:id", productosControlador::modificar);
         app.delete("/productos/borrar/:id", productosControlador::borrar);
-
 
     }
 

@@ -7,6 +7,7 @@ import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
 import edu.unam.integrador.modelo.Cliente;
+//import jdk.nashorn.internal.ir.IdentNode;
 
 public class Sql2oClientesRepositorio implements ClientesRepositorio {
 
@@ -30,7 +31,7 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     @Override
     public int crear(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Cliente(nombre, apellido, cuil, domicilio, telefono) VALUES (:nombre, :apellido, :cuil, :domicilio, :telefono);";
+            String sql = "INSERT INTO Cliente(nombre,apellido, cuil, domicilio, telefono) VALUES (:nombre,:apellido, :cuil, :domicilio, :telefono);";
             return (int) conn.createQuery(sql).bind(cliente).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -38,10 +39,10 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     }
 
     @Override
-    public Cliente obtener(int idCliente) throws RepositorioException {
+    public Cliente obtener(int id) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "SELECT * FROM Cliente WHERE \"idCliente\" = :idCliente;";
-            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false)
+            return conn.createQuery(sql).addParameter("idCliente", id).throwOnMappingFailure(false)
                     .executeAndFetchFirst(Cliente.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -52,10 +53,8 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     public boolean borrar(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "DELETE FROM Cliente WHERE \"idCliente\" = :idCliente;";
-            int filas = (int) conn.createQuery(sql)
-                .addParameter("idCliente", cliente.getIdCliente())
-                .executeUpdate()
-                .getResult();
+            int filas = (int) conn.createQuery(sql).addParameter("idCliente", cliente.getIdCliente()).executeUpdate()
+                    .getResult();
             return filas > 0;
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -63,17 +62,14 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     }
 
     @Override
-    public boolean modificar(Cliente cliente) throws RepositorioException {
-        return false;
-    }
-
-    @Override
-    public int actualizar(Cliente cliente) throws RepositorioException {
+    public void actualizar(Cliente cliente) throws RepositorioException {
+        String sql = "UPDATE cliente SET  nombre= :nombre, apellido= :apellido, cuil= :cuil, domicilio= :domicilio, telefono= :telefono WHERE \"idCliente\" = :idCliente;";
         try (Connection conn = sql2o.open()) {
-            String sql = "UPDATE Cliente SET (:nombre, :apellido, :cuil, :domicilio, :telefono) WHERE \"idCliente\" = :idCliente;";
-            return (int) conn.createQuery(sql)
-              .bind(cliente)
-              .executeUpdate();
+            conn.createQuery(sql).addParameter("idCliente", cliente.getIdCliente())
+                    .addParameter("nombre", cliente.getNombre()).addParameter("apellido", cliente.getApellido())
+                    .addParameter("cuil", cliente.getCuil()).addParameter("domicilio", cliente.getDomicilio())
+                    .addParameter("telefono", cliente.getTelefono()).executeUpdate();
+
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
