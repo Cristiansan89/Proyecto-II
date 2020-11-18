@@ -36,7 +36,7 @@ public class ProductosControlador {
         var unidad = ctx.formParam("unidad", String.class).get();
         var stock = ctx.formParam("stock", Integer.class).get();
         var detalle = ctx.formParam("detalle", String.class).get();
-        var producto = new Producto(codproducto, categoria, marca, medida, unidad, stock , detalle);
+        var producto = new Producto(codproducto, categoria, marca, medida, unidad, stock, detalle);
         this.productosRepositorio.crear(producto);
         ctx.redirect("/");
     }

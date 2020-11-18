@@ -72,8 +72,14 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
         try (Connection conn = sql2o.open()) {
             String sql = "UPDATE Cliente SET (:nombre, :apellido, :cuil, :domicilio, :telefono) WHERE \"idCliente\" = :idCliente;";
             return (int) conn.createQuery(sql)
-              .bind(cliente)
-              .executeUpdate();
+              .addParameter("idCliente", cliente.getIdCliente())
+              .addParameter("nombre", cliente.getNombre())
+              .addParameter("apellido", cliente.getApellido())
+              .addParameter("cuil", cliente.getCuil())
+              .addParameter("domicilio", cliente.getDomicilio())
+              .addParameter("telefono", cliente.getTelefono())
+              .executeUpdate()
+              .getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
