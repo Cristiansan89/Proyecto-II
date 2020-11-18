@@ -7,7 +7,7 @@
     <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>
-                <tr>
+                <tr>  
                     <th>ID Cliente</th>
                     <th>Nombre</th>
                     <th>Apellido</th>

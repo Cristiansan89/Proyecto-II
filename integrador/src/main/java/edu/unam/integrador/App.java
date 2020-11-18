@@ -43,6 +43,7 @@ public class App {
         app.post("/clientes/crear", clientesControlador::crear);
         app.post("/clientes/", clientesControlador::crear);
         app.get("/clientes/:id", clientesControlador::modificar);
+        app.post("/clientes/actualizar", clientesControlador::actualizar);
         app.delete("/clientes/borrar/:id", clientesControlador::borrar);
 
         // Producto

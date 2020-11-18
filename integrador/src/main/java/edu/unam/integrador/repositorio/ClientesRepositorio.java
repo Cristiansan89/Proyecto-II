@@ -10,5 +10,5 @@ public interface ClientesRepositorio {
     boolean borrar (Cliente cliente) throws RepositorioException;
     boolean modificar (Cliente cliente) throws RepositorioException;
     Cliente obtener (int id) throws RepositorioException;
-
+    int actualizar (Cliente cliente) throws RepositorioException;
 }

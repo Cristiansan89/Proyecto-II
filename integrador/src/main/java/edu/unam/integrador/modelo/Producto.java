@@ -1,6 +1,7 @@
 package edu.unam.integrador.modelo;
 
 public class Producto {
+    
     private int idProducto;
     private int codProducto;
     private String categoria;

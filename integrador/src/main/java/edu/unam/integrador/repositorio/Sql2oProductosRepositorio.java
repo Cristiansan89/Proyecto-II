@@ -37,7 +37,7 @@ public class Sql2oProductosRepositorio implements ProductosRepositorio {
     }
 
     @Override
-    public Producto obtener(int id) throws RepositorioException {
+    public Producto obtener(int idProducto) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "SELECT * FROM Producto WHERE \"idProducto\" = :idProducto;";
             return conn.createQuery(sql).addParameter("idProducto", idProducto).throwOnMappingFailure(false)

@@ -66,4 +66,17 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     public boolean modificar(Cliente cliente) throws RepositorioException {
         return false;
     }
+
+    @Override
+    public int actualizar(Cliente cliente) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "UPDATE Cliente SET (:nombre, :apellido, :cuil, :domicilio, :telefono) WHERE \"idCliente\" = :idCliente;";
+            return (int) conn.createQuery(sql)
+              .bind(cliente)
+              .executeUpdate();
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
 }

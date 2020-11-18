@@ -36,8 +36,13 @@
 
 #bar_principal{
     margin-top:auto;
-    padding-top: 5em;
+    padding-top: 0.3em;
     padding-right: 0px;
-    padding-bottom: 3em;
+    padding-bottom: 0px;
     padding-left: 0px;
+}
+
+.format_fecha p{
+    display: inline-block;
+    line-height: 0.2em;
 }

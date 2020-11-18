@@ -52,4 +52,15 @@ public class ClientesControlador {
         modelo.cliente = this.clientesRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
         ctx.render("editarCliente.jte", Collections.singletonMap("modelo", modelo));
     }
+
+    public void actualizar(Context ctx) throws SQLException {
+        var nombre = ctx.formParam("nombre", String.class).get();
+        var apellido = ctx.formParam("apellido", String.class).get();
+        var cuil = ctx.formParam("cuil", Float.class).get();
+        var domicilio = ctx.formParam("domicilio", String.class).get();
+        var telefono = ctx.formParam("telefono", Float.class).get();
+        var cliente = new Cliente(nombre, apellido, cuil, domicilio, telefono); // HAY HACER COMO ACTUALIZAR Y NO UNO NUEVO
+        this.clientesRepositorio.actualizar(cliente);
+        ctx.redirect("/clientes");
+    }
 }
