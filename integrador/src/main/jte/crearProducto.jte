@@ -10,13 +10,13 @@
                 <div class="form-group row">
                     <label for="codProducto" class="col-sm-2 col-form-label font-weight-bold"> C&oacute;digo Producto </label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="numbre" name="codProducto"/>
+                        <input class="form-control" type="number" name="codProducto"/>
                     </div>
                 </div>
                     <div class="form-group row">
                     <label for="categoria" class="col-sm-2 col-form-label font-weight-bold"> Categor&iacute;a </label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="number" name="categoria"/>
+                        <input class="form-control" type="text" name="categoria"/>
                     </div>
                 </div>
                     <div class="form-group row">
