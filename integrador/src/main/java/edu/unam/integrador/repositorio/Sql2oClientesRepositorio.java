@@ -62,9 +62,10 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
 
     @Override
     public void actualizar(Cliente cliente) throws RepositorioException {
-        String sql = "UPDATE cliente SET  nombre= :nombre, apellido= :apellido, cuil= :cuil, domicilio= :domicilio, telefono= :telefono WHERE \"idCliente\" = :idCliente;";
+        String sql = "UPDATE cliente SET nombre= :nombre, apellido= :apellido, cuil= :cuil, domicilio= :domicilio, telefono= :telefono WHERE \"idCliente\" = :idCliente;";
         try (Connection conn = sql2o.open()) {
-            conn.createQuery(sql).addParameter("idCliente", cliente.getIdCliente())
+            conn.createQuery(sql)
+                .addParameter("idCliente", cliente.getIdCliente())
                 .addParameter("nombre", cliente.getNombre())
                 .addParameter("apellido", cliente.getApellido())
                 .addParameter("cuil", cliente.getCuil())

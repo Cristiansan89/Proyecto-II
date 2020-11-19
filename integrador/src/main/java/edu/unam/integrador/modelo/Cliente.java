@@ -5,14 +5,14 @@ public class Cliente {
     private int idCliente;
     private String nombre;
     private String apellido;
-    private float cuil;
+    private int cuil;
     private String domicilio;
-    private float telefono;
+    private int telefono;
 
     public Cliente() {
     }
 
-    public Cliente(String nombre, String apellido, float cuil, String domicilio, float telefono) {
+    public Cliente(String nombre, String apellido, int cuil, String domicilio, int telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cuil = cuil;
@@ -44,11 +44,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public float getCuil() {
+    public int getCuil() {
         return cuil;
     }
 
-    public void setCuil(float cuil) {
+    public void setCuil(int cuil) {
         this.cuil = cuil;
     }
 
@@ -60,11 +60,11 @@ public class Cliente {
         this.domicilio = domicilio;
     }
 
-    public float getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(float telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 

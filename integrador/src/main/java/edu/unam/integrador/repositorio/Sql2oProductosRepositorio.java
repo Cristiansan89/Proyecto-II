@@ -63,13 +63,15 @@ public class Sql2oProductosRepositorio implements ProductosRepositorio {
 
     @Override
     public void actualizar(Producto producto) throws RepositorioException {
-        String sql = "UPDATE producto SET  codpoducto= :codProducto, categoria= :categoria, marca= :marca, medida= :medida, unidad= :unidad, stock= :stock, preciounitario= :precioUnitario, detalle= :detalle  WHERE \"idProducto\" = :idProducto;";
+        String sql = "UPDATE producto SET  codproducto= :codproducto, categoria= :categoria, marca= :marca, medida= :medida, unidad= :unidad, stock= :stock, preciounitario= :preciounitario, detalle= :detalle WHERE \"idProducto\" = :idProducto;";
         try (Connection conn = sql2o.open()) {
-            conn.createQuery(sql).addParameter("idProducto", producto.getIdProducto())
+            conn.createQuery(sql)
+                .addParameter("idProducto", producto.getIdProducto())
                 .addParameter("codproducto", producto.getCodProducto())
                 .addParameter("categoria", producto.getCategoria())
                 .addParameter("marca", producto.getMarca())
                 .addParameter("medida", producto.getMedida())
+                .addParameter("unidad", producto.getUnidad())
                 .addParameter("stock", producto.getStock())
                 .addParameter("preciounitario", producto.getPrecioUnitario())
                 .addParameter("detalle", producto.getDetalle())

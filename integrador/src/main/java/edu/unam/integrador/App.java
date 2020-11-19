@@ -23,7 +23,7 @@ public class App {
 
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
         var clientesControlador = new ClientesControlador(clientesRepositorio);
-
+        
         var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
         var productosControlador = new ProductosControlador(productosRepositorio);
 
@@ -65,7 +65,7 @@ public class App {
         } else {
             modelo.nombreUsuario = "";
         }
-        ctx.render("inicio.jte", Collections.singletonMap("modelo", modelo));
+       ctx.render("inicio.jte", Collections.singletonMap("modelo", modelo));
     }
 
     private static void validarUsuario(Context ctx) {

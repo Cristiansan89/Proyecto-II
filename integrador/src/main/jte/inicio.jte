@@ -35,6 +35,15 @@
                             <a class="dropdown-item text-dark" href="/productos">Ver Producto</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pedido
+                        </a>
+                        <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-dark" href="/pedidos/nuevo">Realizar Pedido</a>
+                            <a class="dropdown-item text-dark" href="/pedidos">Ver Pedido</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div> 

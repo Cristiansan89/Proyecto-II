@@ -2,7 +2,9 @@
 
 @tag.header()
 
-<h2>Cliente</h2>
+
+
+<h2>Producto</h2>
 
 <div class="card" style="width: 42rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
     <div class="card-footer">
@@ -37,7 +39,7 @@
                 <label for="unidad" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Unidad</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="number" name="unidad" value="${modelo.producto.getUnidad()}"/>
+                        <input class="form-control" type="text" name="unidad" value="${modelo.producto.getUnidad()}"/>
                     </div>
                 </div>
                 <label for="stock" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Stock</label>
