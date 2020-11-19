@@ -15,6 +15,7 @@
                     <th>Medida</th>
                     <th>Unidad</th>
                     <th>Stock</th>
+                    <th>Precio Unitario</th>
                     <th>Detalle</th>
                     <th> </th>
                     <th> </th>
@@ -30,8 +31,9 @@
                         <td>${producto.getMedida()}</td>
                         <td>${producto.getUnidad()}</td>
                         <td>${producto.getStock()}</td>
+                        <td>${producto.getPrecioUnitario()}</td>
                         <td>${producto.getDetalle()}</td>
-                        <td> <a type="button" class="btn btn-info no-gutters" href="/productos/${producto.getIdProducto()}"> Editar </a></td>
+                        <td> <a type="button" class="btn btn-info no-gutters" href="/productos/modificar/${producto.getIdProducto()}"> Editar </a></td>
                         <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${producto.getIdProducto()})"> Eliminar </button></td>
                     </tr>
                 @endfor

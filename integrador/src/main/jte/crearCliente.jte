@@ -1,43 +1,43 @@
 
 @tag.header()
 
-<div class="card" style="width: 42rem; top: 7rem; left: 40rem;"> 
+<div class="card" style="width: 40rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
     <div class="card-footer">
-        <div style="margin-left: 3em; ">
+        <div style="margin-left: 3em;"> 
             <h2><b>Crear Cliente</b></h2>
             <br>
             <form action="/clientes/crear" method="post">
+                <label for="nombre" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Nombre</label>
                 <div class="form-group row">
-                    <label for="nombre" class="col-sm-2 col-form-label font-weight-bold"> Nombre </label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-10">
                         <input class="form-control" type="text" name="nombre"/>
                     </div>
                 </div>
-                    <div class="form-group row">
-                    <label for="apellido" class="col-sm-2 col-form-label font-weight-bold"> Apellido </label>
-                    <div class="col-sm-8">
+                <label for="apellido" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Apellido</label>    
+                <div class="form-group row">
+                    <div class="col-sm-10">
                         <input class="form-control" type="text" name="apellido"/>
                     </div>
                 </div>
-                    <div class="form-group row">
-                    <label for="cuil" class="col-sm-2 col-form-label font-weight-bold"> Cuil </label>
-                    <div class="col-sm-8">
+                <label for="cuil" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Cuil</label>
+                <div class="form-group row">
+                    <div class="col-sm-10">
                         <input class="form-control" type="number" name="cuil"/>
                     </div>
                 </div>
-                    <div class="form-group row">
-                    <label for="domicilio" class="col-sm-2 col-form-label font-weight-bold"> Domicilio </label>
-                    <div class="col-sm-8">
+                <label for="domicilio" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Domicilio</label>
+                <div class="form-group row">
+                    <div class="col-sm-10">
                         <input class="form-control" type="text" name="domicilio"/>
                     </div>
                 </div>
+                <label for="telefono" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Tel&eacute;fono</label>   
                 <div class="form-group row">
-                    <label for="telefono" class="col-sm-2 col-form-label font-weight-bold"> Tel&eacute;fono</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-10">
                         <input class="form-control" type="number" name="telefono"/>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center" style="margin-right: 4em;">
                     <button type="submit" class="btn btn-primary"> Guardar </button>
                     <a href="/" type="button" class="btn btn-secondary"> Volver </a>
                 </div>

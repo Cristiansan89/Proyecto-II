@@ -5,7 +5,7 @@
 <div id="bar_menu">
     @if (! modelo.nombreUsuario.trim().isEmpty())
         <!-- Barra de Menú -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">   
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">   
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -23,7 +23,6 @@
                         </a>
                         <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item text-dark" href="/clientes/nuevo">Crear Cliente</a>
-                            <a class="dropdown-item text-dark" href="/clientes/:id">Editar Cliente</a>
                             <a class="dropdown-item text-dark" href="/clientes">Ver Cliente</a>
                         </div>
                     </li> 
@@ -33,7 +32,6 @@
                         </a>
                         <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item text-dark" href="/productos/nuevo">Crear Producto</a>
-                            <a class="dropdown-item text-dark" href="/productos/:id">Editar Producto</a>
                             <a class="dropdown-item text-dark" href="/productos">Ver Producto</a>
                         </div>
                     </li>
@@ -42,11 +40,15 @@
             <div> 
                 <span><b>${modelo.nombreUsuario}</b></span><br>
                 <div class="format_fecha font-weight-bold">
-                    <p id="dia"></p>
-                    <p>/</p>
-                    <p id="mes" class="mes"></p>
-                    <p>/</p>
-                    <p id="anio" class="anio"></p>
+                    <p id="dia">
+                        <p>/
+                            <p id="mes" class="mes">
+                                <p>/
+                                    <p id="anio" class="anio"></p>
+                                </p>
+                            </p>
+                        </p>
+                    </p>
                 </div>
             </div>
         </nav>

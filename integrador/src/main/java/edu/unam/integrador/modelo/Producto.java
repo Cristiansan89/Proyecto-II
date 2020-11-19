@@ -9,18 +9,20 @@ public class Producto {
     private String medida;
     private String unidad;
     private int stock;
+    private double precioUnitario;
     private String detalle;
 
     public Producto() {
     }
 
-    public Producto(int codProducto, String categoria, String marca, String medida, String unidad, int stock, String detalle) {
+    public Producto(int codProducto, String categoria, String marca, String medida, String unidad, int stock, double precioUnitario, String detalle) {
         this.codProducto = codProducto;
         this.categoria = categoria;
         this.marca = marca;
         this.medida = medida;
         this.unidad = unidad;
         this.stock = stock;
+        this.precioUnitario = precioUnitario;
         this.detalle = detalle;
     }
 
@@ -81,6 +83,14 @@ public class Producto {
         this.stock = stock;
     }
 
+    public double getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+    public void setPrecioUnitario(double precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
+
     public String getDetalle() {
         return detalle;
     }
@@ -92,8 +102,8 @@ public class Producto {
     @Override
     public String toString() {
         return "Producto [categoria=" + categoria + ", codProducto=" + codProducto + ", detalle=" + detalle
-                + ", marca=" + marca + ", medida=" + medida + ", stock=" + stock
-                + ", unidad=" + unidad + "]";
+                + ", idProducto=" + idProducto + ", marca=" + marca + ", medida=" + medida + ", precioUnitario="
+                + precioUnitario + ", stock=" + stock + ", unidad=" + unidad + "]";
     }
 
 }

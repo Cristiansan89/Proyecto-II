@@ -46,3 +46,15 @@
     display: inline-block;
     line-height: 0.2em;
 }
+
+#text-size{
+    font-size: 18px;
+}
+
+form{
+    margin-left: 30px;
+}
+
+#text_card{
+    margin-right: 50px;
+}

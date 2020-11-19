@@ -35,8 +35,9 @@ public class ProductosControlador {
         var medida = ctx.formParam("medida", String.class).get();
         var unidad = ctx.formParam("unidad", String.class).get();
         var stock = ctx.formParam("stock", Integer.class).get();
+        var preciounitario = ctx.formParam("precioUnitario", Double.class).get();
         var detalle = ctx.formParam("detalle", String.class).get();
-        var producto = new Producto(codproducto, categoria, marca, medida, unidad, stock, detalle);
+        var producto = new Producto(codproducto, categoria, marca, medida, unidad, stock, preciounitario, detalle);
         this.productosRepositorio.crear(producto);
         ctx.redirect("/");
     }
@@ -51,5 +52,28 @@ public class ProductosControlador {
         var modelo = new ModeloProducto();
         modelo.producto = this.productosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
         ctx.render("editarProducto.jte", Collections.singletonMap("modelo", modelo));
+    }
+
+    public void actualizar(Context ctx) throws SQLException {
+        var id = ctx.pathParam("id", Integer.class).get();
+        Producto producto = this.productosRepositorio.obtener(id);
+        var codProducto = ctx.formParam("codproducto", Integer.class).get();
+        var categoria = ctx.formParam("categoria", String.class).get();
+        var marca = ctx.formParam("marca", String.class).get();
+        var medida = ctx.formParam("medida", String.class).get();
+        var unidad = ctx.formParam("unidad", String.class).get();
+        var stock = ctx.formParam("stock", Integer.class).get();
+        var precioUnitario = ctx.formParam("preciounitario", Double.class).get();
+        var detalle = ctx.formParam("detalle", String.class).get();
+        producto.setCodProducto(codProducto);
+        producto.setCategoria(categoria);
+        producto.setMarca(marca);
+        producto.setMedida(medida);
+        producto.setUnidad(unidad);
+        producto.setStock(stock);
+        producto.setPrecioUnitario(precioUnitario);
+        producto.setDetalle(detalle);
+        this.productosRepositorio.actualizar(producto);
+        ctx.redirect("/productos");
     }
 }

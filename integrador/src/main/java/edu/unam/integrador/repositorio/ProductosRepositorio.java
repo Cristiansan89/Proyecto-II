@@ -9,4 +9,5 @@ public interface ProductosRepositorio {
     boolean borrar(Producto producto) throws RepositorioException;
     boolean modificar(Producto producto) throws RepositorioException;
     Producto obtener(int id) throws RepositorioException;
+    void actualizar(Producto producto) throws RepositorioException;
 }

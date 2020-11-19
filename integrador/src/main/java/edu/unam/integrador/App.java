@@ -17,7 +17,7 @@ public class App {
     public static void main(String[] args) {
 
         // Conexión de sql2o
-        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "410556");
+        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "gpl");
 
         // Repositorio y Controladores
 
@@ -42,11 +42,7 @@ public class App {
         app.get("/clientes/nuevo", clientesControlador::nuevo);
         app.post("/clientes/crear", clientesControlador::crear);
         app.post("/clientes/", clientesControlador::crear);
-<<<<<<< HEAD
         app.get("/clientes/modificar/:id", clientesControlador::modificar);
-=======
-        app.get("/clientes/:id", clientesControlador::modificar);
->>>>>>> 7f3638a3dcdb74de19c5b2cd66b350117b41d8cb
         app.post("/clientes/actualizar/:id", clientesControlador::actualizar);
         app.delete("/clientes/borrar/:id", clientesControlador::borrar);
 
@@ -56,6 +52,7 @@ public class App {
         app.post("/productos/crear", productosControlador::crear);
         app.post("/productos/", productosControlador::crear);
         app.get("/productos/modificar/:id", productosControlador::modificar);
+        app.post("/productos/actualizar/:id", productosControlador::actualizar);
         app.delete("/productos/borrar/:id", productosControlador::borrar);
 
     }
