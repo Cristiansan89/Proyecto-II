@@ -16,7 +16,7 @@
 ![Mapa H.U. Cliente](Documentos/IteracionI/HistoriaUsuario/MapaCliente.png "Mapa Historia de Usuario del Cliente")
 <br>
 
-# Tareas
+# Historia de Usuario
 <h2>Gestión de Producto</h2>
 <h4>Alta de Producto</h4>
 <br>
@@ -87,3 +87,18 @@
 
 ![HU-12](Documentos/IteracionI/HistoriaUsuario/HU-12ConfirmarBajaCliente.png "Confirmar Baja de Cliente")
 <br>
+
+# Tareas
+
+* Crear la Base de Datos **Distribuidora**.
+
+* Crear las tabla **Cliente** y **Producto** en la Base de Datos.
+
+* Crear el Proyecto Distribuidora en **Visio Code**.
+
+* Crear la Gestión de Software **Maven** en el Proyecto Distribuidora.
+
+* Crear los **Modelo**, **Repositorio**, **Controlador** de Cliente y Producto.
+
+* Crear las **Vista** de Cliente y Producto.
+
