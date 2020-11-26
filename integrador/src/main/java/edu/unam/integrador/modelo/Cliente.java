@@ -5,14 +5,14 @@ public class Cliente {
     private int idCliente;
     private String nombre;
     private String apellido;
-    private float cuil;
+    private String cuil;
     private String domicilio;
-    private float telefono;
+    private int telefono;
 
     public Cliente() {
     }
 
-    public Cliente(String nombre, String apellido, float cuil, String domicilio, float telefono) {
+    public Cliente(String nombre, String apellido, String cuil, String domicilio, int telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cuil = cuil;
@@ -44,11 +44,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public float getCuil() {
+    public String getCuil() {
         return cuil;
     }
 
-    public void setCuil(float cuil) {
+    public void setCuil(String cuil) {
         this.cuil = cuil;
     }
 
@@ -60,20 +60,18 @@ public class Cliente {
         this.domicilio = domicilio;
     }
 
-    public float getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(float telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 
     @Override
     public String toString() {
-        return "Cliente [nombre=" + nombre + ", apellido=" + apellido + ", cuil=" + cuil + ", domicilio=" + domicilio + ", telefono=" + telefono + "]";
+        return "Cliente [nombre=" + nombre + ", apellido=" + apellido + ", cuil=" + cuil + ", domicilio=" + domicilio
+                + ", telefono=" + telefono + "]";
     }
-
-    
-
 
 }

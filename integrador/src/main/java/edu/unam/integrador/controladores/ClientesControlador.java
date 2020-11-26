@@ -33,9 +33,9 @@ public class ClientesControlador {
     public void crear(Context ctx) throws SQLException {
         var nombre = ctx.formParam("nombre", String.class).get();
         var apellido = ctx.formParam("apellido", String.class).get();
-        var cuil = ctx.formParam("cuil", Float.class).get();
+        var cuil = ctx.formParam("cuil", String.class).get();
         var domicilio = ctx.formParam("domicilio", String.class).get();
-        var telefono = ctx.formParam("telefono", Float.class).get();
+        var telefono = ctx.formParam("telefono", Integer.class).get();
         var cliente = new Cliente(nombre, apellido, cuil, domicilio, telefono);
         this.clientesRepositorio.crear(cliente);
         ctx.redirect("/");
@@ -58,15 +58,14 @@ public class ClientesControlador {
         Cliente cliente = this.clientesRepositorio.obtener(id);
         var nombre = ctx.formParam("nombre", String.class).get();
         var apellido = ctx.formParam("apellido", String.class).get();
-        var cuil = ctx.formParam("cuil", Float.class).get();
+        var cuil = ctx.formParam("cuil", String.class).get();
         var domicilio = ctx.formParam("domicilio", String.class).get();
-        var telefono = ctx.formParam("telefono", Float.class).get();
+        var telefono = ctx.formParam("telefono", Integer.class).get();
         cliente.setApellido(apellido);
         cliente.setCuil(cuil);
         cliente.setDomicilio(domicilio);
         cliente.setTelefono(telefono);
         cliente.setNombre(nombre);
-        System.out.println(cliente.toString());
         this.clientesRepositorio.actualizar(cliente);
         ctx.redirect("/clientes");
     }

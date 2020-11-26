@@ -41,12 +41,8 @@ public class App {
         app.get("/clientes", clientesControlador::listar);
         app.get("/clientes/nuevo", clientesControlador::nuevo);
         app.post("/clientes/crear", clientesControlador::crear);
-        app.post("/clientes/", clientesControlador::crear);
-<<<<<<< HEAD
+
         app.get("/clientes/modificar/:id", clientesControlador::modificar);
-=======
-        app.get("/clientes/:id", clientesControlador::modificar);
->>>>>>> 7f3638a3dcdb74de19c5b2cd66b350117b41d8cb
         app.post("/clientes/actualizar/:id", clientesControlador::actualizar);
         app.delete("/clientes/borrar/:id", clientesControlador::borrar);
 
@@ -54,7 +50,7 @@ public class App {
         app.get("/productos", productosControlador::listar);
         app.get("/productos/nuevo", productosControlador::nuevo);
         app.post("/productos/crear", productosControlador::crear);
-        app.post("/productos/", productosControlador::crear);
+
         app.get("/productos/modificar/:id", productosControlador::modificar);
         app.delete("/productos/borrar/:id", productosControlador::borrar);
 

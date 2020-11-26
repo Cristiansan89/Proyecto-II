@@ -43,12 +43,8 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     public Cliente obtener(int id) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "SELECT * FROM Cliente WHERE \"idCliente\" = :idCliente;";
-<<<<<<< HEAD
-            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false).executeAndFetchFirst(Cliente.class);
-=======
             return conn.createQuery(sql).addParameter("idCliente", id).throwOnMappingFailure(false)
                     .executeAndFetchFirst(Cliente.class);
->>>>>>> 7f3638a3dcdb74de19c5b2cd66b350117b41d8cb
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
@@ -58,12 +54,8 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     public boolean borrar(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "DELETE FROM Cliente WHERE \"idCliente\" = :idCliente;";
-<<<<<<< HEAD
-            int filas = (int) conn.createQuery(sql).addParameter("idCliente", cliente.getIdCliente()).executeUpdate().getResult();
-=======
             int filas = (int) conn.createQuery(sql).addParameter("idCliente", cliente.getIdCliente()).executeUpdate()
                     .getResult();
->>>>>>> 7f3638a3dcdb74de19c5b2cd66b350117b41d8cb
             return filas > 0;
         } catch (Sql2oException e) {
             throw new RepositorioException();
