@@ -31,11 +31,17 @@
 <h2> Arquitectura de software</h2>
 
 <p>Sera una aplicación web basado en java que se ajustará a la arquitectura de software Cliente-Servidor</p>
+
 * **Base de Datos:** Postresql 4.25.
+
 * **Framework:** Javalin.
+
 * **Herrramienta de Diseño:** Miro, Pencil Project, Visual Paradigm 16.2. 
+
 * **Herramienta de Gestión:** Maven.
+
 * **Lenguaje:** CSS, Html, Java 14.
+
 * **Librería:** Bootstrap 4.5.3
 
 <h2> Wireframe</h2>
