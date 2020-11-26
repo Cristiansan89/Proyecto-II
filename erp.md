@@ -139,7 +139,9 @@
 
 * **Lenguaje:** CSS, Html, Java 14.
 
-* **Librería:** Bootstrap 4.5.3
+* **Librería:** Bootstrap 4.5.3, sql2o.
+
+* **Testing:** Junit, Postman.
 
 <h2> Wireframe</h2>
 
