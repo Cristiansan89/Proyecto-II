@@ -22,7 +22,7 @@
 ![Mapa H.U. Detalle Pedido](Documentos/IteracionII/HistoriaUsuario/MHU-DetallePedido.png "Mapa Historia de Usuario del Detalle Pedido")
 <br>
 
-# Tareas
+# Historia de Usuario
 <h2>Gestión de Producto</h2>
 <h4>Alta de Producto</h4>
 <br>
@@ -122,4 +122,14 @@
 
 ![HU-33](Documentos/IteracionII/HistoriaUsuario/ConfirmarBajaDetallePedido.png "Confirmar Baja de un Detalle Pedido")
 <br><br>
+
+# Tareas
+
+* Crear las tablas **Pedido** y **Detalle Pedido** en la BD.
+
+* Crear el **Modelo**, **Repositorio** y **Controlador** de *Pedido* y *Detalle Pedido*.
+
+* Crear la Vista de *Pedido* y *Detalle Pedido*.
+
+* Actualizar el **Repositorio** y **Controlador** del *Cliente* y *Producto*.
 
