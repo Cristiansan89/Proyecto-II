@@ -17,7 +17,7 @@
 
 <h2>Gestión de Cliente Preferencial</h2>
 
-<h4>Alta de Cliente</h4>
+<h4>Alta de Cliente Preferencial</h4>
 <br>
 
 ![HU-34](Documentos/IteracionII/HistoriaUsuario/CrearClientePreferencial.png "Crear Cliente Preferencial")
@@ -32,7 +32,7 @@
 <h4>Actualización de Cliente Preferencial</h4>
 <br>
 
-![HU-37](Documentos/IteracionII/HistoriaUsuario/ActualizarCliente.png "Seleccionar Pedido")
+![HU-37](Documentos/IteracionII/HistoriaUsuario/ActualizarClientePreferencial.png "Actualizar Cliente Preferencial")
 <br>
 
 ![HU-38](Documentos/IteracionII/HistoriaUsuario/ActualizarDatosClientePreferencial.png "Actualizar Datos Cliente Preferencial")
