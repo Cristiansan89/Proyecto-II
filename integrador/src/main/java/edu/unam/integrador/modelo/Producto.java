@@ -6,7 +6,7 @@ public class Producto {
     private int codProducto;
     private String categoria;
     private String marca;
-    private Double medida;
+    private double medida;
     private String unidad;
     private int stock;
     private double precioUnitario;

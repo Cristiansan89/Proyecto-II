@@ -2,11 +2,9 @@
 
 @tag.header()
 
-<h2>Cliente</h2>
-
-<div class="card" style="width: 40rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
+<div class="card" style="width: 42rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
     <div class="card-footer">
-        <div style="margin-left: 3em;">
+        <div style="margin-left: 3rem;">
             <h2><b>Editar Cliente</b></h2>
             <br>
             <form action="/clientes/actualizar/${modelo.cliente.getIdCliente()}" method="post">

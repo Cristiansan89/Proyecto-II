@@ -40,6 +40,7 @@
             </tbody>
         </table>
     </div>
+    
     <a href="/" style="float: right;" type="button" class="btn btn-primary"> Volver </a>
 </div>
 

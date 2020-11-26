@@ -1,13 +1,20 @@
 package edu.unam.integrador.repositorio;
 
 import java.util.List;
-import edu.unam.integrador.modelo.DetallePedido;
 import edu.unam.integrador.modelo.Pedido;
+import edu.unam.integrador.modelo.Producto;
 
-public class PedidosRepositorio {
+public interface PedidosRepositorio {
     List<Pedido> listar() throws RepositorioException;
+
+    List<Producto> listarProducto() throws RepositorioException;
+
+    int nuevo(int id) throws RepositorioException;
+
     int crear(Pedido pedido) throws RepositorioException;
-    boolean borrar(Pedido pedido) throws RepositorioException;
-    Cliente obtener(int id) throws RepositorioException;
-    void actualizar(Pedido pedido) throws RepositorioException;
+
+    // boolean anular(Pedido pedido) throws RepositorioException;
+    Pedido obtener(int id) throws RepositorioException;
+
+    Pedido finalizar(Pedido pedido) throws RepositorioException;
 }

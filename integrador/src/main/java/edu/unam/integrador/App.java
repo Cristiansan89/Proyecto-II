@@ -5,10 +5,14 @@ import io.javalin.http.Context;
 import java.util.Collections;
 import org.sql2o.Sql2o;
 import edu.unam.integrador.controladores.ClientesControlador;
+import edu.unam.integrador.controladores.DetallesPedidosControlador;
 import edu.unam.integrador.controladores.ProductosControlador;
+import edu.unam.integrador.controladores.PedidosControlador;
 import edu.unam.integrador.paginas.*;
 import edu.unam.integrador.repositorio.RepositorioException;
 import edu.unam.integrador.repositorio.Sql2oClientesRepositorio;
+import edu.unam.integrador.repositorio.Sql2oDetallesPedidosRepositorio;
+import edu.unam.integrador.repositorio.Sql2oPedidosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oProductosRepositorio;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
@@ -27,6 +31,18 @@ public class App {
         var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
         var productosControlador = new ProductosControlador(productosRepositorio);
 
+        /*
+         * var detallePedidoRepositorio = new Sql2oDetallesPedidosRepositorio(sql2o);
+         * var detallePedidoControlador = new
+         * DetallesPedidosControlador(detallePedidoRepositorio);
+         */
+
+        var pedidosRepositorio = new Sql2oPedidosRepositorio(sql2o);
+        var detallePedidoControlador = new Sql2oDetallesPedidosRepositorio(sql2o, pedidosRepositorio,
+                productosRepositorio);
+        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio,
+                detallePedidoControlador);
+
         // Crear Servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public");
@@ -41,7 +57,6 @@ public class App {
         app.get("/clientes", clientesControlador::listar);
         app.get("/clientes/nuevo", clientesControlador::nuevo);
         app.post("/clientes/crear", clientesControlador::crear);
-
         app.get("/clientes/modificar/:id", clientesControlador::modificar);
         app.post("/clientes/actualizar/:id", clientesControlador::actualizar);
         app.delete("/clientes/borrar/:id", clientesControlador::borrar);
@@ -50,9 +65,13 @@ public class App {
         app.get("/productos", productosControlador::listar);
         app.get("/productos/nuevo", productosControlador::nuevo);
         app.post("/productos/crear", productosControlador::crear);
-
-        app.get("/productos/modificar/:id", productosControlador::modificar);
-        app.delete("/productos/borrar/:id", productosControlador::borrar);
+        app.get("/pedidos", pedidosControlador::listar);
+        app.get("/pedidos/crear", pedidosControlador::crear);
+        app.post("/pedidos/agregardetalle/:id", pedidosControlador::agregar);
+        app.get("/pedidos/nuevo/:id", pedidosControlador::nuevo);
+        app.get("/pedidos/formulario", pedidosControlador::listarProducto);
+        app.delete("/detallepedido/borrar/:id/:idpedido", pedidosControlador::eliminardetalle);
+        app.post("/pedidos/finalizar/:id", pedidosControlador::finalizar);
 
     }
 

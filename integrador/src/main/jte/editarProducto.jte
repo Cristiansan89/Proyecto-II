@@ -2,10 +2,6 @@
 
 @tag.header()
 
-
-
-<h2>Producto</h2>
-
 <div class="card" style="width: 42rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
     <div class="card-footer">
         <div style="margin-left: 3em; ">
