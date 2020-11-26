@@ -6,7 +6,7 @@ public class Producto {
     private int codProducto;
     private String categoria;
     private String marca;
-    private String medida;
+    private double medida;
     private String unidad;
     private int stock;
     private double precioUnitario;
@@ -15,7 +15,7 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(int codProducto, String categoria, String marca, String medida, String unidad, int stock, double precioUnitario, String detalle) {
+    public Producto(int codProducto, String categoria, String marca, double medida, String unidad, int stock, double precioUnitario, String detalle) {
         this.codProducto = codProducto;
         this.categoria = categoria;
         this.marca = marca;
@@ -59,11 +59,11 @@ public class Producto {
         this.marca = marca;
     }
 
-    public String getMedida() {
+    public double getMedida() {
         return medida;
     }
 
-    public void setMedida(String medida) {
+    public void setMedida(double medida) {
         this.medida = medida;
     }
 
@@ -105,5 +105,6 @@ public class Producto {
                 + ", idProducto=" + idProducto + ", marca=" + marca + ", medida=" + medida + ", precioUnitario="
                 + precioUnitario + ", stock=" + stock + ", unidad=" + unidad + "]";
     }
+
 
 }

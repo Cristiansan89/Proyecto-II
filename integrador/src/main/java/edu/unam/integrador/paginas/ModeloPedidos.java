@@ -5,6 +5,7 @@ import java.util.List;
 import edu.unam.integrador.modelo.Pedido;
 
 public class ModeloPedidos {
-    public int idPedido;
-    public List<Pedido> pedido = new ArrayList<>();
+    public int idCliente;
+    public int idProducto;
+    public List<Pedido> pedidos = new ArrayList<>();
 }

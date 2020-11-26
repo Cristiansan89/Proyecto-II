@@ -1,8 +1,8 @@
 package edu.unam.integrador.paginas;
 
+import edu.unam.integrador.modelo.Cliente;
 import java.util.ArrayList;
 import java.util.List;
-import edu.unam.integrador.modelo.Cliente;
 
 public class ModeloClientes {
     public int idCliente;

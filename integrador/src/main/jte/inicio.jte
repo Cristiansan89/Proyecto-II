@@ -1,3 +1,4 @@
+
 @param edu.unam.integrador.paginas.ModeloIndex modelo
 
 @tag.header()
@@ -40,7 +41,7 @@
                             Pedido
                         </a>
                         <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item text-dark" href="/pedidos/nuevo">Realizar Pedido</a>
+                            <a class="dropdown-item text-dark" href="/pedidos/crear">Realizar Pedido</a>
                             <a class="dropdown-item text-dark" href="/pedidos">Ver Pedido</a>
                         </div>
                     </li>
@@ -61,8 +62,8 @@
                 </div>
             </div>
         </nav>
-        <!-- Tarjeta de Publicidad -->
-        <!-- <div >
+            <!-- Tarjeta de Publicidad -->
+            <!-- <div >
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -104,7 +105,7 @@
                 <br>  
                 <form action="/" method="post" onsubmit="validarUsuario();" class="text-center">
                     <div class="form-group row">                     
-                        <label class="col-sm-5 col-form-label font-weight-bold"> Usuario </label>
+                            <label class="col-sm-5 col-form-label font-weight-bold"> Usuario </label>
                         <input class="form-control col-sm-6" type="text" placeholder="nombre del usuario" id="nombreUsuario" name="nombreUsuario"/>
                     </div>
                     <button class="btn btn-primary"> Ingresar </button>
@@ -116,4 +117,5 @@
 
 <script src="/js/validarUsuario.js"></script>
 <script src="/js/fecha.js"></script>
+
 @tag.footer()

@@ -32,7 +32,7 @@ public class ProductosControlador {
         var codproducto = ctx.formParam("codProducto", Integer.class).get();
         var categoria = ctx.formParam("categoria", String.class).get();
         var marca = ctx.formParam("marca", String.class).get();
-        var medida = ctx.formParam("medida", String.class).get();
+        var medida = ctx.formParam("medida", Double.class).get();
         var unidad = ctx.formParam("unidad", String.class).get();
         var stock = ctx.formParam("stock", Integer.class).get();
         var preciounitario = ctx.formParam("precioUnitario", Double.class).get();
@@ -60,7 +60,7 @@ public class ProductosControlador {
         var codProducto = ctx.formParam("codproducto", Integer.class).get();
         var categoria = ctx.formParam("categoria", String.class).get();
         var marca = ctx.formParam("marca", String.class).get();
-        var medida = ctx.formParam("medida", String.class).get();
+        var medida = ctx.formParam("medida", Double.class).get();
         var unidad = ctx.formParam("unidad", String.class).get();
         var stock = ctx.formParam("stock", Integer.class).get();
         var precioUnitario = ctx.formParam("preciounitario", Double.class).get();

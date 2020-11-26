@@ -46,7 +46,7 @@
                 <label for="precioUnitario" class="col-sm-8 col-form-label font-weight-bold" id="text-size"> Precio Unitario </label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="number" name="precioUnitario"/>
+                        <input class="form-control" type="text" name="precioUnitario"/>
                     </div>
                 </div>
                 <label for="detalle" class="col-sm-8 col-form-label font-weight-bold" id="text-size"> Detalle </label>

@@ -8,7 +8,6 @@ import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
 import edu.unam.integrador.modelo.Cliente;
-//import jdk.nashorn.internal.ir.IdentNode;
 
 public class Sql2oClientesRepositorio implements ClientesRepositorio {
 

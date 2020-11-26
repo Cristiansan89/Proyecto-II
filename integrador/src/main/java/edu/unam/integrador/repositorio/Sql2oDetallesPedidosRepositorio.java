@@ -10,6 +10,7 @@ import org.sql2o.Sql2oException;
 import edu.unam.integrador.modelo.DetallePedido;
 
 public class Sql2oDetallesPedidosRepositorio implements DetallesPedidosRepositorio {
+    
     private final Sql2o sql2o;
 
     public Sql2oDetallesPedidosRepositorio(Sql2o sql2o) {

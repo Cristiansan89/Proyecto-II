@@ -5,10 +5,14 @@ import io.javalin.http.Context;
 import java.util.Collections;
 import org.sql2o.Sql2o;
 import edu.unam.integrador.controladores.ClientesControlador;
+import edu.unam.integrador.controladores.DetallesPedidosControlador;
 import edu.unam.integrador.controladores.ProductosControlador;
+import edu.unam.integrador.controladores.PedidosControlador;
 import edu.unam.integrador.paginas.*;
 import edu.unam.integrador.repositorio.RepositorioException;
 import edu.unam.integrador.repositorio.Sql2oClientesRepositorio;
+import edu.unam.integrador.repositorio.Sql2oDetallesPedidosRepositorio;
+import edu.unam.integrador.repositorio.Sql2oPedidosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oProductosRepositorio;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
@@ -23,9 +27,15 @@ public class App {
 
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
         var clientesControlador = new ClientesControlador(clientesRepositorio);
-        
+
         var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
         var productosControlador = new ProductosControlador(productosRepositorio);
+
+        /*var detallePedidoRepositorio = new Sql2oDetallesPedidosRepositorio(sql2o);
+        var detallePedidoControlador = new DetallesPedidosControlador(detallePedidoRepositorio);*/
+
+        var pedidosRepositorio = new Sql2oPedidosRepositorio(sql2o);
+        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio);
 
         // Crear Servidor
         Javalin app = Javalin.create(config -> {
@@ -41,7 +51,6 @@ public class App {
         app.get("/clientes", clientesControlador::listar);
         app.get("/clientes/nuevo", clientesControlador::nuevo);
         app.post("/clientes/crear", clientesControlador::crear);
-        app.post("/clientes/", clientesControlador::crear);
         app.get("/clientes/modificar/:id", clientesControlador::modificar);
         app.post("/clientes/actualizar/:id", clientesControlador::actualizar);
         app.delete("/clientes/borrar/:id", clientesControlador::borrar);
@@ -50,11 +59,20 @@ public class App {
         app.get("/productos", productosControlador::listar);
         app.get("/productos/nuevo", productosControlador::nuevo);
         app.post("/productos/crear", productosControlador::crear);
-        app.post("/productos/", productosControlador::crear);
         app.get("/productos/modificar/:id", productosControlador::modificar);
         app.post("/productos/actualizar/:id", productosControlador::actualizar);
         app.delete("/productos/borrar/:id", productosControlador::borrar);
 
+        //Pedido
+        app.get("/pedidos", pedidosControlador::listar);
+        app.post("/pedidos/crear", pedidosControlador::crear);
+        app.get("/pedidos/nuevo/", pedidosControlador::nuevo);
+        app.get("/pedidos/formulario", pedidosControlador::listarProducto);
+       // app.get("pedido/listaDetallePedido", pedidosControlador::agregarDetallePedido);
+        //app.post("/pedidos/", pedidosControlador::crear);
+        /*app.get("/pedidos/modificar/:id", pedidosControlador::modificar);
+        app.post("/pedidos/actualizar/:id", pedidosControlador::actualizar);
+        app.delete("/pedidos/borrar/:id", pedidosControlador::borrar);*/
     }
 
     private static void mostrarIndex(Context ctx) {

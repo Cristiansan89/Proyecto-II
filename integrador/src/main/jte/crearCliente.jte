@@ -1,7 +1,7 @@
 
 @tag.header()
 
-<div class="card" style="width: 40rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
+<div class="card" style="width: 40rem; top: 7rem; left: 55rem; margin-bottom: 10rem;"> 
     <div class="card-footer">
         <div style="margin-left: 3em;"> 
             <h2><b>Crear Cliente</b></h2>
