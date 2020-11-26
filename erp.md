@@ -38,12 +38,14 @@
    <li>[HU-01] Crear Producto</li>   
    <li>[HU-02] Cargar Datos del Producto</li>   
    <li>[HU-13] Confirmar Alta de Producto</li>
+   <br>
    
    **Modificar Producto**
    
    <li>[HU-03] Seleccionar Producto</li>   
    <li>[HU-04] Modificar Datos del Producto</li>   
    <li>[HU-14] Confirmar Modificación de Producto</li>
+   <br>
    
    **Baja de Producto**
    
@@ -52,42 +54,48 @@
    <li>[HU-15] Confirmar Baja de Producto</li>
    
    <h4>Gestión de Cliente</h4>
-   
+
    **Alta de Cliente**
    
    <li>[HU-07] Crear Cliente</li>   
    <li>[HU-08] Cargar Datos Personales</li>
    <li>[HU-16] Confirmar Alta de Cliente</li>
+   <br>
    
    **Modificación de Cliente**
    
    <li>[HU-09] Seleccionar Modificación</li>
    <li>[HU-10] Modificar Datos Personales</li>
    <li>[HU-17] Confirmar Modificación de Cliente</li>
-      
+   <br> 
+    
    **Baja de Cliente**
    
    <li>[HU-11] Solicitar Baja Cliente</li>
    <li>[HU-12] Confirmar Baja Cliente</li>
+   <br>
    
    <h4>Gestión de Pedido</h4>
-   
+  
    **Alta Pedido**
    
    <li>[HU-18] Crear Pedido</li>
    <li>[HU-19] Cargar Datos Pedido</li>
    <li>[HU-20] Confirmar Alta de Pedido</li> 
+   <br>
    
    **Modificación de Pedido**
    
    <li>[HU-21] Seleccionar Pedido</li>
    <li>[HU-22] Modificar Datos Pedido</li>
    <li>[HU-23] Confirmar Datos Pedido</li>
+   <br>
    
    **Baja de Pedido**
    
    <li>[HU-24] Solicitar Baja Pedido</li>
    <li>[HU-25] Confirmar Baja Pedido</li>
+   <br>
    
    <h4>Gestión de DetallePedido</h4>
    
@@ -96,17 +104,20 @@
    <li>[HU-26] Crear Detalle de Pedido</li>
    <li>[HU-27] Cargar Datos de Detalle de Pedido</li>
    <li>[HU-28] Confirmar Alta de Detalle de Pedido</li>
-     
+   <br>
+   
    **Modificación de Detalle Pedido**
    
    <li>[HU-29] Seleccionar Modificación de Detalle de Pedido</li>
    <li>[HU-30] Modificar Datos de Detalle de Pedido</li>
    <li>[HU-31] Confirmar Modificación de Detalle de Pedido</li>
+   <br>
    
    **Baja de Detalle Pedido**
    
    <li>[HU-32] Baja de un Detalle de Pedido</li>
    <li>[HU-33] Confirmar Baja de un Detalle Pedido</li>
+   <br>
    
    <h4>Gestión de Cliente Preferencial</h4>
    
