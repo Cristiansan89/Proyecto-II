@@ -28,6 +28,92 @@
  * Este módulo debe registrar, modificar y borrar los datos de usuario.
  
 </p>
+ 
+ <h3> Historia de Usuario</h3>
+ <p>
+   <h4>Gestión de Producto</h4>
+   
+   **Alta Producto**
+   
+   <li>[HU-01] Crear Producto</li>   
+   <li>[HU-02] Cargar Datos del Producto</li>   
+   <li>[HU-13] Confirmar Alta de Producto</li>
+   
+   **Modificar Producto**
+   
+   <li>[HU-03] Seleccionar Producto</li>   
+   <li>[HU-04] Modificar Datos del Producto</li>   
+   <li>[HU-14] Confirmar Modificación de Producto</li>
+   
+   **Baja de Producto**
+   
+   <li>[HU-05] Seleccionar Producto</li>   
+   <li>[HU-06] Eliminar Producto</li>   
+   <li>[HU-15] Confirmar Baja de Producto</li>
+   
+   <h4>Gestión de Cliente</h4>
+   
+   **Alta de Cliente**
+   
+   <li>[HU-07] Crear Cliente</li>   
+   <li>[HU-08] Cargar Datos Personales</li>
+   <li>[HU-16] Confirmar Alta de Cliente</li>
+   
+   **Modificación de Cliente**
+   
+   <li>[HU-09] Seleccionar Modificación</li>
+   <li>[HU-10] Modificar Datos Personales</li>
+   <li>[HU-17] Confirmar Modificación de Cliente</li>
+      
+   **Baja de Cliente**
+   
+   <li>[HU-11] Solicitar Baja Cliente</li>
+   <li>[HU-12] Confirmar Baja Cliente</li>
+   
+   <h4>Gestión de Pedido</h4>
+   
+   **Alta Pedido**
+   
+   <li>[HU-18] Crear Pedido</li>
+   <li>[HU-19] Cargar Datos Pedido</li>
+   <li>[HU-20] Confirmar Alta de Pedido</li> 
+   
+   **Modificación de Pedido**
+   
+   <li>[HU-21] Seleccionar Pedido</li>
+   <li>[HU-22] Modificar Datos Pedido</li>
+   <li>[HU-23] Confirmar Datos Pedido</li>
+   
+   **Baja de Pedido**
+   
+   <li>[HU-24] Solicitar Baja Pedido</li>
+   <li>[HU-25] Confirmar Baja Pedido</li>
+   
+   <h4>Gestión de DetallePedido</h4>
+   
+   **Alta de Detalle Pedido**
+   
+   <li>[HU-26] Crear Detalle de Pedido</li>
+   <li>[HU-27] Cargar Datos de Detalle de Pedido</li>
+   <li>[HU-28] Confirmar Alta de Detalle de Pedido</li>
+     
+   **Modificación de Detalle Pedido**
+   
+   <li>[HU-29] Seleccionar Modificación de Detalle de Pedido</li>
+   <li>[HU-30] Modificar Datos de Detalle de Pedido</li>
+   <li>[HU-31] Confirmar Modificación de Detalle de Pedido</li>
+   
+   **Baja de Detalle Pedido**
+   
+   <li>[HU-32] Baja de un Detalle de Pedido</li>
+   <li>[HU-33] Confirmar Baja de un Detalle Pedido</li>
+   
+   <h4>Gestión de Cliente Preferencial</h4>
+   
+   <h4>Gestión de Usuario</h4>
+ 
+ </p>
+
 <h2> Arquitectura de software</h2>
 
 <p>Sera una aplicación web basado en java que se ajustará a la arquitectura de software Cliente-Servidor</p>
