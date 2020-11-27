@@ -2,7 +2,7 @@
 
 <h2>Modelo de Dominio</h2>
 
-![Modelo Dominio](Documentos/IteracionIII/ModeloDominio/ModeloDominioII.png "Modelo de Dominio")
+![Modelo Dominio](Documentos/IteracionIII/ModeloDominio/ModeloDominio.png "Modelo de Dominio")
 <br>
 
 # Backlog de Iteración
