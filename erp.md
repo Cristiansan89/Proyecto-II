@@ -203,7 +203,7 @@
 
 <br>
 
-<h4>Pantalla Sesi&oacuta;n</h4>
+<h4>Pantalla Sesi&oacute;n</h4>
 
 ![Sesion](Documentos/Wireframe/Sesión.png "ABM del Sesion")
 
