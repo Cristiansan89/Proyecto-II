@@ -22,7 +22,7 @@
                 <label for="cuil" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Cuil</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="number" name="cuil"/>
+                        <input id="cuil" class="form-control" type="number" name="cuil"/>
                     </div>
                 </div>
                 <label for="domicilio" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Domicilio</label>
@@ -34,7 +34,7 @@
                 <label for="telefono" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Tel&eacute;fono</label>   
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="number" name="telefono"/>
+                        <input id="telefono" class="form-control" type="number" name="telefono"/>
                     </div>
                 </div>
                 <div class="text-center" style="margin-right: 4em;">
@@ -45,5 +45,12 @@
         </div>
     </div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#cuil').mask('00000000000');
+    $('#telefono').mask('0000000000');
+  });
+</script>
+  
 @tag.footer()

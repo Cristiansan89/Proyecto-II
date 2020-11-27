@@ -53,7 +53,10 @@ public class PedidosControlador {
         modelo.productos = pedidosRepositorio.listarProducto();
         modelo.nombreUsuario = ctx.cookie("nombreUsuario");
         modelo.detallePedidos = this.detallesPedidosRepositorio.listar(id);
-        System.out.println(modelo.detallePedidos + " " + modelo.detallePedidos.getClass());
+        modelo.total = 0;
+        for (DetallePedido detalle : modelo.detallePedidos) {
+            modelo.total += detalle.getTotalFila();
+        }
         modelo.idPedido = id;
         ctx.render("formularioPedido.jte", Collections.singletonMap("modelo", modelo));
     }
@@ -68,7 +71,6 @@ public class PedidosControlador {
         var producto = this.productosRepositorio.obtener(idproducto);
         if (producto.getStock() > cantidad) {
             var pedido = this.pedidosRepositorio.obtener(idpedido);
-            System.out.println(String.valueOf(idproducto) + producto + String.valueOf(cantidad));
             var detalle = new DetallePedido(cantidad, pedido, producto);
             this.detallesPedidosRepositorio.crear(detalle);
             ctx.redirect("/pedidos/nuevo/" + String.valueOf(idpedido));
@@ -87,12 +89,12 @@ public class PedidosControlador {
         var pedido = new Pedido(cliente);
 
         var id = this.pedidosRepositorio.crear(pedido);
-        System.out.println(String.valueOf(id));
+
         ctx.redirect("/pedidos/nuevo/" + String.valueOf(id));
     }
 
     public void eliminardetalle(Context ctx) throws SQLException, RepositorioException {
-        System.out.println(ctx.pathParam("id", Integer.class).get());
+
         this.detallesPedidosRepositorio
                 .borrar(this.detallesPedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get()));
         ctx.redirect("/pedidos/nuevo/" + ctx.pathParam("idpedido", Integer.class).get());

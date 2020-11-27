@@ -7,12 +7,12 @@ public class Cliente {
     private String apellido;
     private String cuil;
     private String domicilio;
-    private double telefono;
+    private String telefono;
 
     public Cliente() {
     }
 
-    public Cliente(String nombre, String apellido, String cuil, String domicilio, double telefono) {
+    public Cliente(String nombre, String apellido, String cuil, String domicilio, String telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cuil = cuil;
@@ -60,11 +60,11 @@ public class Cliente {
         this.domicilio = domicilio;
     }
 
-    public double getTelefono() {
-        return telefono;
+    public String getTelefono() {
+        return this.telefono;
     }
 
-    public void setTelefono(double telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

@@ -35,11 +35,11 @@ public class ClientesControlador {
         var apellido = ctx.formParam("apellido", String.class).get();
         var cuil = ctx.formParam("cuil", String.class).get();
         var domicilio = ctx.formParam("domicilio", String.class).get();
-        var telefono = ctx.formParam("telefono", Double.class).get();
+        var telefono = ctx.formParam("telefono", String.class).get();
         var cliente = new Cliente(nombre, apellido, cuil, domicilio, telefono);
         this.clientesRepositorio.crear(cliente);
         ctx.redirect("/");
-        
+
     }
 
     public void borrar(Context ctx) throws SQLException, RepositorioException {
@@ -61,7 +61,7 @@ public class ClientesControlador {
         var apellido = ctx.formParam("apellido", String.class).get();
         var cuil = ctx.formParam("cuil", String.class).get();
         var domicilio = ctx.formParam("domicilio", String.class).get();
-        var telefono = ctx.formParam("telefono", Double.class).get();
+        var telefono = ctx.formParam("telefono", String.class).get();
         cliente.setApellido(apellido);
         cliente.setCuil(cuil);
         cliente.setDomicilio(domicilio);

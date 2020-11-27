@@ -72,6 +72,7 @@
                                         <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${detallepedido.getIdDetallePedido()},${modelo.idPedido})"> Quitar </button></td>
                                     </tr>
                             @endfor
+                            <tr><td></td><td></td><td>Total</td><td>${modelo.total}</td></tr>
                             </tbody>
                         </table>
 

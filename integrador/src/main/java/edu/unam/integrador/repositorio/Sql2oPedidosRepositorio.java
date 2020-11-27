@@ -26,7 +26,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public List<Pedido> listar() throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM pedidos;";
+            String sql = "SELECT * FROM pedido;";
             return conn.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Pedido.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -46,7 +46,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public int crear(Pedido pedido) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Pedidos (fecha, hora, totalPagar, \"idCliente\", estado) VALUES (current_date, CONCAT(extract(hour from now())::text,':', extract(minute from now())::text), 0,:clienteId, false);";
+            String sql = "INSERT INTO Pedido (fecha, hora, totalPagar, \"idCliente\", estado) VALUES (current_date, CONCAT(extract(hour from now())::text,':', extract(minute from now())::text), 0,:clienteId, false);";
             return (int) conn.createQuery(sql).bind(pedido)
                     .addParameter("clienteId", pedido.getCliente().getIdCliente()).executeUpdate().getKey();
         } catch (Sql2oException e) {
@@ -57,7 +57,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public Pedido obtener(int id) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM pedidos WHERE \"idPedido\" = :idPedido;";
+            String sql = "SELECT * FROM pedido WHERE \"idPedido\" = :idPedido;";
             return conn.createQuery(sql).addParameter("idPedido", id).throwOnMappingFailure(false)
                     .executeAndFetchFirst(Pedido.class);
         } catch (Sql2oException e) {
@@ -68,7 +68,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public Pedido finalizar(Pedido pedido) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "UPDATE pedidos set  estado=:estado WHERE \"idPedido\" = :idPedido;";
+            String sql = "UPDATE pedido set  estado=:estado WHERE \"idPedido\" = :idPedido;";
             conn.createQuery(sql).bind(pedido).addParameter("idPedido", pedido.getIdPedido()).executeUpdate().getKey();
             return pedido;
         } catch (Sql2oException e) {

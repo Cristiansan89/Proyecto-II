@@ -1,7 +1,7 @@
 package gg.jte.generated;
 public final class JteformularioPedidoGenerated {
 	public static final String JTE_NAME = "formularioPedido.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,0,0,2,2,2,11,11,11,17,17,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,19,19,26,26,26,50,50,50,64,64,66,66,66,67,67,67,68,68,68,69,69,69,71,71,71,71,71,71,73,73,86,86};
+	public static final int[] JTE_LINE_INFO = {0,0,0,0,2,2,2,11,11,11,17,17,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,19,19,26,26,26,50,50,50,64,64,66,66,66,67,67,67,68,68,68,69,69,69,71,71,71,71,71,71,73,73,74,74,74,87,87};
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, edu.unam.integrador.paginas.ModeloDetallesPedidos modelo) {
 		jteOutput.writeContent("\r\n");
 		gg.jte.generated.tag.JteheadersGenerated.render(jteOutput, jteHtmlInterceptor);
@@ -70,7 +70,10 @@ public final class JteformularioPedidoGenerated {
 			jteOutput.writeUserContent(modelo.idPedido);
 			jteOutput.writeContent(")\"> Quitar </button></td>\r\n                                    </tr>\r\n                            ");
 		}
-		jteOutput.writeContent("\r\n                            </tbody>\r\n                        </table>\r\n\r\n                    </div>\r\n                    <button type=\"submit\" class=\"btn btn-primary\"> Finalizar </button>\r\n                    <a href=\"/\" style=\"float: right;\" type=\"button\" class=\"btn btn-primary\"> Volver </a>\r\n                </div>\r\n            </form>\r\n        </div>\r\n    </div>\r\n</div>\r\n<script src=\"/js/detallepedido.js\"></script>\r\n");
+		jteOutput.writeContent("\r\n                            <tr><td></td><td></td><td>Total</td><td>");
+		jteOutput.setContext("td", null);
+		jteOutput.writeUserContent(modelo.total);
+		jteOutput.writeContent("</td></tr>\r\n                            </tbody>\r\n                        </table>\r\n\r\n                    </div>\r\n                    <button type=\"submit\" class=\"btn btn-primary\"> Finalizar </button>\r\n                    <a href=\"/\" style=\"float: right;\" type=\"button\" class=\"btn btn-primary\"> Volver </a>\r\n                </div>\r\n            </form>\r\n        </div>\r\n    </div>\r\n</div>\r\n<script src=\"/js/detallepedido.js\"></script>\r\n");
 		gg.jte.generated.tag.JtefooterGenerated.render(jteOutput, jteHtmlInterceptor);
 	}
 	public static void renderMap(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, java.util.Map<String, Object> params) {

@@ -35,7 +35,7 @@
                 <label for="telefono" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Tel&eacute;fono</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="number" name="telefono" value="${modelo.cliente.getTelefono()}"/>
+                        <input class="form-control" type="text" name="telefono" value="${modelo.cliente.getTelefono()}"/>
                     </div>
                 </div>
                 <div class="text-center" style="margin-right: 4em;">

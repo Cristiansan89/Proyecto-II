@@ -65,6 +65,11 @@ public class App {
         app.get("/productos", productosControlador::listar);
         app.get("/productos/nuevo", productosControlador::nuevo);
         app.post("/productos/crear", productosControlador::crear);
+        app.get("/productos/modificar/:id", productosControlador::modificar);
+        app.post("/productos/actualizar/:id", productosControlador::actualizar);
+        app.delete("/productos/borrar/:id", productosControlador::borrar);
+
+        // Pedido
         app.get("/pedidos", pedidosControlador::listar);
         app.get("/pedidos/crear", pedidosControlador::crear);
         app.post("/pedidos/agregardetalle/:id", pedidosControlador::agregar);
