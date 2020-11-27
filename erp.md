@@ -44,7 +44,7 @@
    
    <li>[HU-03] Seleccionar Producto</li>   
    <li>[HU-04] Modificar Datos del Producto</li>   
-   <li>[HU-14] Confirmar Modificación de Producto</li>
+   <li>[HU-14] Confirmar Modificaci&oacute;n de Producto</li>
    <br>
    
    ***Baja de Producto***
@@ -66,7 +66,7 @@
    
    <li>[HU-09] Seleccionar Modificación</li>
    <li>[HU-10] Modificar Datos Personales</li>
-   <li>[HU-17] Confirmar Modificación de Cliente</li>
+   <li>[HU-17] Confirmar Modificaci&oacute;n de Cliente</li>
    <br> 
     
    ***Baja de Cliente***
@@ -110,7 +110,7 @@
    
    <li>[HU-29] Seleccionar Modificación de Detalle de Pedido</li>
    <li>[HU-30] Modificar Datos de Detalle de Pedido</li>
-   <li>[HU-31] Confirmar Modificación de Detalle de Pedido</li>
+   <li>[HU-31] Confirmar Modificaci&oacute;n de Detalle de Pedido</li>
    <br>
    
    ***Baja de Detalle Pedido***
@@ -121,8 +121,42 @@
    
    <h4>Gestión de Cliente Preferencial</h4>
    
+   ***Alta de Cliente Preferencial***
+   
+   <li>[HU-34] Crear Cliente Preferencial</li>
+   <li>[HU-35] Cargar Datos Cliente Preferencial</li>
+   <li>[HU-36] Confirmar Alta de Cliente Preferencial</li>
+   <br>
+   
+   ***Actualización de Cliente Preferencialo***
+   
+   <li>[HU-37] Actualizar Cliente Preferencial</li>
+   <li>[HU-38] Actualizar Datos de Cliente Preferencial</li>
+   <li>[HU-39] Confirmar Actualizaci&oacuta;n de Cliente Preferencial</li>
+   <br>
+   
    <h4>Gestión de Usuario</h4>
  
+   ***Alta de Usuario***
+   
+   <li>[HU-40] Crear Usuario</li>
+   <li>[HU-41] Cargar Datos de Usuario</li>
+   <li>[HU-42] Confirmar Alta de Usuario</li>
+   <br>
+   
+   ***Modificación de Usuario***
+   
+   <li>[HU-43] Modificar Usuario</li>
+   <li>[HU-44] Modificar Datos de Usuario</li>
+   <li>[HU-45] Confirmar Modificaci&oacute;n de Usuario</li>
+   <br>
+   
+   ***Baja de Usuario***
+   
+   <li>[HU-46] Baja de Usuario</li>
+   <li>[HU-47] Confirmar Baja de Usuario</li>
+   <li>[HU-48] Aceptar Baja de Usuario</li>
+   <br>
  </p>
 
 <h2> Arquitectura de software</h2>
@@ -171,7 +205,7 @@
 
 <h4>Pantalla Sesi&oacuta;n</h4>
 
-![Sesion](Documentos/Wireframe/Sesion.png "ABM del Sesion")
+![Sesion](Documentos/Wireframe/Sesión.png "ABM del Sesion")
 
 <br><br>
 
