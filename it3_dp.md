@@ -2,7 +2,7 @@
 
 <h2>Modelo de Dominio</h2>
 
-![Modelo Dominio](Documentos/IteracionIII/ModeloDominio/ModeloDominioII.png "Modelo de Dominio")
+![Modelo Dominio](Documentos/IteracionIII/ModeloDominio/ModeloDominio.png "Modelo de Dominio")
 <br>
 
 # Backlog de Iteración
@@ -17,28 +17,28 @@
 
 <h2>Gestión de Cliente Preferencial</h2>
 
-<h4>Alta de Cliente</h4>
+<h4>Alta de Cliente Preferencial</h4>
 <br>
 
-![HU-34](Documentos/IteracionII/HistoriaUsuario/CrearClientePreferencial.png "Crear Cliente Preferencial")
+![HU-34](Documentos/IteracionIII/HistoriaUsuario/CrearClientePreferencial.png "Crear Cliente Preferencial")
 <br>
 
-![HU-35](Documentos/IteracionII/HistoriaUsuario/CargarDatosClientePreferencial.png "Cargar Datos del Cliente Preferencial")
+![HU-35](Documentos/IteracionIII/HistoriaUsuario/CargarDatosClientePreferencial.png "Cargar Datos del Cliente Preferencial")
 <br>
 
-![HU-36](Documentos/IteracionII/HistoriaUsuario/ConfirmarAltaClientePreferencial.png "Confirmar Alta de Cliente Preferencial")
+![HU-36](Documentos/IteracionIII/HistoriaUsuario/ConfirmarAltaClientePreferencial.png "Confirmar Alta de Cliente Preferencial")
 <br><br>
 
 <h4>Actualización de Cliente Preferencial</h4>
 <br>
 
-![HU-37](Documentos/IteracionII/HistoriaUsuario/ActualizarCliente.png "Seleccionar Pedido")
+![HU-37](Documentos/IteracionIII/HistoriaUsuario/ActualizarClientePreferencial.png "Actualizar Cliente Preferencial")
 <br>
 
-![HU-38](Documentos/IteracionII/HistoriaUsuario/ActualizarDatosClientePreferencial.png "Actualizar Datos Cliente Preferencial")
+![HU-38](Documentos/IteracionIII/HistoriaUsuario/ActualizarDatosClientePreferencial.png "Actualizar Datos Cliente Preferencial")
 <br>
 
-![HU-39](Documentos/IteracionII/HistoriaUsuario/ConfirmarActualizaciónClientePreferencial.png "Confirmar Actualización Cliente Preferencial")
+![HU-39](Documentos/IteracionIII/HistoriaUsuario/ConfirmarActualizaciónClientePreferencial.png "Confirmar Actualización Cliente Preferencial")
 <br><br>
 
 # Tareas
