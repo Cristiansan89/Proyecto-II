@@ -168,3 +168,19 @@
 ![ABM Pedido y Detalle Pedido](Documentos/Wireframe/Pedido&DetallePedido.png "ABM del Pedido y Detalle Pedido")
 
 <br>
+
+<h4>Pantalla Sesi&oacuta;n</h4>
+
+![Sesion](Documentos/Wireframe/Sesion.png "ABM del Sesion")
+
+<br><br>
+
+<h4>Pantalla ABM del Usuario</h4>
+
+![Nuevo Usuario](Documentos/Wireframe/NuevaCuenta.png "Nueva Cuenta de Usuario")
+
+<br><br>
+
+![Aceptar Baja de Usuario](Documentos/Wireframe/AceptarBaja.png "Aceptar Baja de Usuario")
+
+<br><br>
