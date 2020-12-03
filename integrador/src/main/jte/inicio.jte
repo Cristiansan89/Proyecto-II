@@ -1,10 +1,10 @@
 
-@param edu.unam.integrador.paginas.ModeloIndex modelo
+@param edu.unam.integrador.paginas.ModeloUsuarios modelo
 
 @tag.header()
 
 <div id="bar_menu">
-    @if (! modelo.nombreUsuario.trim().isEmpty())
+    @if (! modelo.nick.trim().isEmpty())
         <!-- Barra de Menú -->
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">   
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,7 +48,7 @@
                 </ul>
             </div>
             <div> 
-                <span><b>${modelo.nombreUsuario}</b></span><br>
+                <span><b>${modelo.nick}</b></span><br>
                 <p id=""></p>
             </div>
         </nav>
@@ -88,7 +88,7 @@
                     <form action="/" method="post" onsubmit="validarUsuario();" class="text-center">
                         <div class="form-group row">                     
                             <label class="col-sm-3 col-form-label font-weight-bold" id="text-size"> Usuario </label>
-                            <input class="form-control col-sm-8" type="text" id="nombreUsuario" name="nombreUsuario"/>
+                            <input class="form-control col-sm-8" type="text" name="nick"/>
                         </div>
                         <div class="form-group row">                     
                             <label class="col-sm-3 col-form-label font-weight-bold" id="text-size"> Contraseña </label>

@@ -74,6 +74,16 @@ public class Pedido {
         this.estado = estado;
     }
 
+    public String tipoEstadoStr(){
+        String text;
+        if(this.estado){
+            text = "Pedido Realizado";
+        }else{
+            text = "Pedido No Realizado";
+        }
+        return text;
+    }
+
     public String formatoFecha(Date fecha) {
         String formato = "dd/MM/yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formato);
@@ -84,7 +94,7 @@ public class Pedido {
     @Override
     public String toString() {
         return "ID Pedido: " + idPedido + ", Cliente: " + cliente + ", Fecha: " + this.formatoFecha(fecha) + 
-            ", Hora: " + hora  + ", Total a Pagar: " + totalPagar;
+            ", Hora: " + hora  + ", Total a Pagar: " + totalPagar + ", Estado: " + this.tipoEstadoStr();
     }
 
 }

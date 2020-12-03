@@ -77,20 +77,24 @@ public class App {
     }
 
     private static void mostrarIndex(Context ctx) {
-        var modelo = new ModeloIndex();
+        var modelo = new ModeloUsuarios();
         // controlo por cookie
-        if (ctx.cookie("nombreUsuario") != null) {
-            modelo.nombreUsuario = ctx.cookie("nombreUsuario");
+        if (ctx.cookie("nick") != null) {
+            modelo.nick = ctx.cookie("nick");
         } else {
-            modelo.nombreUsuario = "";
+            modelo.nick = "";
         }
         ctx.render("inicio.jte", Collections.singletonMap("modelo", modelo));
     }
 
     private static void validarUsuario(Context ctx) {
-        var valor = ctx.formParam("nombreUsuario", String.class).get();
-        ctx.cookie("nombreUsuario", valor.trim());
-        ctx.redirect("/");
+        var nick = ctx.formParam("nick", String.class).get();
+        var clave = ctx.formParam("contrasena", String.class).get();
+        if ((nick ==  )(clave ==)){
+            ctx.cookie("nick", nick.trim());
+            ctx.redirect("/");    
+        } else{}
+        
     }
 
 }

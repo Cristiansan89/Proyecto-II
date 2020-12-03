@@ -72,4 +72,9 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
             throw new RepositorioException();
         }
     }
+
+    @Override
+    public void clave(Usuario usuario) throws RepositorioException {
+        String sql = "SELECT * FROM Usuario Where nick = :nick AND contrasena = :contrasena";
+    }
 }
