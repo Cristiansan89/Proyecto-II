@@ -15,18 +15,19 @@ import edu.unam.integrador.repositorio.Sql2oDetallesPedidosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oPedidosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oProductosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oUsuariosRepositorio;
-import edu.unam.integrador.repositorio.UsuariosRepositorio;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class App {
+
     public static void main(String[] args) {
 
         // Conexión de sql2o
-        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "gpl");
+        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "410556");
 
         // Repositorio y Controladores
         var usuariosRepositorio = new Sql2oUsuariosRepositorio(sql2o);
+        var usuariosControlador = new UsuariosControlador(usuariosRepositorio);
 
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
         var clientesControlador = new ClientesControlador(clientesRepositorio, usuariosRepositorio);
@@ -35,10 +36,11 @@ public class App {
         var productosControlador = new ProductosControlador(productosRepositorio);
 
         var pedidosRepositorio = new Sql2oPedidosRepositorio(sql2o);
-        var detallePedidoControlador = new Sql2oDetallesPedidosRepositorio(sql2o, pedidosRepositorio, productosRepositorio);
-        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio, detallePedidoControlador);
+        var detallePedidoControlador = new Sql2oDetallesPedidosRepositorio(sql2o, pedidosRepositorio,
+                productosRepositorio);
+        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio,
+                detallePedidoControlador);
 
-    
         // Crear Servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public");
@@ -47,7 +49,7 @@ public class App {
         }).start(8000);
 
         app.get("/", App::mostrarIndex); // muestra el index
-        app.post("/", App::validarUsuario);
+        app.post("/", usuariosControlador::validarUsuario);
 
         // Cliente
         app.get("/clientes", clientesControlador::listar);
@@ -85,16 +87,6 @@ public class App {
             modelo.nick = "";
         }
         ctx.render("inicio.jte", Collections.singletonMap("modelo", modelo));
-    }
-
-    private static void validarUsuario(Context ctx) {
-        var nick = ctx.formParam("nick", String.class).get();
-        var clave = ctx.formParam("contrasena", String.class).get();
-        if ((nick ==  )(clave ==)){
-            ctx.cookie("nick", nick.trim());
-            ctx.redirect("/");    
-        } else{}
-        
     }
 
 }

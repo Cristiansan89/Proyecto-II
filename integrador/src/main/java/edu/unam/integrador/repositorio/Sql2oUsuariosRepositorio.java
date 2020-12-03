@@ -9,7 +9,7 @@ import org.sql2o.Sql2oException;
 import edu.unam.integrador.modelo.Usuario;
 
 public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
-    
+
     private final Sql2o sql2o;
 
     public Sql2oUsuariosRepositorio(Sql2o sql2o) {
@@ -32,7 +32,7 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
         try (Connection conn = sql2o.open()) {
             String sql = "INSERT INTO Usuario(mail, nick, contrasena,  \"idCliente\") VALUES (:mail, :nick, PGP_SYM_ENCRYPT(:contrasena, 'AES_KEY'), :idCliente);";
             return (int) conn.createQuery(sql).bind(usuario)
-                .addParameter("idCliente", usuario.getCliente().getIdCliente()).executeUpdate().getKey();
+                    .addParameter("idCliente", usuario.getCliente().getIdCliente()).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
@@ -63,7 +63,7 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
 
     @Override
     public void actualizar(Usuario usuario) throws RepositorioException {
-        String sql = "UPDATE Usuario SET  mail= :mail, nick= :nick, contrasena = (PGP_SYM_ENCRYPT(':contrasena', 'AES_KEY')) WHERE \"idUsuario\" = :idUsuario;";
+        String sql = "UPDATE Usuario SET  mail= :mail, nick= :nick, contrasena = (PGP_SYM_ENCRYPT(:contrasena, 'AES_KEY')) WHERE \"idUsuario\" = :idUsuario;";
         try (Connection conn = sql2o.open()) {
             conn.createQuery(sql).addParameter("idUsuario", usuario.getIdUsuario())
                     .addParameter("mail", usuario.getMail()).addParameter("nick", usuario.getNick())
@@ -74,7 +74,19 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
     }
 
     @Override
-    public void clave(Usuario usuario) throws RepositorioException {
-        String sql = "SELECT * FROM Usuario Where nick = :nick AND contrasena = :contrasena";
+    public boolean clave(String nick, String contrasena) throws RepositorioException {
+        String sql = "SELECT COUNT(*) AS coincidencias  FROM Usuario Where nick = :nick AND PGP_SYM_DECRYPT(contrasena::bytea, 'AES_KEY') = :contrasena;";
+        try (Connection conn = sql2o.open()) {
+            int resultado = (int) conn.createQuery(sql).addParameter("nick", nick)
+                    .addParameter("contrasena", contrasena).executeScalar(Integer.class);
+            if (resultado == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+
     }
 }
