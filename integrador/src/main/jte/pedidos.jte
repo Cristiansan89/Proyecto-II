@@ -14,14 +14,13 @@
                             </thead>
                             <tbody>
                             @for (var pedido : modelo.pedidos )
-                                    <tr>
-<td>${pedido.getIdPedido()}</td>
-                         <td>${pedido.formatoFecha(pedido.getFecha())}-${pedido.getHora()}</td>
-                                        <td>${pedido.isEstado()}</td>
-                                        <td>${pedido.getTotalPagar()}</td>
-                                        
-                                        <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${pedido.getIdPedido()})"> Anular </button></td>
-                                    </tr>
+                                <tr>
+                                    <td>${pedido.getIdPedido()}</td>
+                                    <td>${pedido.formatoFecha(pedido.getFecha())}-${pedido.getHora()}</td>
+                                    <td>${pedido.isEstado()}</td>
+                                    <td>${pedido.getTotalPagar()}</td> 
+                                    <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${pedido.getIdPedido()})"> Anular </button></td>
+                                </tr>
                             @endfor
                             </tbody>
                         </table>

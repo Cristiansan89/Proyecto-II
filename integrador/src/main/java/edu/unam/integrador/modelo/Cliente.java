@@ -1,5 +1,7 @@
 package edu.unam.integrador.modelo;
 
+import java.util.Date;
+ 
 public class Cliente {
 
     private int idCliente;
@@ -8,6 +10,7 @@ public class Cliente {
     private String cuil;
     private String domicilio;
     private String telefono;
+    private Date fechaIngreso;
 
     public Cliente() {
     }
@@ -18,6 +21,17 @@ public class Cliente {
         this.cuil = cuil;
         this.domicilio = domicilio;
         this.telefono = telefono;
+    }
+
+    
+    public Cliente(int idCliente, String nombre, String apellido, String cuil, String domicilio, String telefono, Date fechaIngreso) {
+        this.idCliente = idCliente;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cuil = cuil;
+        this.domicilio = domicilio;
+        this.telefono = telefono;
+        this.fechaIngreso = fechaIngreso;
     }
 
     public int getIdCliente() {
@@ -68,10 +82,19 @@ public class Cliente {
         this.telefono = telefono;
     }
 
-    @Override
-    public String toString() {
-        return "Cliente [nombre=" + nombre + ", apellido=" + apellido + ", cuil=" + cuil + ", domicilio=" + domicilio
-                + ", telefono=" + telefono + "]";
+    public Date getFechaIngreso() {
+        return fechaIngreso;
     }
 
+    public void setFechaIngreso(Date fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
+    }
+
+    @Override
+    public String toString() {
+        return "ID Cliente: " + idCliente  + ", Nombre: " + nombre + ", Apellido: " + apellido  + ", Cuil: " + cuil + 
+            ", Domicilio: " + domicilio  +  ", Telefono: " + telefono + ", Fecha Ingreso: " + fechaIngreso;
+    }
+
+    
 }

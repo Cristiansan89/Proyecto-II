@@ -1,6 +1,5 @@
 package edu.unam.integrador.controladores;
 
- 
-public class DetallesPedidosControlador {
-
+public class UsuariosControlador {
+    
 }

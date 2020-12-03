@@ -1,12 +1,40 @@
 
 @tag.header()
 
-<div class="card" style="width: 40rem; top: 7rem; left: 55rem; margin-bottom: 10rem;"> 
+<div class="card" id="estilo_card"> 
     <div class="card-footer">
-        <div style="margin-left: 3em;"> 
-            <h2><b>Crear Cliente</b></h2>
-            <br>
+        <div id="estilo_card_form"> 
             <form action="/clientes/crear" method="post">
+                <h2>Datos del Usuario</h2>
+                <br>
+                <label for="mail" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Mail</label>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <input class="form-control" type="email" name="mail"/>
+                    </div>
+                </div>
+                <label for="nick" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Usuario</label>    
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" name="nick"/>
+                    </div>
+                </div>
+                <label for="contrasena" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Contraseña</label>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <input class="form-control" type="password" name="contrasena"/>
+                    </div>
+                </div>
+                <label for="repetirContrasena" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Repetir Contraseña</label>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <input class="form-control" type="password" name="repetirContrasena"/>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <h2>Datos de Cliente</h2>
+                <br>
                 <label for="nombre" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Nombre</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
@@ -47,6 +75,7 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script>
+
 $(document).ready(function(){
     $('#cuil').mask('00000000000');
     $('#telefono').mask('0000000000');

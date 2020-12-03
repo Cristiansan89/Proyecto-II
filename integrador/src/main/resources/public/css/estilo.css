@@ -9,53 +9,188 @@
     z-index: 1; 
 }
 
-#fondo_text{
-    font-family: Arial;
-    font-style: normal;
+div h2{
+    text-align: center;
     font-weight: bold;
-    font-family:cursive;
-    line-height: 50px;
-    font-size: 45px;
-    margin-top: 10px;
+    font-family: times;
 }
 
-#user_text{
-    font-family: Arial;
-    margin-right: 15px;
-    font-size: 16px;
-    text-align: end;
+
+
+@media (min-width: 1366px) and (max-width: 1920px){
+    .format_fecha p{
+        display: inline-block;
+        line-height: 0.3em;
+    }
+
+    #text-size{
+        font-size: 18px;
+    }
+    
+    form{
+        margin-left: 30px;
+    }
+    
+    #text_card{
+        margin-right: 50px;
+    }
+
+    #fondo_text{
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        font-family:cursive;
+        line-height: 50px;
+        font-size: 45px;
+        margin-top: 11px;
+    }
+    
+    #user_text{
+        font-family: Arial;
+        margin-right: 15px;
+        font-size: 16px;
+        text-align: end;
+    }
+    
+    #bar_menu{
+        margin-top:auto;
+        padding-top: 5em;
+        padding-right: 0px;
+        padding-bottom: 5em;
+        padding-left: 0px;
+    }
+    
+    #bar_principal{
+        margin-top:auto;
+        padding-top: 0.3em;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    #estilo_list{
+        padding-top: 6em; 
+        margin-left: 15em; 
+        margin-right: 15em;
+    }
+
+    #estilo_card{
+        width: 40rem; 
+        top: 8rem; 
+        left: 33rem;
+        margin-bottom: 10rem;
+    }
+
+    #estilo_card_form{
+        margin-left: 3em;
+    }
+
+    #estilo_card_list{
+        width: 95%; 
+        left: 45px; 
+        right: 25px; 
+        margin-bottom: 3rem;
+    }
+
+    #estilo_card_pedido{
+        width: 50rem; 
+        top: 8rem; 
+        left: 35rem;
+        margin-bottom: 10rem;
+    }
+
+    #estilo_list_pedido{
+        margin-top: 3em; 
+        margin-left: 15em; 
+        margin-right: 15em;
+    }
 }
 
-#bar_menu{
-    margin-top:auto;
-    padding-top: 5em;
-    padding-right: 0px;
-    padding-bottom: 5em;
-    padding-left: 0px;
-}
+@media (min-width: 1920px){
+    .format_fecha p{
+        display: inline-block;
+        line-height: 0.3em;
+    }
 
-#bar_principal{
-    margin-top:auto;
-    padding-top: 0.3em;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-}
+    #text-size{
+        font-size: 18px;
+    }
+    
+    form{
+        margin-left: 30px;
+    }
+    
+    #text_card{
+        margin-right: 50px;
+    }
 
-.format_fecha p{
-    display: inline-block;
-    line-height: 0.2em;
-}
+    #fondo_text{
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        font-family:cursive;
+        line-height: 50px;
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    
+    #user_text{
+        font-family: Arial;
+        margin-right: 15px;
+        font-size: 16px;
+        text-align: end;
+    }
+    
+    #bar_menu{
+        margin-top:auto;
+        padding-top: 5em;
+        padding-right: 0px;
+        padding-bottom: 5em;
+        padding-left: 0px;
+    }
+    
+    #bar_principal{
+        margin-top:auto;
+        padding-top: 0.3em;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
 
-#text-size{
-    font-size: 18px;
-}
+    #estilo_list{
+        padding-top: 6em; 
+        margin-left: 15em; 
+        margin-right: 15em;
+    }
 
-form{
-    margin-left: 30px;
-}
+    #estilo_card{
+        width: 40rem; 
+        top: 8rem; 
+        left: 54rem;
+        margin-bottom: 10rem;
+    }
 
-#text_card{
-    margin-right: 50px;
-}
+    #estilo_card_form{
+        margin-left: 3.5em;
+    }
 
+    #estilo_card_list{
+        width: 95%; 
+        left: 45px; 
+        right: 25px; 
+        margin-bottom: 3rem;
+    }
+
+    #estilo_card_pedido{
+        width: 50rem; 
+        top: 8rem; 
+        left: 35rem;
+        margin-bottom: 10rem;
+    }
+
+    #estilo_list_pedido{
+        margin-top: 3em; 
+        margin-left: 15em; 
+        margin-right: 15em;
+    }
+}

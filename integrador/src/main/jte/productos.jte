@@ -2,8 +2,8 @@
 
 @tag.header()
 
-<div style="margin-top: 6em; margin-left: 15em; margin-right: 15em;">
-    <h2><b>Producto</b></h2>
+<div id="estilo_list">
+    <h2>Producto</h2>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>

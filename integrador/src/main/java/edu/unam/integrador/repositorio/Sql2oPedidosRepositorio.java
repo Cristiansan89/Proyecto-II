@@ -68,7 +68,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public Pedido finalizar(Pedido pedido) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "UPDATE pedido set  estado=:estado WHERE \"idPedido\" = :idPedido;";
+            String sql = "UPDATE pedido set  estado = :estado, totalpagar = :totalPagar WHERE \"idPedido\" = :idPedido;";
             conn.createQuery(sql).bind(pedido).addParameter("idPedido", pedido.getIdPedido()).executeUpdate().getKey();
             return pedido;
         } catch (Sql2oException e) {

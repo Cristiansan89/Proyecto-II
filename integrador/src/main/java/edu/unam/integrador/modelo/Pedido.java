@@ -83,8 +83,8 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido [cliente=" + cliente + ", fecha=" + this.formatoFecha(fecha) + ", hora=" + hora + ", idPedido="
-                + idPedido + ", totalPagar=" + totalPagar + "]";
+        return "ID Pedido: " + idPedido + ", Cliente: " + cliente + ", Fecha: " + this.formatoFecha(fecha) + 
+            ", Hora: " + hora  + ", Total a Pagar: " + totalPagar;
     }
 
 }

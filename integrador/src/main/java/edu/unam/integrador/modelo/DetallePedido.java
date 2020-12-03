@@ -43,11 +43,6 @@ public class DetallePedido {
         this.producto = producto;
     }
 
-    @Override
-    public String toString() {
-        return "DetallePedido [cantidad=" + cantidad + ", idDetallePedido=" + idDetallePedido + ", pedido=" + pedido
-                + ", producto=" + producto + "]";
-    }
 
     public Pedido getPedido() {
         return pedido;
@@ -57,4 +52,9 @@ public class DetallePedido {
         this.pedido = pedido;
     }
 
+    @Override
+    public String toString() {
+        return "ID Detalle Pedido: " + idDetallePedido + ", Pedido: " + pedido
+            + ", Producto: " + producto + ", Cantidad: " + cantidad;
+    }
 }

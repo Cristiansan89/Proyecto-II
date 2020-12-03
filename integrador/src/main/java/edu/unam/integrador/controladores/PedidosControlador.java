@@ -26,8 +26,7 @@ public class PedidosControlador {
     private final ProductosRepositorio productosRepositorio;
     private final DetallesPedidosRepositorio detallesPedidosRepositorio;
 
-    public PedidosControlador(PedidosRepositorio pedidosRepositorio, ClientesRepositorio clientesRepositorio,
-            ProductosRepositorio productosRepositorio, DetallesPedidosRepositorio detallesPedidosRepositorio) {
+    public PedidosControlador(PedidosRepositorio pedidosRepositorio, ClientesRepositorio clientesRepositorio, ProductosRepositorio productosRepositorio, DetallesPedidosRepositorio detallesPedidosRepositorio) {
         this.pedidosRepositorio = pedidosRepositorio;
         this.clientesRepositorio = clientesRepositorio;
         this.productosRepositorio = productosRepositorio;
@@ -62,12 +61,9 @@ public class PedidosControlador {
     }
 
     public void agregar(Context ctx) throws SQLException {
-
         var idpedido = ctx.pathParam("id", Integer.class).get();
         Integer idproducto = ctx.formParam("producto", Integer.class).get();
-
         var cantidad = ctx.formParam("cantidad", Integer.class).get();
-
         var producto = this.productosRepositorio.obtener(idproducto);
         if (producto.getStock() > cantidad) {
             var pedido = this.pedidosRepositorio.obtener(idpedido);
@@ -80,31 +76,30 @@ public class PedidosControlador {
 
     }
 
-    public void crear(Context ctx) // throws SQLException {
-    {
+    public void crear(Context ctx) throws SQLException {
         // Poner en estado de solicitud de pedido "No realizado"
-        System.out.println("accesado");
-        var cliente = this.clientesRepositorio.obtener(2);
-
+        var cliente = this.clientesRepositorio.obtener(23);
         var pedido = new Pedido(cliente);
-
         var id = this.pedidosRepositorio.crear(pedido);
-
         ctx.redirect("/pedidos/nuevo/" + String.valueOf(id));
     }
 
     public void eliminardetalle(Context ctx) throws SQLException, RepositorioException {
-
-        this.detallesPedidosRepositorio
-                .borrar(this.detallesPedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get()));
+        this.detallesPedidosRepositorio.borrar(this.detallesPedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get()));
         ctx.redirect("/pedidos/nuevo/" + ctx.pathParam("idpedido", Integer.class).get());
     }
 
     public void finalizar(Context ctx) throws SQLException, RepositorioException {
-
         var pedido = this.pedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
+        var detallePedidos = this.detallesPedidosRepositorio.listar(pedido.getIdPedido());
+        var totalPagar = 0;
+        for (DetallePedido detalle : detallePedidos) {
+            totalPagar += detalle.getTotalFila();
+        }
         pedido.setEstado(true);
+        pedido.setTotalPagar(Double.valueOf(totalPagar));
         this.pedidosRepositorio.finalizar(pedido);
         ctx.redirect("/");
     }
+
 }

@@ -1,9 +1,9 @@
 @param edu.unam.integrador.paginas.ModeloClientes modelo
 
-@tag.headers()
+@tag.header()
 
-<div style="margin-top: 6em; margin-left: 15em; margin-right: 15em;"  >
-    <h2><b>Clientes</b></h2>
+<div id="estilo_list" >
+    <h2>Clientes</h2>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>

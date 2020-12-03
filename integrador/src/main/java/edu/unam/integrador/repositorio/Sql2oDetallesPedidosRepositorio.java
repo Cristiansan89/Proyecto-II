@@ -21,8 +21,7 @@ public class Sql2oDetallesPedidosRepositorio implements DetallesPedidosRepositor
     private final PedidosRepositorio pedidospRepositorio;
     private final ProductosRepositorio productosRepositorio;
 
-    public Sql2oDetallesPedidosRepositorio(Sql2o sql2o, PedidosRepositorio pedidospRepositorio,
-            ProductosRepositorio productosRepositorio) {
+    public Sql2oDetallesPedidosRepositorio(Sql2o sql2o, PedidosRepositorio pedidospRepositorio, ProductosRepositorio productosRepositorio) {
         this.sql2o = sql2o;
         this.pedidospRepositorio = pedidospRepositorio;
         this.productosRepositorio = productosRepositorio;
@@ -34,22 +33,18 @@ public class Sql2oDetallesPedidosRepositorio implements DetallesPedidosRepositor
             var detalles = new ArrayList<DetallePedido>();
             String sql = "SELECT * FROM detallepedido where detallepedido.idpedido = :id;";
             var resultado = conn.createQuery(sql).addParameter("id", id).executeAndFetchTable().asList();
-
             for (var o : resultado) {
-
                 var pedido = this.pedidospRepositorio.obtener((int) o.get("idpedido"));
                 var producto = this.productosRepositorio.obtener((int) o.get("idproducto"));
                 var detalle = new DetallePedido((int) o.get("cantidad"), pedido, producto);
                 detalle.setIdDetallePedido((int) o.get("iddetallepedido"));
                 detalles.add(detalle);
-
             }
             return detalles;
         } catch (Sql2oException e) {
             System.out.println(e);
             throw new RepositorioException();
         }
-
     }
 
     @Override

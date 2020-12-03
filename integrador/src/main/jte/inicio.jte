@@ -19,7 +19,7 @@
                         </span>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white font-weight-bold h5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Cliente
                         </a>
                         <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
@@ -28,7 +28,7 @@
                         </div>
                     </li> 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white font-weight-bold h5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Producto
                         </a>
                         <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
@@ -37,7 +37,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white font-weight-bold h5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Pedido
                         </a>
                         <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
@@ -49,28 +49,9 @@
             </div>
             <div> 
                 <span><b>${modelo.nombreUsuario}</b></span><br>
-                <div class="format_fecha font-weight-bold">
-                    <p id="dia">
-                        <p>/
-                            <p id="mes" class="mes">
-                                <p>/
-                                    <p id="anio" class="anio"></p>
-                                </p>
-                            </p>
-                        </p>
-                    </p>
-                </div>
+                <p id=""></p>
             </div>
         </nav>
-            <!-- Tarjeta de Publicidad -->
-            <!-- <div >
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div> -->
     @else
         <!-- Inicio de Sesión -->
         <div id="bar_principal">
@@ -87,11 +68,11 @@
                             </span>
                         </li>
                         <li class="nav-item dropdown text-center">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white font-weight-bold h5" href="#" id="navbarDropdown " role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Registrarse
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="">Crear Cuenta</a>
+                                <a class="dropdown-item text-dark" href="/clientes/nuevo">Crear Cuenta</a>
                                 <a class="dropdown-item text-dark" href="">Recuperar Cuenta</a>
                             </div>
                         </li> 
@@ -99,17 +80,23 @@
                 </div>
             </nav>
         </div>
-        <div class="card" style="width: 33rem; top: 5rem; left: 45rem; "> 
-            <div class="card-body">
-                <h3 class="text-center"><b>Iniciar Sesi&oacute;n</b></h3>
-                <br>  
-                <form action="/" method="post" onsubmit="validarUsuario();" class="text-center">
-                    <div class="form-group row">                     
-                            <label class="col-sm-5 col-form-label font-weight-bold"> Usuario </label>
-                        <input class="form-control col-sm-6" type="text" placeholder="nombre del usuario" id="nombreUsuario" name="nombreUsuario"/>
-                    </div>
-                    <button class="btn btn-primary"> Ingresar </button>
-                </form>
+        <div class="card" id="estilo_card"> 
+            <div class="card-footer">
+                <div id="estilo_card_form">
+                    <h3 class="text-center font-weight-bold"> Iniciar Sesi&oacute;n </h3>
+                    <br>  
+                    <form action="/" method="post" onsubmit="validarUsuario();" class="text-center">
+                        <div class="form-group row">                     
+                            <label class="col-sm-3 col-form-label font-weight-bold" id="text-size"> Usuario </label>
+                            <input class="form-control col-sm-8" type="text" id="nombreUsuario" name="nombreUsuario"/>
+                        </div>
+                        <div class="form-group row">                     
+                            <label class="col-sm-3 col-form-label font-weight-bold" id="text-size"> Contraseña </label>
+                            <input class="form-control col-sm-8" type="password" name="contrasena"/>
+                        </div>
+                        <button class="btn btn-primary"> Ingresar </button>
+                    </form>
+                </div>
             </div>
         </div>
     @endif
