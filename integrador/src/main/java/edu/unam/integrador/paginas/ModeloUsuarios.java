@@ -8,4 +8,8 @@ public class ModeloUsuarios {
     public int idUsuario;
     public String nick;
     public List<Usuario> usuarios = new ArrayList<>();
+    public int idCliente;
+    public String rol;
+
+    
 }

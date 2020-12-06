@@ -31,7 +31,7 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     @Override
     public int crear(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Cliente(nombre,apellido, cuil, domicilio, telefono, \"fechaIngreso\") VALUES (:nombre, :apellido, :cuil, :domicilio, :telefono, current_date);";
+            String sql = "INSERT INTO Cliente(nombre, apellido, cuil, domicilio, telefono, \"fechaIngreso\") VALUES (:nombre, :apellido, :cuil, :domicilio, :telefono, current_date);";
             return (int) conn.createQuery(sql).bind(cliente).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();

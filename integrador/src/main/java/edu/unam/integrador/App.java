@@ -1,14 +1,11 @@
 package edu.unam.integrador;
 
 import io.javalin.*;
-import io.javalin.http.Context;
-import java.util.Collections;
 import org.sql2o.Sql2o;
 import edu.unam.integrador.controladores.ClientesControlador;
 import edu.unam.integrador.controladores.ProductosControlador;
 import edu.unam.integrador.controladores.PedidosControlador;
 import edu.unam.integrador.controladores.UsuariosControlador;
-import edu.unam.integrador.paginas.*;
 import edu.unam.integrador.repositorio.RepositorioException;
 import edu.unam.integrador.repositorio.Sql2oClientesRepositorio;
 import edu.unam.integrador.repositorio.Sql2oDetallesPedidosRepositorio;
@@ -23,7 +20,7 @@ public class App {
     public static void main(String[] args) {
 
         // Conexión de sql2o
-        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "410556");
+        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "gpl");
 
         // Repositorio y Controladores
         var usuariosRepositorio = new Sql2oUsuariosRepositorio(sql2o);
@@ -48,7 +45,7 @@ public class App {
             ctx.status(404);
         }).start(8000);
 
-        app.get("/", App::mostrarIndex); // muestra el index
+        app.get("/", usuariosControlador::mostrarIndex); // muestra el index
         app.post("/", usuariosControlador::validarUsuario);
 
         // Cliente
@@ -76,17 +73,6 @@ public class App {
         app.delete("/detallepedido/borrar/:id/:idpedido", pedidosControlador::eliminardetalle);
         app.post("/pedidos/finalizar/:id", pedidosControlador::finalizar);
 
-    }
-
-    private static void mostrarIndex(Context ctx) {
-        var modelo = new ModeloUsuarios();
-        // controlo por cookie
-        if (ctx.cookie("nick") != null) {
-            modelo.nick = ctx.cookie("nick");
-        } else {
-            modelo.nick = "";
-        }
-        ctx.render("inicio.jte", Collections.singletonMap("modelo", modelo));
     }
 
 }

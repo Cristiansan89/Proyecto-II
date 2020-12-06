@@ -7,11 +7,9 @@ import java.sql.SQLException;
 import java.util.Collections;
 
 import edu.unam.integrador.paginas.ModeloCliente;
-import edu.unam.integrador.paginas.ModeloUsuario;
 import edu.unam.integrador.modelo.Cliente;
 import edu.unam.integrador.modelo.Usuario;
 import edu.unam.integrador.paginas.ModeloClientes;
-import edu.unam.integrador.paginas.ModeloUsuarios;
 import edu.unam.integrador.repositorio.ClientesRepositorio;
 import edu.unam.integrador.repositorio.UsuariosRepositorio;
 import edu.unam.integrador.repositorio.RepositorioException;
@@ -40,7 +38,6 @@ public class ClientesControlador {
         var mail = ctx.formParam("mail", String.class).get();
         var nick = ctx.formParam("nick", String.class).get();
         var contrasena = ctx.formParam("contrasena", String.class).get();
-
         var nombre = ctx.formParam("nombre", String.class).get();
         var apellido = ctx.formParam("apellido", String.class).get();
         var cuil = ctx.formParam("cuil", String.class).get();

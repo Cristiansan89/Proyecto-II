@@ -5,6 +5,7 @@ public class Usuario {
     private String mail;
     private String nick;
     private String contrasena;
+    private String rol;
     private Cliente cliente;
 
     public Usuario() {
@@ -17,11 +18,12 @@ public class Usuario {
         this.cliente = cliente;
     }
 
-    public Usuario(int idUsuario, String mail, String nick, String contrasena, Cliente cliente) {
+    public Usuario(int idUsuario, String mail, String nick, String contrasena, String rol, Cliente cliente) {
         this.idUsuario = idUsuario;
         this.mail = mail;
         this.nick = nick;
         this.contrasena = contrasena;
+        this.rol = rol;
         this.cliente = cliente;
     }
 
@@ -53,6 +55,14 @@ public class Usuario {
         return contrasena;
     }
 
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
@@ -67,7 +77,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "ID Usuario: " + idUsuario + ", Nombre Usuario: " + nick + ", Mail: " + mail;
+        return "ID Usuario: " + idUsuario + ", Nombre Usuario: " + nick + ", Mail: " + mail + ", Rol: " + rol;
     }
 
     

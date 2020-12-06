@@ -30,7 +30,7 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
     @Override
     public int crear(Usuario usuario) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Usuario(mail, nick, contrasena,  \"idCliente\") VALUES (:mail, :nick, PGP_SYM_ENCRYPT(:contrasena, 'AES_KEY'), :idCliente);";
+            String sql = "INSERT INTO Usuario(mail, nick, contrasena, rol, \"idCliente\") VALUES (:mail, :nick, PGP_SYM_ENCRYPT(:contrasena, 'AES_KEY'), 'cliente', :idCliente);";
             return (int) conn.createQuery(sql).bind(usuario)
                     .addParameter("idCliente", usuario.getCliente().getIdCliente()).executeUpdate().getKey();
         } catch (Sql2oException e) {
@@ -39,10 +39,10 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
     }
 
     @Override
-    public Usuario obtener(int id) throws RepositorioException {
+    public Usuario obtener(String nick) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM Usuario WHERE \"idUsuario\" = :idUsuario;";
-            return conn.createQuery(sql).addParameter("idUsuario", id).throwOnMappingFailure(false)
+            String sql = "SELECT * FROM Usuario WHERE nick = :nick;";
+            return conn.createQuery(sql).addParameter("nick", nick).throwOnMappingFailure(false)
                     .executeAndFetchFirst(Usuario.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
