@@ -44,4 +44,9 @@ public class UsuariosControlador {
         ctx.render("inicio.jte", Collections.singletonMap("modelo", modelo));
     }
 
+    public void cerrarSesion(Context ctx){
+        ctx.removeCookie("nick", "/");
+        ctx.redirect("/");
+    }
+
 }

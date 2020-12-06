@@ -47,6 +47,7 @@ public class App {
 
         app.get("/", usuariosControlador::mostrarIndex); // muestra el index
         app.post("/", usuariosControlador::validarUsuario);
+        app.get("/cerrar", usuariosControlador::cerrarSesion);
 
         // Cliente
         app.get("/clientes", clientesControlador::listar);

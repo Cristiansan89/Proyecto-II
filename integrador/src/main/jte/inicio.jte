@@ -124,7 +124,7 @@
                                             <span>  ${modelo.nick}  </span>
                                         </a>
                                         <div class="dropdown-menu bg-danger" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item text-light font-weight-bold" href="/">Cerrar Sesi&oacute;n</a>
+                                            <a class="dropdown-item text-light font-weight-bold" href="/cerrar">Cerrar Sesi&oacute;n</a>
                                         </div>
                                     </li>
                                 </ul>      
