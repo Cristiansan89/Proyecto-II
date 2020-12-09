@@ -1,29 +1,31 @@
 package edu.unam.integrador.controladores;
 
 import io.javalin.http.Context;
-
-import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Collections;
 
 import edu.unam.integrador.paginas.ModeloCliente;
 import edu.unam.integrador.modelo.Cliente;
 import edu.unam.integrador.modelo.Usuario;
+import edu.unam.integrador.modelo.ClientePreferencial;
 import edu.unam.integrador.paginas.ModeloClientes;
 import edu.unam.integrador.repositorio.ClientesRepositorio;
 import edu.unam.integrador.repositorio.UsuariosRepositorio;
+import edu.unam.integrador.repositorio.ClientesPreferencialRepositorio;
 import edu.unam.integrador.repositorio.RepositorioException;
 
 public class ClientesControlador {
 
     private final ClientesRepositorio clientesRepositorio;
     private final UsuariosRepositorio usuariosRepositorio;
+    private final ClientesPreferencialRepositorio clientesPreferencialRepositorio;
 
-    public ClientesControlador(ClientesRepositorio clientesRepositorio, UsuariosRepositorio usuariosRepositorio) {
+    public ClientesControlador(ClientesRepositorio clientesRepositorio, UsuariosRepositorio usuariosRepositorio, ClientesPreferencialRepositorio clientesPreferencialRepositorio) {
         this.clientesRepositorio = clientesRepositorio;
         this.usuariosRepositorio = usuariosRepositorio;
+        this.clientesPreferencialRepositorio = clientesPreferencialRepositorio;
     }
-
+    
     public void listar(Context ctx) throws SQLException {
         var modelo = new ModeloClientes();
         modelo.clientes = clientesRepositorio.listar();
@@ -48,6 +50,8 @@ public class ClientesControlador {
         cliente.setIdCliente(clienteId);
         var usuario = new Usuario(mail, nick, contrasena, cliente);
         this.usuariosRepositorio.crear(usuario);
+        var clientePreferencial = new ClientePreferencial();
+        this.clientesPreferencialRepositorio.crear(clientePreferencial);
         ctx.redirect("/");
 
     }
@@ -59,7 +63,7 @@ public class ClientesControlador {
 
     public void modificar(Context ctx) throws SQLException, RepositorioException {
         var modelo = new ModeloCliente();
-        modelo.cliente = this.clientesRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
+        modelo.cliente = this.clientesRepositorio.obtener(ctx.cookie("nick"));
         ctx.render("editarCliente.jte", Collections.singletonMap("modelo", modelo));
     }
 
@@ -79,4 +83,5 @@ public class ClientesControlador {
         this.clientesRepositorio.actualizar(cliente);
         ctx.redirect("/clientes");
     }
+    
 }

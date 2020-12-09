@@ -10,5 +10,7 @@ public class ModeloDetallesPedidos {
     public int idPedido;
     public List<DetallePedido> detallePedidos = new ArrayList<>();
     public List<Producto> productos = new ArrayList<>();
+    public float descuento;
+    public float subtotal;
     public float total;
 }

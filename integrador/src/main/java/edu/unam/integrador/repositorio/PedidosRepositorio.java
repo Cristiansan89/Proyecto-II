@@ -2,6 +2,7 @@ package edu.unam.integrador.repositorio;
 
 import java.util.List;
 import edu.unam.integrador.modelo.Pedido;
+import edu.unam.integrador.modelo.Cliente;
 import edu.unam.integrador.modelo.Producto;
 
 public interface PedidosRepositorio {

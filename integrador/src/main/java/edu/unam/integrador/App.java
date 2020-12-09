@@ -12,6 +12,7 @@ import edu.unam.integrador.repositorio.Sql2oDetallesPedidosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oPedidosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oProductosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oUsuariosRepositorio;
+import edu.unam.integrador.repositorio.Sql2oClientesPreferencialRepositorio;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
@@ -23,20 +24,22 @@ public class App {
         var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/distribuidora", "postgres", "gpl");
 
         // Repositorio y Controladores
+
+        var clientesPreferencialRepositorio = new Sql2oClientesPreferencialRepositorio(sql2o);
+
         var usuariosRepositorio = new Sql2oUsuariosRepositorio(sql2o);
-        var usuariosControlador = new UsuariosControlador(usuariosRepositorio);
+        var usuariosControlador = new UsuariosControlador(usuariosRepositorio, clientesPreferencialRepositorio);
+
 
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
-        var clientesControlador = new ClientesControlador(clientesRepositorio, usuariosRepositorio);
+        var clientesControlador = new ClientesControlador(clientesRepositorio, usuariosRepositorio, clientesPreferencialRepositorio);
 
         var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
         var productosControlador = new ProductosControlador(productosRepositorio);
 
         var pedidosRepositorio = new Sql2oPedidosRepositorio(sql2o);
-        var detallePedidoControlador = new Sql2oDetallesPedidosRepositorio(sql2o, pedidosRepositorio,
-                productosRepositorio);
-        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio,
-                detallePedidoControlador);
+        var detallePedidoControlador = new Sql2oDetallesPedidosRepositorio(sql2o, pedidosRepositorio, productosRepositorio);
+        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio, detallePedidoControlador);
 
         // Crear Servidor
         Javalin app = Javalin.create(config -> {

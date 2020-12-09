@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class ModeloProductos {
     public int idProducto;
-    public String nombreUsuario;
     public List<Producto> productos = new ArrayList<>();
+    public String nick;
+    public String rol;
 }

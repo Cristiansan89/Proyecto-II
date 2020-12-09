@@ -19,13 +19,13 @@ public class ProductosControlador {
 
     public void listar(Context ctx) throws SQLException {
         var modelo = new ModeloProductos();
+        modelo.rol = ctx.cookie("rol");
         modelo.productos = productosRepositorio.listar();
         ctx.render("productos.jte", Collections.singletonMap("modelo", modelo));
     }
 
     public void nuevo(Context ctx) throws SQLException {
         ctx.render("crearProducto.jte");
-
     }
 
     public void crear(Context ctx) throws SQLException {

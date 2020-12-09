@@ -5,13 +5,18 @@ import java.sql.SQLException;
 import java.util.Collections;
 import java.util.Date;
 
+import javax.servlet.http.Cookie;
+
 import edu.unam.integrador.paginas.ModeloPedido;
 import edu.unam.integrador.paginas.ModeloDetallePedido;
 import edu.unam.integrador.modelo.Pedido;
 import edu.unam.integrador.modelo.Cliente;
 import edu.unam.integrador.modelo.DetallePedido;
+import edu.unam.integrador.modelo.Usuario;
 import edu.unam.integrador.paginas.ModeloPedidos;
 import edu.unam.integrador.paginas.ModeloProductos;
+import edu.unam.integrador.paginas.ModeloUsuario;
+import edu.unam.integrador.paginas.ModeloUsuarios;
 import edu.unam.integrador.paginas.ModeloDetallesPedidos;
 import edu.unam.integrador.repositorio.PedidosRepositorio;
 import edu.unam.integrador.repositorio.ProductosRepositorio;
@@ -26,11 +31,13 @@ public class PedidosControlador {
     private final ProductosRepositorio productosRepositorio;
     private final DetallesPedidosRepositorio detallesPedidosRepositorio;
 
-    public PedidosControlador(PedidosRepositorio pedidosRepositorio, ClientesRepositorio clientesRepositorio, ProductosRepositorio productosRepositorio, DetallesPedidosRepositorio detallesPedidosRepositorio) {
+    public PedidosControlador(PedidosRepositorio pedidosRepositorio, ClientesRepositorio clientesRepositorio,
+            ProductosRepositorio productosRepositorio, DetallesPedidosRepositorio detallesPedidosRepositorio) {
         this.pedidosRepositorio = pedidosRepositorio;
         this.clientesRepositorio = clientesRepositorio;
         this.productosRepositorio = productosRepositorio;
         this.detallesPedidosRepositorio = detallesPedidosRepositorio;
+       
     }
 
     public void listar(Context ctx) throws SQLException {
@@ -42,7 +49,7 @@ public class PedidosControlador {
     public void listarProducto(Context ctx) throws SQLException {
         var modelo = new ModeloProductos();
         modelo.productos = pedidosRepositorio.listarProducto();
-        modelo.nombreUsuario = ctx.cookie("nombreUsuario");
+        modelo.nombreUsuario = ctx.cookie("nick");
         ctx.render("formularioPedido.jte", Collections.singletonMap("modelo", modelo));
     }
 
@@ -50,7 +57,7 @@ public class PedidosControlador {
         var id = ctx.pathParam("id", Integer.class).get();
         var modelo = new ModeloDetallesPedidos();
         modelo.productos = pedidosRepositorio.listarProducto();
-        modelo.nombreUsuario = ctx.cookie("nombreUsuario");
+        modelo.nombreUsuario = ctx.cookie("nick");
         modelo.detallePedidos = this.detallesPedidosRepositorio.listar(id);
         modelo.total = 0;
         for (DetallePedido detalle : modelo.detallePedidos) {
@@ -78,7 +85,7 @@ public class PedidosControlador {
 
     public void crear(Context ctx) throws SQLException {
         // Poner en estado de solicitud de pedido "No realizado"
-        var cliente = this.clientesRepositorio.obtener(23);
+        var cliente = this.clientesRepositorio.obtener(ctx.cookie("nick"));
         var pedido = new Pedido(cliente);
         var id = this.pedidosRepositorio.crear(pedido);
         ctx.redirect("/pedidos/nuevo/" + String.valueOf(id));
@@ -101,5 +108,7 @@ public class PedidosControlador {
         this.pedidosRepositorio.finalizar(pedido);
         ctx.redirect("/");
     }
+
+    
 
 }

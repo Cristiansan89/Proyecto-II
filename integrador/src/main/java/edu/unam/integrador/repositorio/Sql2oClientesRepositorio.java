@@ -74,4 +74,15 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
         }
     }
 
+    @Override
+    public Cliente obtener(String nick) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM Cliente, Usuario WHERE nick = :nick;";
+            return conn.createQuery(sql).addParameter("nick", nick).throwOnMappingFailure(false)
+                    .executeAndFetchFirst(Cliente.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
 }

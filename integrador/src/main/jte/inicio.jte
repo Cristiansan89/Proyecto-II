@@ -58,7 +58,7 @@
                                             <span>  ${modelo.nick}  </span>
                                         </a>
                                         <div class="dropdown-menu bg-danger" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item text-light font-weight-bold" href="/">Cerrar Sesi&oacute;n</a>
+                                            <a class="dropdown-item text-light font-weight-bold" href="/cerrar">Cerrar Sesi&oacute;n</a>
                                         </div>
                                     </li>
                                 </ul>      
@@ -68,8 +68,7 @@
                 </div>
             </nav>
         </div>
-    @endif
-    @if (modelo.rol.equals("cliente"))
+    @elseif (modelo.rol.equals("cliente"))
         <!-- Barra de Menú Cliente -->
         <div id="bar_principal">
             <nav class="navbar navbar-expand-lg navbar-light bg-primary">   

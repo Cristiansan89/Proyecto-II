@@ -70,11 +70,26 @@
                                 
                             </tbody>
                             <thead>
+                                <tr class="alert-secondary">
+                                    <td> </td>
+                                    <td> </td>
+                                    <td><b>SubTotal</b></td>
+                                    <td><b>$</b></td>
+                                    <td> </td>
+                                </tr> 
+                                <tr class="bg-light">
+                                    <td> </td>
+                                    <td> </td>
+                                    <td><b>Descuento</b></td>
+                                    <td><b>%</b></td>
+                                    <td> </td>
+                                </tr> 
                                 <tr class="bg-warning">
                                     <td> </td>
                                     <td> </td>
                                     <td><b>Total</b></td>
                                     <td><b>${modelo.total}</b></td>
+                                    <td> </td>
                                 </tr>
                             </thead>
                         </table>

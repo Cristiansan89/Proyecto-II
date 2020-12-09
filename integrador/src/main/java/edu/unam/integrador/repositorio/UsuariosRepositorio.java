@@ -2,6 +2,8 @@ package edu.unam.integrador.repositorio;
 
 import java.util.List;
 import edu.unam.integrador.modelo.Usuario;
+import edu.unam.integrador.modelo.Cliente;
+
 
 public interface UsuariosRepositorio {
 

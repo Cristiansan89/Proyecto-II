@@ -9,6 +9,7 @@ import org.sql2o.Sql2oException;
 
 import edu.unam.integrador.modelo.Pedido;
 import edu.unam.integrador.modelo.Producto;
+import edu.unam.integrador.modelo.Cliente;
 
 public class Sql2oPedidosRepositorio implements PedidosRepositorio {
 
@@ -75,4 +76,5 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
             throw new RepositorioException();
         }
     }
+
 }

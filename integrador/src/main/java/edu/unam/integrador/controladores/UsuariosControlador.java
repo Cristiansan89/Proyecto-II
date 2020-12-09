@@ -1,18 +1,27 @@
 package edu.unam.integrador.controladores;
 
 import edu.unam.integrador.repositorio.UsuariosRepositorio;
+import edu.unam.integrador.repositorio.ClientesPreferencialRepositorio;
+import edu.unam.integrador.repositorio.ClientesRepositorio;
 import edu.unam.integrador.paginas.ModeloUsuarios;
 import io.javalin.http.Context;
 import java.sql.SQLException;
 import java.util.Collections;
+
+import edu.unam.integrador.modelo.Cliente;
+import edu.unam.integrador.modelo.ClientePreferencial;
 import edu.unam.integrador.modelo.Usuario;
 
 public class UsuariosControlador {
     
     private final UsuariosRepositorio usuariosRepositorio;
+    private final ClientesPreferencialRepositorio clientesPreferencialRepositorio;
+    private final ClientesRepositorio clientesRepositorio;
 
-    public UsuariosControlador(UsuariosRepositorio usuariosRepositorio) {
+    public UsuariosControlador(UsuariosRepositorio usuariosRepositorio, ClientesRepositorio clientesRepositorio, ClientesPreferencialRepositorio clientesPreferencialRepositorio) {
         this.usuariosRepositorio = usuariosRepositorio;
+        this.clientesPreferencialRepositorio = clientesPreferencialRepositorio;
+        this.clientesRepositorio = clientesRepositorio;
     }
 
     public void validarUsuario(Context ctx) throws SQLException {
@@ -24,6 +33,10 @@ public class UsuariosControlador {
             ctx.cookie("nick", nick.trim());
             Usuario usuario = this.usuariosRepositorio.obtener(nick);
             ctx.cookie("rol", usuario.getRol());
+            Cliente cliente = this.clientesRepositorio.obtener(nick);
+            ClientePreferencial clientePreferencial = this.clientesPreferencialRepositorio.obtenerClientePreferencial(cliente.getIdCliente());
+            clientePreferencial.getDescuento();
+            this.clientesPreferencialRepositorio.actualizar(clientePreferencial);
             ctx.redirect("/");
         } else {
             ctx.redirect("/");

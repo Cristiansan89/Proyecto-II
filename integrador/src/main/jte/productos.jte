@@ -17,8 +17,11 @@
                     <th>Stock</th>
                     <th>Precio Unitario</th>
                     <th>Detalle</th>
-                    <th> </th>
-                    <th> </th>
+                    @if (modelo.rol.equals("admin"))
+                        <th> </th>
+                        <th> </th>
+                    
+                    @endif
                 </tr>
             </thead>
             <tbody>
@@ -33,8 +36,10 @@
                         <td>${producto.getStock()}</td>
                         <td>${producto.getPrecioUnitario()}</td>
                         <td>${producto.getDetalle()}</td>
-                        <td> <a type="button" class="btn btn-info no-gutters" href="/productos/modificar/${producto.getIdProducto()}"> Editar </a></td>
-                        <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${producto.getIdProducto()})"> Eliminar </button></td>
+                        @if (modelo.rol.equals("admin"))
+                            <td> <a type="button" class="btn btn-info no-gutters" href="/productos/modificar/${producto.getIdProducto()}"> Editar </a></td>
+                            <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${producto.getIdProducto()})"> Eliminar </button></td>
+                        @endif
                     </tr>
                 @endfor
             </tbody>
