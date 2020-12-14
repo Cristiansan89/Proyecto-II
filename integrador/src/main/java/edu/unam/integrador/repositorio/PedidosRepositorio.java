@@ -2,7 +2,6 @@ package edu.unam.integrador.repositorio;
 
 import java.util.List;
 import edu.unam.integrador.modelo.Pedido;
-import edu.unam.integrador.modelo.Cliente;
 import edu.unam.integrador.modelo.Producto;
 
 public interface PedidosRepositorio {
@@ -13,5 +12,7 @@ public interface PedidosRepositorio {
     int crear(Pedido pedido) throws RepositorioException;
     // boolean anular(Pedido pedido) throws RepositorioException;
     Pedido obtener(int id) throws RepositorioException;
+    Pedido obtenerClientePedido(String nick) throws RepositorioException;
+    Pedido obtenerCliente(int id) throws RepositorioException;
     Pedido finalizar(Pedido pedido) throws RepositorioException;
 }

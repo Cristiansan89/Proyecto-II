@@ -15,6 +15,13 @@ div h2{
     font-family: times;
 }
 
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
 
 @media screen and (min-width: 1366px) and (max-width: 1920px){
     #bar_principal{
@@ -45,10 +52,9 @@ div h2{
     }
 
 
-   #table_menu{
-       border-spacing: 0px;
-
-   }
+    #table_menu{
+        border-spacing: 0px;
+    }
 
     #text-size{
         font-size: 18px;
@@ -85,9 +91,12 @@ div h2{
         margin-right: 15em;
     }
 
-  
-
-  
+    #cuerpo_datos{
+        width: 40rem; 
+        top: 5rem; 
+        left: 10rem;
+        margin-bottom: 10rem;
+    }
 
     #estilo_card_list{
         width: 95%; 

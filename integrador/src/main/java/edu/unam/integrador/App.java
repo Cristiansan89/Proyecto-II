@@ -6,6 +6,7 @@ import edu.unam.integrador.controladores.ClientesControlador;
 import edu.unam.integrador.controladores.ProductosControlador;
 import edu.unam.integrador.controladores.PedidosControlador;
 import edu.unam.integrador.controladores.UsuariosControlador;
+import edu.unam.integrador.controladores.DetallesPedidosControlador;
 import edu.unam.integrador.repositorio.RepositorioException;
 import edu.unam.integrador.repositorio.Sql2oClientesRepositorio;
 import edu.unam.integrador.repositorio.Sql2oDetallesPedidosRepositorio;
@@ -13,8 +14,6 @@ import edu.unam.integrador.repositorio.Sql2oPedidosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oProductosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oUsuariosRepositorio;
 import edu.unam.integrador.repositorio.Sql2oClientesPreferencialRepositorio;
-
-import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class App {
 
@@ -26,21 +25,18 @@ public class App {
         // Repositorio y Controladores
 
         var clientesPreferencialRepositorio = new Sql2oClientesPreferencialRepositorio(sql2o);
-
-        var usuariosRepositorio = new Sql2oUsuariosRepositorio(sql2o);
-        var usuariosControlador = new UsuariosControlador(usuariosRepositorio, clientesPreferencialRepositorio);
-
-
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
-        var clientesControlador = new ClientesControlador(clientesRepositorio, usuariosRepositorio, clientesPreferencialRepositorio);
-
         var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
-        var productosControlador = new ProductosControlador(productosRepositorio);
-
         var pedidosRepositorio = new Sql2oPedidosRepositorio(sql2o);
+        var usuariosRepositorio = new Sql2oUsuariosRepositorio(sql2o);
+        
+        var usuariosControlador = new UsuariosControlador(usuariosRepositorio);
+        var clientesControlador = new ClientesControlador(clientesRepositorio, usuariosRepositorio, clientesPreferencialRepositorio);
+        var productosControlador = new ProductosControlador(productosRepositorio);
         var detallePedidoControlador = new Sql2oDetallesPedidosRepositorio(sql2o, pedidosRepositorio, productosRepositorio);
-        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio, detallePedidoControlador);
-
+        var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio, detallePedidoControlador, clientesPreferencialRepositorio);
+        var detallesPedidosControlador = new DetallesPedidosControlador(pedidosRepositorio, clientesRepositorio, detallePedidoControlador, clientesPreferencialRepositorio);
+       
         // Crear Servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public");
@@ -68,15 +64,19 @@ public class App {
         app.post("/productos/actualizar/:id", productosControlador::actualizar);
         app.delete("/productos/borrar/:id", productosControlador::borrar);
 
-        // Pedido
-        app.get("/pedidos", pedidosControlador::listar);
+        // Pedido y Detalle Pedido
+        app.get("/pedidos/listapedido", pedidosControlador::listar);
+        app.get("/pedidos/listadetalle/:id", detallesPedidosControlador::listarDetalle);
         app.get("/pedidos/crear", pedidosControlador::crear);
         app.post("/pedidos/agregardetalle/:id", pedidosControlador::agregar);
         app.get("/pedidos/nuevo/:id", pedidosControlador::nuevo);
         app.get("/pedidos/formulario", pedidosControlador::listarProducto);
         app.delete("/detallepedido/borrar/:id/:idpedido", pedidosControlador::eliminardetalle);
         app.post("/pedidos/finalizar/:id", pedidosControlador::finalizar);
-
+        
+        // Usuario
+        app.get("/usuarios/modificar/:id", usuariosControlador::modificar);
+        app.post("/usuarios/actualizar/:id", usuariosControlador::actualizar);
     }
 
 }

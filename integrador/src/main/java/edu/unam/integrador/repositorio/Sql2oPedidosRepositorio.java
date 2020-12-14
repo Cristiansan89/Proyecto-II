@@ -9,7 +9,6 @@ import org.sql2o.Sql2oException;
 
 import edu.unam.integrador.modelo.Pedido;
 import edu.unam.integrador.modelo.Producto;
-import edu.unam.integrador.modelo.Cliente;
 
 public class Sql2oPedidosRepositorio implements PedidosRepositorio {
 
@@ -27,13 +26,23 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public List<Pedido> listar() throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM pedido;";
+            String sql = "SELECT * FROM pedido where estado = 'true';";
             return conn.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Pedido.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
     }
-
+/*
+    @Override
+    public List<Pedido> listarTodo(int idPedido) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM pedido where idPedido = :idPedido;";
+            return conn.createQuery(sql).addParameter("idPedido", idPedido).throwOnMappingFailure(false).executeAndFetch(Pedido.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+*/
     @Override
     public List<Producto> listarProducto() throws RepositorioException {
         try (Connection conn = sql2o.open()) {
@@ -47,9 +56,8 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public int crear(Pedido pedido) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Pedido (fecha, hora, totalPagar, \"idCliente\", estado) VALUES (current_date, CONCAT(extract(hour from now())::text,':', extract(minute from now())::text), 0,:clienteId, false);";
-            return (int) conn.createQuery(sql).bind(pedido)
-                    .addParameter("clienteId", pedido.getCliente().getIdCliente()).executeUpdate().getKey();
+            String sql = "INSERT INTO Pedido (fecha, hora, descuento, totalPagar, \"idCliente\", estado) VALUES (current_date, CONCAT(extract(hour from now())::text,':', extract(minute from now())::text), :descuento, 0, :idCliente, false);";
+            return (int) conn.createQuery(sql).bind(pedido).addParameter("idCliente", pedido.getCliente().getIdCliente()).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
@@ -58,8 +66,29 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public Pedido obtener(int id) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM pedido WHERE \"idPedido\" = :idPedido;";
+            String sql = "SELECT * FROM Pedido WHERE \"idPedido\" = :idPedido;";
             return conn.createQuery(sql).addParameter("idPedido", id).throwOnMappingFailure(false)
+                    .executeAndFetchFirst(Pedido.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
+    @Override
+    public Pedido obtenerClientePedido(String nick) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM Usuario WHERE nick = :nick;";
+            return conn.createQuery(sql).addParameter("nick", nick).throwOnMappingFailure(false).executeAndFetchFirst(Pedido.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
+    @Override
+    public Pedido obtenerCliente(int id) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM cliente WHERE \"idCliente\" = :idCliente;";
+            return conn.createQuery(sql).addParameter("idCliente", id).throwOnMappingFailure(false)
                     .executeAndFetchFirst(Pedido.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -76,5 +105,5 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
             throw new RepositorioException();
         }
     }
-
+    
 }

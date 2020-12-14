@@ -30,8 +30,9 @@ public class Sql2oClientesPreferencialRepositorio implements ClientesPreferencia
     @Override
     public int crear(ClientePreferencial clientePreferencial) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO ClientePreferencial(descuento) VALUES (0.0);";
-            return (int) conn.createQuery(sql).bind(clientePreferencial).executeUpdate().getKey();
+            String sql = "INSERT INTO ClientePreferencial(descuento, \"idCliente\") VALUES (0, :idCliente);";
+            return (int) conn.createQuery(sql).bind(clientePreferencial)
+                .addParameter("idCliente", clientePreferencial.getCliente().getIdCliente()).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
@@ -50,17 +51,6 @@ public class Sql2oClientesPreferencialRepositorio implements ClientesPreferencia
     }
 
     @Override
-    public void actualizar(ClientePreferencial clientePreferencial) throws RepositorioException {
-        String sql = "UPDATE Usuario SET (descuento) WHERE \"idClientePreferencial\" = :idClientePreferencial;";
-        try (Connection conn = sql2o.open()) {
-            conn.createQuery(sql).addParameter("idClientePreferencial", clientePreferencial.getIdClientePreferencial())
-                    .addParameter("descuento", clientePreferencial.getDescuento());
-        } catch (Sql2oException e) {
-            throw new RepositorioException();
-        }
-    }
-
-    @Override
     public ClientePreferencial obtener(int id) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "SELECT * FROM ClientePreferencial WHERE \"idClientePreferencial\" = :idClientePreferencial;";
@@ -72,10 +62,10 @@ public class Sql2oClientesPreferencialRepositorio implements ClientesPreferencia
     }
     
     @Override
-    public ClientePreferencial obtenerClientePreferencial(int idCliente) throws RepositorioException {
+    public ClientePreferencial obtenerCliente(int id) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM ClientePreferencial, Cliente WHERE \"idCliente\" = :idCliente;";
-            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false)
+            String sql = "SELECT * FROM ClientePreferencial WHERE \"idCliente\" = :idCliente;";
+            return conn.createQuery(sql).addParameter("idCliente", id).throwOnMappingFailure(false)
                     .executeAndFetchFirst(ClientePreferencial.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();

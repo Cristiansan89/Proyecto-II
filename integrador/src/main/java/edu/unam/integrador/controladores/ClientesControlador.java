@@ -46,11 +46,11 @@ public class ClientesControlador {
         var domicilio = ctx.formParam("domicilio", String.class).get();
         var telefono = ctx.formParam("telefono", String.class).get();
         var cliente = new Cliente(nombre, apellido, cuil, domicilio, telefono);
-        var clienteId = this.clientesRepositorio.crear(cliente);
-        cliente.setIdCliente(clienteId);
+        var idCliente = this.clientesRepositorio.crear(cliente);
+        cliente.setIdCliente(idCliente);
         var usuario = new Usuario(mail, nick, contrasena, cliente);
         this.usuariosRepositorio.crear(usuario);
-        var clientePreferencial = new ClientePreferencial();
+        var clientePreferencial = new ClientePreferencial(cliente);
         this.clientesPreferencialRepositorio.crear(clientePreferencial);
         ctx.redirect("/");
 
@@ -63,7 +63,8 @@ public class ClientesControlador {
 
     public void modificar(Context ctx) throws SQLException, RepositorioException {
         var modelo = new ModeloCliente();
-        modelo.cliente = this.clientesRepositorio.obtener(ctx.cookie("nick"));
+        var user = this.clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
+        modelo.cliente = this.clientesRepositorio.obtener(user.getIdCliente());
         ctx.render("editarCliente.jte", Collections.singletonMap("modelo", modelo));
     }
 
@@ -81,7 +82,7 @@ public class ClientesControlador {
         cliente.setTelefono(telefono);
         cliente.setNombre(nombre);
         this.clientesRepositorio.actualizar(cliente);
-        ctx.redirect("/clientes");
+        ctx.redirect("/");
     }
     
 }

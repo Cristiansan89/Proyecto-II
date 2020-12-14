@@ -1,12 +1,15 @@
 package edu.unam.integrador.modelo;
 
-import java.util.Date;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class Pedido {
     private int idPedido;
     private Date fecha;
     private String hora;
+    private Double descuento;
     private Double totalPagar;
     private Cliente cliente;
     private boolean estado;
@@ -14,13 +17,14 @@ public class Pedido {
     public Pedido() {
     }
 
-    public Pedido(Cliente cliente) {
+    public Pedido(Cliente cliente){
         this.cliente = cliente;
     }
 
-    public Pedido(Date fecha, String hora, Double totalPagar, Cliente cliente, boolean estado) {
+    public Pedido(Date fecha, String hora, Double descuento, Double totalPagar, Cliente cliente, boolean estado) {
         this.fecha = fecha;
         this.hora = hora;
+        this.descuento = descuento;
         this.totalPagar = totalPagar;
         this.cliente = cliente;
         this.estado = estado;
@@ -48,6 +52,14 @@ public class Pedido {
 
     public void setHora(String hora) {
         this.hora = hora;
+    }
+
+    public Double getDescuento(){
+        return descuento;
+    }
+
+    public void setDescuento(Double descuento){
+        this.descuento = descuento;
     }
 
     public Double getTotalPagar() {
@@ -91,10 +103,19 @@ public class Pedido {
         return formatoFecha;
     }
 
+    public String formatoHora(String hora){
+        String formato = "HH:mm";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formato);
+        String formatoHora = simpleDateFormat.format(hora);
+        return formatoHora;     
+    }
+
     @Override
     public String toString() {
-        return "ID Pedido: " + idPedido + ", Cliente: " + cliente + ", Fecha: " + this.formatoFecha(fecha) + 
-            ", Hora: " + hora  + ", Total a Pagar: " + totalPagar + ", Estado: " + this.tipoEstadoStr();
+        return  "ID Pedido: " + idPedido + ", Fecha: " + this.formatoFecha(fecha) + ", Hora: " + hora + ", Estado: " + this.tipoEstadoStr() + ", Descuento: " + descuento + 
+            ", Total a Pagar: " + totalPagar + ", Cliente: " + cliente;
     }
+
+    
 
 }

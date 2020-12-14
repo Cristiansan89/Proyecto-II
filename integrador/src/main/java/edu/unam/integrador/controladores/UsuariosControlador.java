@@ -1,31 +1,24 @@
 package edu.unam.integrador.controladores;
 
 import edu.unam.integrador.repositorio.UsuariosRepositorio;
-import edu.unam.integrador.repositorio.ClientesPreferencialRepositorio;
-import edu.unam.integrador.repositorio.ClientesRepositorio;
+import edu.unam.integrador.paginas.ModeloUsuario;
 import edu.unam.integrador.paginas.ModeloUsuarios;
 import io.javalin.http.Context;
 import java.sql.SQLException;
 import java.util.Collections;
 
-import edu.unam.integrador.modelo.Cliente;
-import edu.unam.integrador.modelo.ClientePreferencial;
 import edu.unam.integrador.modelo.Usuario;
 
 public class UsuariosControlador {
     
     private final UsuariosRepositorio usuariosRepositorio;
-    private final ClientesPreferencialRepositorio clientesPreferencialRepositorio;
-    private final ClientesRepositorio clientesRepositorio;
 
-    public UsuariosControlador(UsuariosRepositorio usuariosRepositorio, ClientesRepositorio clientesRepositorio, ClientesPreferencialRepositorio clientesPreferencialRepositorio) {
+    public UsuariosControlador(UsuariosRepositorio usuariosRepositorio) {
         this.usuariosRepositorio = usuariosRepositorio;
-        this.clientesPreferencialRepositorio = clientesPreferencialRepositorio;
-        this.clientesRepositorio = clientesRepositorio;
+        
     }
 
     public void validarUsuario(Context ctx) throws SQLException {
-
         String nick = ctx.formParam("nick", String.class).get();
         String clave = ctx.formParam("contrasena", String.class).get();
         var resultado = this.usuariosRepositorio.clave(nick, clave);
@@ -33,10 +26,6 @@ public class UsuariosControlador {
             ctx.cookie("nick", nick.trim());
             Usuario usuario = this.usuariosRepositorio.obtener(nick);
             ctx.cookie("rol", usuario.getRol());
-            Cliente cliente = this.clientesRepositorio.obtener(nick);
-            ClientePreferencial clientePreferencial = this.clientesPreferencialRepositorio.obtenerClientePreferencial(cliente.getIdCliente());
-            clientePreferencial.getDescuento();
-            this.clientesPreferencialRepositorio.actualizar(clientePreferencial);
             ctx.redirect("/");
         } else {
             ctx.redirect("/");
@@ -59,6 +48,26 @@ public class UsuariosControlador {
 
     public void cerrarSesion(Context ctx){
         ctx.removeCookie("nick", "/");
+        ctx.redirect("/");
+    }
+
+    public void modificar(Context ctx){
+        var modelo = new ModeloUsuario();
+        modelo.usuario = this.usuariosRepositorio.obtener(ctx.cookie("nick"));
+        modelo.nick = ctx.cookie("nick");
+        ctx.render("editarUsuario.jte", Collections.singletonMap("modelo", modelo));
+    }
+
+    public void actualizar(Context ctx) throws SQLException {
+        var id = ctx.pathParam("id", Integer.class).get();
+        Usuario usuario = this.usuariosRepositorio.obtener(id);
+        var mail = ctx.formParam("mail", String.class).get();
+        var contrasena = ctx.formParam("contrasena", String.class).get();
+        
+        usuario.setMail(mail);
+        usuario.setContrasena(contrasena);
+
+        this.usuariosRepositorio.actualizar(usuario);
         ctx.redirect("/");
     }
 

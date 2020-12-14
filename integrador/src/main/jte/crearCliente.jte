@@ -4,31 +4,31 @@
 <div class="card" id="estilo_card"> 
     <div class="card-footer">
         <div id="estilo_card_form"> 
-            <form action="/clientes/crear" method="post">
+            <form action="/clientes/crear" method="post" onsubmit="verificarPasswords(); return false">
                 <h2>Datos del Usuario</h2>
                 <br>
                 <label for="mail" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Mail</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="email" name="mail"/>
+                        <input class="form-control" type="email" name="mail" required/>
                     </div>
                 </div>
                 <label for="nick" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Usuario</label>    
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="nick"/>
+                        <input class="form-control" type="text" name="nick" required/>
                     </div>
                 </div>
                 <label for="contrasena" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Contraseña</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="password" name="contrasena"/>
+                        <input class="form-control" type="password" id="contrasena" name="contrasena" required/>
                     </div>
                 </div>
-                <label for="repetirContrasena" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Repetir Contraseña</label>
+                <label for="contrasena1" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Repetir Contraseña</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="password" name="repetirContrasena"/>
+                        <input class="form-control" type="password" id="contrasena1" name="contrasena1" required/>
                     </div>
                 </div>
                 <br>
@@ -38,48 +38,60 @@
                 <label for="nombre" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Nombre</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="nombre"/>
+                        <input class="form-control" type="text" name="nombre" required/>
                     </div>
                 </div>
                 <label for="apellido" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Apellido</label>    
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="apellido"/>
+                        <input class="form-control" type="text" name="apellido" required/>
                     </div>
                 </div>
                 <label for="cuil" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Cuil</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input id="cuil" class="form-control" type="number" name="cuil"/>
+                        <input id="cuil" class="form-control" type="number" name="cuil" required/>
                     </div>
                 </div>
                 <label for="domicilio" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Domicilio</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="domicilio"/>
+                        <input class="form-control" type="text" name="domicilio" required/>
                     </div>
                 </div>
                 <label for="telefono" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Tel&eacute;fono</label>   
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input id="telefono" class="form-control" type="number" name="telefono"/>
+                        <input id="telefono" class="form-control" type="number" name="telefono" required/>
                     </div>
                 </div>
+                <div id="msg"></div>
+                <!-- Mensajes de Verificación -->
+                <div id="error" class="alert alert-danger col-sm-10 ocultar" role="alert">
+                    Las Contraseñas no coinciden, vuelve a intentar !
+                </div>
+                <div id="ok" class="alert alert-success col-sm-10 ocultar" role="alert">
+                    Las Contraseñas coinciden ! (Procesando formulario ... )
+                </div>
+                <!-- Fin Mensajes de Verificación -->
                 <div class="text-center" style="margin-right: 4em;">
-                    <button type="submit" class="btn btn-primary"> Guardar </button>
+                    <button type="submit" id="login" class="btn btn-primary"> Guardar </button>
                     <a href="/" type="button" class="btn btn-secondary"> Volver </a>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script>
 
-$(document).ready(function(){
-    $('#cuil').mask('00000000000');
-    $('#telefono').mask('0000000000');
-  });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+<script src="/js/usuario.js"></>
+
+<script>
+    $(document).ready(function(){
+        $('#cuil').mask('00000000000');
+        $('#telefono').mask('0000000000');
+    });
 </script>
   
 @tag.footer()

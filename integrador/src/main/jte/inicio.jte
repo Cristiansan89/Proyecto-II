@@ -40,7 +40,7 @@
                                 Pedido
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/pedidos">Ver Pedido</a>
+                                <a class="dropdown-item text-dark" href="/pedidos/listapedido"> Ver Pedido </a>
                             </div>
                         </li>
                     </ul>
@@ -88,7 +88,8 @@
                                 Cliente
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/clientes/modificar/:id">Editar Mis Datos</a>
+                                <a class="dropdown-item text-dark" href="/clientes/modificar"> Editar Mis Datos </a>
+                                <a class="dropdown-item text-dark" href="/usuarios/modificar"> Cambiar Contrase&ntilde;a </a>
                             </div>
                         </li> 
                         <li class="nav-item dropdown">
@@ -96,7 +97,7 @@
                                 Producto
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/productos">Ver Producto</a>
+                                <a class="dropdown-item text-dark" href="/productos"> Ver Producto </a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -104,8 +105,8 @@
                                 Pedido
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/pedidos/crear">Realizar Pedido</a>
-                                <a class="dropdown-item text-dark" href="/pedidos/lista/:id">Mis Pedido</a>
+                                <a class="dropdown-item text-dark" href="/pedidos/crear"> Realizar Pedido </a>
+                                <a class="dropdown-item text-dark" href="/pedidos/lista/:id"> Mis Pedido </a>
                             </div>
                         </li>
                     </ul>

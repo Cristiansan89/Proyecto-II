@@ -4,16 +4,11 @@ package edu.unam.integrador.repositorio;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.namespace.QName;
-
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
 import edu.unam.integrador.modelo.DetallePedido;
-import edu.unam.integrador.modelo.Pedido;
-import edu.unam.integrador.repositorio.PedidosRepositorio;
-import edu.unam.integrador.repositorio.ProductosRepositorio;
 
 public class Sql2oDetallesPedidosRepositorio implements DetallesPedidosRepositorio {
 

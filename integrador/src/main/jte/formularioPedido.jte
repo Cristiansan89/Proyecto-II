@@ -22,7 +22,7 @@
                 <label for="unCliente" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Cliente</label>    
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" value="${modelo.nombreUsuario}" name="unCliente" readonly/>
+                        <input class="form-control" type="text" value="${modelo.nombre} ${modelo.apellido}" name="unCliente" readonly/>
                     </div>
                 </div>
                 <label for="cantidad" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Cantidad</label>
@@ -74,14 +74,14 @@
                                     <td> </td>
                                     <td> </td>
                                     <td><b>SubTotal</b></td>
-                                    <td><b>$</b></td>
+                                    <td><b>${modelo.subtotal}</b></td>
                                     <td> </td>
                                 </tr> 
                                 <tr class="bg-light">
                                     <td> </td>
                                     <td> </td>
-                                    <td><b>Descuento</b></td>
-                                    <td><b>%</b></td>
+                                    <td><b>Descuento ${modelo.valdescuento}%</b></td>
+                                    <td><b>${modelo.descuento}</b></td>
                                     <td> </td>
                                 </tr> 
                                 <tr class="bg-warning">

@@ -8,5 +8,7 @@ public class ModeloProductos {
     public int idProducto;
     public List<Producto> productos = new ArrayList<>();
     public String nick;
+    public String nombre;
+    public String apellido;
     public String rol;
 }

@@ -6,11 +6,10 @@ import edu.unam.integrador.modelo.ClientePreferencial;
 
 public interface ClientesPreferencialRepositorio {
     
-    public List<ClientePreferencial> listar();
-    public int crear(ClientePreferencial clientePreferencial);
-    public boolean borrar(ClientePreferencial clientePreferencialario);
-    public void actualizar(ClientePreferencial clientePreferencial);
-    public ClientePreferencial obtener(int id);
-    public ClientePreferencial obtenerClientePreferencial(int idCliente);
-
+    List<ClientePreferencial> listar();
+    int crear(ClientePreferencial clientePreferencial);
+    boolean borrar(ClientePreferencial clientePreferencialario);
+    ClientePreferencial obtener(int id);
+    ClientePreferencial obtenerCliente(int id);
+    
 }

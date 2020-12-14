@@ -50,6 +50,17 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
     }
 
     @Override
+    public Usuario obtener(int id) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM Usuario WHERE \"idUsuario\" = :idUsuario;";
+            return conn.createQuery(sql).addParameter("idUsuario", id).throwOnMappingFailure(false)
+                    .executeAndFetchFirst(Usuario.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
+    @Override
     public boolean borrar(Usuario usuario) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "DELETE FROM Usuario WHERE \"idUsuario\" = :idUsuario;";

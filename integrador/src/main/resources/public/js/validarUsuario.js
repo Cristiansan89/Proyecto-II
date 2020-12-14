@@ -1,4 +1,3 @@
-
 function validarUsuario() {
     // obtengo elemento de la pagina con id nombre del Usuario
     const nick = document.getElementById("nick");
