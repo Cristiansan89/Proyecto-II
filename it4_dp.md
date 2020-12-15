@@ -35,7 +35,7 @@
 ![HU-43](Documentos/IteracionIV/HistoriaUsuario/ModificarUsuario.jpg "Modificar Usuario")
 <br>
 
-![HU-44](Documentos/IteracionIV/HistoriaUsuario/ModificarDatosUsuario.jpg "Modificar Datos de Usuario")
+![HU-44](Documentos/IteracionIV/HistoriaUsuario/ModificarDatosUsuario.JPG "Modificar Datos de Usuario")
 <br>
 
 ![HU-45](Documentos/IteracionIV/HistoriaUsuario/ConfirmarModificacionUsuario.jpg "Confirmar Modificación de Usuario")
