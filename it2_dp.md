@@ -1,6 +1,4 @@
-# Diseño Orientado a Objeto
-
-# Iteración N° 2
+# Diseño Orientado a Objeto - Iteración N° 2
 
 <h2>Modelo de Dominio</h2>
 
