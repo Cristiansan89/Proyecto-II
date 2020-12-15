@@ -1,4 +1,4 @@
-# Diseño Orientado a Objeto - Iteración 3
+# Diseño Orientado a Objeto - Iteración III
 
 <h2>Modelo de Dominio</h2>
 
