@@ -1,4 +1,4 @@
-# Diseño Orientado a Objeto
+# Diseño Orientado a Objeto - Iteración II
 
 <h2>Modelo de Dominio</h2>
 
@@ -133,3 +133,11 @@
 
 * Actualizar el **Repositorio** y **Controlador** del *Cliente* y *Producto*.
 
+
+# Corrección de Archivo Anteriores
+
+* Se corrigió el Módulo Cliente al cual se le agregó la fecha de ingreso.
+
+* La fecha de ingreso del cliente se implemento en la codificación.
+
+* Se modificarón las Historia de Usuario Cliente en la cual incluían la fecha de ingreso.

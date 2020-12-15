@@ -1,4 +1,4 @@
-# Diseño Orientado a Objeto
+# Diseño Orientado a Objeto - Iteración III
 
 <h2>Modelo de Dominio</h2>
 
@@ -48,3 +48,12 @@
 * Crear el **Modelo**, **Repositorio** y **Controlador** del *Cliente Preferencial*.
 
 * Actualizar el **Repositorio** y **Controlador** del *Cliente*.
+
+
+# Corrección de Archivo Anteriores
+
+* Se agregó el estado al Moduló de Pedido y se corrigen en la Historia de Usuario y Codificación de Pedido.
+
+* Se corrigió la redacción de la Historia de Usuario de Pedido.
+
+* Se han modificado el Modelo de Dominio de la Tabla de DetallePedido. 
