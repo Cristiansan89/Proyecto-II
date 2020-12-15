@@ -27,8 +27,12 @@ public class DetallePedido {
         return cantidad;
     }
 
-    public double getTotalFila() {
+    public double getSubTotal(){
         return this.getProducto().getPrecioUnitario() * this.getCantidad();
+    }
+
+    public double getTotalFila() {
+        return (((this.getProducto().getPrecioUnitario() * this.getCantidad()) * this.pedido.getDescuento()) / 100);
     }
 
     public void setCantidad(int cantidad) {

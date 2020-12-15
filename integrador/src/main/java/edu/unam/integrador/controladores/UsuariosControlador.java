@@ -1,5 +1,6 @@
 package edu.unam.integrador.controladores;
 
+import edu.unam.integrador.repositorio.ClientesRepositorio;
 import edu.unam.integrador.repositorio.UsuariosRepositorio;
 import edu.unam.integrador.paginas.ModeloUsuario;
 import edu.unam.integrador.paginas.ModeloUsuarios;
@@ -7,15 +8,17 @@ import io.javalin.http.Context;
 import java.sql.SQLException;
 import java.util.Collections;
 
+import edu.unam.integrador.modelo.Cliente;
 import edu.unam.integrador.modelo.Usuario;
 
 public class UsuariosControlador {
     
     private final UsuariosRepositorio usuariosRepositorio;
+    private final ClientesRepositorio clientesRepositorio;
 
-    public UsuariosControlador(UsuariosRepositorio usuariosRepositorio) {
+    public UsuariosControlador(UsuariosRepositorio usuariosRepositorio, ClientesRepositorio clientesRepositorio) {
         this.usuariosRepositorio = usuariosRepositorio;
-        
+        this.clientesRepositorio = clientesRepositorio;
     }
 
     public void validarUsuario(Context ctx) throws SQLException {
@@ -25,7 +28,9 @@ public class UsuariosControlador {
         if (resultado) {
             ctx.cookie("nick", nick.trim());
             Usuario usuario = this.usuariosRepositorio.obtener(nick);
+            Cliente cliente = this.clientesRepositorio.obtenerCliente(nick);
             ctx.cookie("rol", usuario.getRol());
+            ctx.cookie("cliente", String.valueOf(cliente.getIdCliente()));
             ctx.redirect("/");
         } else {
             ctx.redirect("/");

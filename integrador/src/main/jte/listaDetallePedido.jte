@@ -7,10 +7,10 @@
         <div id="estilo_card_form"> 
             <h2>Datos del Cliente</h2>
             <br>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Apellido: ${modelo.apellido}</label>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Nombre: ${modelo.nombre}</label>
+            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Apellido: <p class="text-uppercase">${modelo.apellido}</p></label>
+            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Nombre: <p class="text-uppercase">${modelo.nombre}</p></label>
             <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Cuil: ${modelo.cuil}</label>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Domicilio: ${modelo.domicilio}</label>
+            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Domicilio: <p class="text-uppercase">${modelo.domicilio}</p></label>
             <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Tel&eacute;fono: ${modelo.telefono}</label>
         </div>
     </div>
@@ -61,7 +61,7 @@
             </thead>
         </table>
     </div>
-    <a href="/pedidos" style="float: left;" type="button" class="btn btn-primary"> Volver </a>
+    <a href="/pedidos/listapedido" style="float: left;" type="button" class="btn btn-primary"> Volver </a>
 </div>
 
 

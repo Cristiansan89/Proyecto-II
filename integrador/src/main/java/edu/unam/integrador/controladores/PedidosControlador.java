@@ -37,7 +37,7 @@ public class PedidosControlador {
 
     public void listar(Context ctx) throws SQLException {
         var modelo = new ModeloPedidos();
-        modelo.pedidos = pedidosRepositorio.listar();
+        modelo.pedidos = this.pedidosRepositorio.listar();
         ctx.render("pedidos.jte", Collections.singletonMap("modelo", modelo));
     }
 
@@ -65,8 +65,8 @@ public class PedidosControlador {
         var preferencial = clientesPreferencialRepositorio.obtenerCliente(cliente.getIdCliente());
         modelo.valdescuento = preferencial.getDescuento();
         for (DetallePedido detalle : modelo.detallePedidos) {
-            modelo.subtotal += detalle.getTotalFila();
-            modelo.descuento = (modelo.subtotal * modelo.valdescuento)/100;
+            modelo.subtotal += detalle.getSubTotal();
+            modelo.descuento = detalle.getTotalFila();;
             modelo.total = modelo.subtotal - modelo.descuento;
         }
         modelo.idPedido = id;
@@ -95,7 +95,7 @@ public class PedidosControlador {
         var pedido = new Pedido(cliente);
         var preferencial = clientesPreferencialRepositorio.obtenerCliente(cliente.getIdCliente());
         modelo.valdescuento = preferencial.getDescuento();
-        pedido.setDescuento(modelo.valdescuento);
+        pedido.setDescuento(preferencial.getDescuento());
         var id = this.pedidosRepositorio.crear(pedido);
         ctx.redirect("/pedidos/nuevo/" + String.valueOf(id));
     }

@@ -40,7 +40,7 @@
                                 Pedido
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/pedidos/listapedido"> Ver Pedido </a>
+                                <a class="dropdown-item text-dark" href="/pedidos/listapedido">Ver Pedido</a>
                             </div>
                         </li>
                     </ul>
@@ -105,8 +105,8 @@
                                 Pedido
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/pedidos/crear"> Realizar Pedido </a>
-                                <a class="dropdown-item text-dark" href="/pedidos/lista/:id"> Mis Pedido </a>
+                                <a class="dropdown-item text-dark" href="/pedidos/crear">Realizar Pedido</a>
+                                <a class="dropdown-item text-dark" href="/pedidos/lista/:id">Mis Pedido</a>
                             </div>
                         </li>
                     </ul>

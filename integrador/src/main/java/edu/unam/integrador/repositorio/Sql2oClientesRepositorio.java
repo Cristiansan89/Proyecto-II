@@ -50,6 +50,16 @@ public class Sql2oClientesRepositorio implements ClientesRepositorio {
     }
 
     @Override
+    public Cliente obtenerClientePedido(int id) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT Cliente.\"idCliente\" FROM Pedido, Cliente WHERE pedido.\"idCliente\" = cliente.\"idCliente\" AND pedido.\"idPedido\" = :id;";
+            return conn.createQuery(sql).addParameter("id", id).throwOnMappingFailure(false).executeAndFetchFirst(Cliente.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
+    @Override
     public boolean borrar(Cliente cliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "DELETE FROM Cliente WHERE \"idCliente\" = :idCliente;";

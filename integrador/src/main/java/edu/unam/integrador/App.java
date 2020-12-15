@@ -27,16 +27,16 @@ public class App {
         var clientesPreferencialRepositorio = new Sql2oClientesPreferencialRepositorio(sql2o);
         var clientesRepositorio = new Sql2oClientesRepositorio(sql2o);
         var productosRepositorio = new Sql2oProductosRepositorio(sql2o);
-        var pedidosRepositorio = new Sql2oPedidosRepositorio(sql2o);
+        var pedidosRepositorio = new Sql2oPedidosRepositorio(sql2o, clientesRepositorio);
         var usuariosRepositorio = new Sql2oUsuariosRepositorio(sql2o);
         
-        var usuariosControlador = new UsuariosControlador(usuariosRepositorio);
+        var usuariosControlador = new UsuariosControlador(usuariosRepositorio, clientesRepositorio);
         var clientesControlador = new ClientesControlador(clientesRepositorio, usuariosRepositorio, clientesPreferencialRepositorio);
         var productosControlador = new ProductosControlador(productosRepositorio);
         var detallePedidoControlador = new Sql2oDetallesPedidosRepositorio(sql2o, pedidosRepositorio, productosRepositorio);
         var pedidosControlador = new PedidosControlador(pedidosRepositorio, clientesRepositorio, productosRepositorio, detallePedidoControlador, clientesPreferencialRepositorio);
-        var detallesPedidosControlador = new DetallesPedidosControlador(pedidosRepositorio, clientesRepositorio, detallePedidoControlador, clientesPreferencialRepositorio);
-       
+        var detallesPedidosControlador = new DetallesPedidosControlador(pedidosRepositorio, clientesRepositorio, detallePedidoControlador);
+    
         // Crear Servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public");

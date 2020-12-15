@@ -12,7 +12,6 @@ public interface PedidosRepositorio {
     int crear(Pedido pedido) throws RepositorioException;
     // boolean anular(Pedido pedido) throws RepositorioException;
     Pedido obtener(int id) throws RepositorioException;
-    Pedido obtenerClientePedido(String nick) throws RepositorioException;
     Pedido obtenerCliente(int id) throws RepositorioException;
     Pedido finalizar(Pedido pedido) throws RepositorioException;
 }

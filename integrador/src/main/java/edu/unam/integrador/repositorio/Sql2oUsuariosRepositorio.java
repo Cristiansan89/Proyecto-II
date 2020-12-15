@@ -16,7 +16,8 @@ public class Sql2oUsuariosRepositorio implements UsuariosRepositorio {
         this.sql2o = sql2o;
     }
 
-    @Override
+ 
+	@Override
     public List<Usuario> listar() throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "SELECT * FROM Usuario;";

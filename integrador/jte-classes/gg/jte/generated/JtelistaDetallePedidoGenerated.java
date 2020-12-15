@@ -5,7 +5,7 @@ public final class JtelistaDetallePedidoGenerated {
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, edu.unam.integrador.paginas.ModeloDetallesPedidos modelo) {
 		jteOutput.writeContent("\n");
 		gg.jte.generated.tag.JteheaderGenerated.render(jteOutput, jteHtmlInterceptor);
-		jteOutput.writeContent("\n\n<div id=\"cuerpo_datos\">\n    <div class=\"card-footer\">\n        <div id=\"estilo_card_form\"> \n            <h2>Datos del Cliente</h2>\n            <br>\n            <label class=\"col-sm-8 col-form-label font-weight-bold\" id=\"text-size\">Apellido: ");
+		jteOutput.writeContent("\n\n<div id=\"cuerpo_datos\">\n    <div class=\"card-footer\">\n        <div id=\"estilo_card_form\"> \n            <h2>Datos del Cliente</h2>\n            <br>\n            <label class=\"col-sm-8 col-form-label font-weight-bold text-uppercase\" id=\"text-size\">Apellido: ");
 		jteOutput.setContext("label", null);
 		jteOutput.writeUserContent(modelo.apellido);
 		jteOutput.writeContent("</label>\n            <label class=\"col-sm-8 col-form-label font-weight-bold\" id=\"text-size\">Nombre: ");
