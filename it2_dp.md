@@ -133,8 +133,11 @@
 
 * Actualizar el **Repositorio** y **Controlador** del *Cliente* y *Producto*.
 
+
 # Corrección de Archivo Anteriores
 
 * Se corrigió el Modulo Cliente al cual se le agregó la fecha de ingreso.
+
 * La fecha de ingreso del cliente se implemento en la codificación.
+
 * Se modificarón las Historia de Usuario Cliente en la cuál incluían la fecha de ingreso.
