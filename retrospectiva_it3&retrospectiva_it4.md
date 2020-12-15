@@ -1,4 +1,4 @@
-# Retrospectiva Iteración 3 y 4
+# Retrospectiva Iteración III y IV
 
 <h2>Objetivos Cumplidos</h2>
 <br>
