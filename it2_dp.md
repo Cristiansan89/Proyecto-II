@@ -140,4 +140,4 @@
 
 * La fecha de ingreso del cliente se implemento en la codificación.
 
-* Se modificarón las Historia de Usuario Cliente en la cuál incluían la fecha de ingreso.
+* Se modificarón las Historia de Usuario Cliente en la cual incluían la fecha de ingreso.
