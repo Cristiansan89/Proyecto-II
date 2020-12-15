@@ -136,7 +136,7 @@
 
 # Corrección de Archivo Anteriores
 
-* Se corrigió el Modulo Cliente al cual se le agregó la fecha de ingreso.
+* Se corrigió el Módulo Cliente al cual se le agregó la fecha de ingreso.
 
 * La fecha de ingreso del cliente se implemento en la codificación.
 
