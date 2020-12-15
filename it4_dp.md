@@ -44,7 +44,7 @@
 <h4>Baja de Usuario</h4>
 <br>
 
-![HU-46](Documentos/IteracionIV/HistoriaUsuario/BajaUsuario.png "Baja de Usuario")
+![HU-46](Documentos/IteracionIV/HistoriaUsuario/BajaUsuario.jpg "Baja de Usuario")
 <br>
 
 ![HU-47](Documentos/IteracionIV/HistoriaUsuario/ConfirmarBajaUsuario.jpg "Confirmar Baja de Usuario")
