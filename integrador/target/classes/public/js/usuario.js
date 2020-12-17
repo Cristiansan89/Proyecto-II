@@ -32,6 +32,7 @@ function verificarPasswords(){
         // Refrescamos la página (Simulación de envío del formulario) 
         setTimeout(function() {
             location.href('http://localhost:8000/');
+            // location.href='http://localhost:8000/';
         }, 3000);
         return true;
     }
