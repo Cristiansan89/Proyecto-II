@@ -11,7 +11,7 @@
                 <label for="mail" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Mail</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="email" name="mail" required/>
+                        <input class="form-control" type="email" name="mail" value="${modelo.mail}" required/>
                     </div>
                 </div>
                 <label for="nick" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Usuario</label>    

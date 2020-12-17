@@ -2,6 +2,7 @@
 @param edu.unam.integrador.paginas.ModeloUsuarios modelo
 
 @tag.header()
+
 <div id="bar_menu">
     @if (modelo.rol.equals("admin"))
         <!-- Barra de Menú Admin -->
@@ -88,8 +89,8 @@
                                 Cliente
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/clientes/modificar"> Editar Mis Datos </a>
-                                <a class="dropdown-item text-dark" href="/usuarios/modificar"> Cambiar Contrase&ntilde;a </a>
+                                <a class="dropdown-item text-dark" href="/clientes/modificar/${modelo.idCliente}"> Editar Mis Datos </a>
+                                <a class="dropdown-item text-dark" href="/usuarios/modificar/${modelo.idUsuario}"> Cambiar Contrase&ntilde;a </a>
                             </div>
                         </li> 
                         <li class="nav-item dropdown">
@@ -106,7 +107,7 @@
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item text-dark" href="/pedidos/crear">Realizar Pedido</a>
-                                <a class="dropdown-item text-dark" href="/pedidos/lista/:id">Mis Pedido</a>
+                                <a class="dropdown-item text-dark" href="/pedido/listapedido/cliente/${modelo.idCliente}">Mis Pedido</a>
                             </div>
                         </li>
                     </ul>
@@ -155,7 +156,6 @@
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item text-dark" href="/clientes/nuevo">Crear Cuenta</a>
-                                <a class="dropdown-item text-dark" href="">Recuperar Cuenta</a>
                             </div>
                         </li> 
                     </ul>

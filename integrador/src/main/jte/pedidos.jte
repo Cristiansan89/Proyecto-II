@@ -14,8 +14,8 @@
                     <th>Fecha</th>
                     <th>Hora</th>
                     <th>Estado</th>
+                    <th>Condici&oacute;n</th>
                     <th>Total a Pagar</th>
-                    <th> </th>
                     <th> </th>
                     <th> </th>
                 </tr>
@@ -27,10 +27,16 @@
                     <td>${pedido.formatoFecha(pedido.getFecha())}</td>
                     <td>${pedido.getHora()}</td>
                     <td>${pedido.tipoEstadoStr()}</td>
+                    <td>${pedido.getCondicion()}</td>
                     <td>${pedido.getTotalPagar()}</td> 
                     <td> <a type="button" class="btn btn-success no-gutters" href="/pedidos/listadetalle/${pedido.getIdPedido()}"> Ver </a></td>    
-                    <td> <button type="button" class="btn btn-info no-gutters" onClick=""> Entregado </button></td>    
-                    <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${pedido.getIdPedido()})"> Borrar </button></td>
+                    @if ((modelo.rol.equals("admin")) && (pedido.getCondicion().equals("En Espera")))
+                        <td> <a type="button" class="btn btn-info no-gutters" href="/pedidos/entregado/${pedido.getIdPedido()}"> Entregado </a></td>    
+                    @elseif((modelo.rol.equals("cliente")) && (pedido.getCondicion().equals("En Espera")))
+                        <td> <a type="button" class="btn btn-danger no-gutters" href="/pedidos/cancelar/${pedido.getIdPedido()}"> Cancelar </a></td>    
+                    @else
+                        <td></td>
+                    @endif
                 </tr>
             @endfor
             </tbody>

@@ -1,25 +1,39 @@
 @param edu.unam.integrador.paginas.ModeloDetallesPedidos modelo
 
+
 @tag.header()
 
-<div id="cuerpo_datos">
-    <div class="card-footer">
-        <div id="estilo_card_form"> 
-            <h2>Datos del Cliente</h2>
-            <br>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Apellido: <p class="text-uppercase">${modelo.apellido}</p></label>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Nombre: <p class="text-uppercase">${modelo.nombre}</p></label>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Cuil: ${modelo.cuil}</label>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Domicilio: <p class="text-uppercase">${modelo.domicilio}</p></label>
-            <label class="col-sm-8 col-form-label font-weight-bold" id="text-size">Tel&eacute;fono: ${modelo.telefono}</label>
-        </div>
-    </div>
-</div>
 <br>
 <div id="estilo_list">
-    <h2><b>Lista de Pedido</b></h2>
+    <h2><b>Pedido</b></h2>
     <br>
+    <h3>Datos del Cliente</h3>
     <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr style="border: hidden">
+                    <td>
+                        <label class="col-sm-8 col-form-label font-weight-bold" id="text-size-data ">Apellido: <span class="text-uppercase">${modelo.apellido}</span></label>
+                    </td>
+                    <td>
+                        <label class="col-sm-8 col-form-label font-weight-bold" id="text-size-data">Nombre: <span class="text-uppercase">${modelo.nombre}</span></label>
+                    </td>
+                </tr>
+                <tr style="border: hidden">
+                    <td>
+                        <label class="col-sm-8 col-form-label font-weight-bold" id="text-size-data">Cuil: ${modelo.cuil}</label>
+                    </td>
+                    <td>
+                        <label class="col-sm-8 col-form-label font-weight-bold" id="text-size-data">Tel&eacute;fono: ${modelo.telefono}</label>
+                    </td>
+                </tr>
+                <tr style="border: hidden">
+                    <td>
+                        <label class="col-sm-8 col-form-label font-weight-bold" id="text-size-data">Domicilio: <span class="text-uppercase">${modelo.domicilio}</span></label>                        
+                    </td>
+                </tr>
+            </thead>
+        </table>
         <table class="table table-hover table-striped">
             <thead>
                 <tr>  
@@ -35,7 +49,7 @@
                         <td>${detallepedido.getProducto().toString()}</td>
                         <td>${detallepedido.getCantidad()}</td>
                         <td>${detallepedido.getProducto().getPrecioUnitario()}</td>
-                        <td>${detallepedido.getTotalFila()}</td>
+                        <td>${detallepedido.getSubTotal()}</td>
                     </tr>
                 @endfor
             </tbody>
@@ -61,7 +75,10 @@
             </thead>
         </table>
     </div>
-    <a href="/pedidos/listapedido" style="float: left;" type="button" class="btn btn-primary"> Volver </a>
+    <center>
+        <a href="/pedidos/listapedido" type="button" class="btn btn-primary justify-content-center align-items-center"> Volver </a>
+    </center>
+  
 </div>
 
 

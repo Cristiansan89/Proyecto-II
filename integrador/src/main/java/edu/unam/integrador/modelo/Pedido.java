@@ -1,6 +1,5 @@
 package edu.unam.integrador.modelo;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,6 +11,7 @@ public class Pedido {
     private Double totalPagar;
     private Cliente cliente;
     private boolean estado;
+    private String condicion;
 
     public Pedido() {
     }
@@ -20,13 +20,14 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public Pedido(Date fecha, String hora, Double descuento, Double totalPagar, Cliente cliente, boolean estado) {
+    public Pedido(Date fecha, String hora, Double descuento, Double totalPagar, Cliente cliente, boolean estado, String condicion) {
         this.fecha = fecha;
         this.hora = hora;
         this.descuento = descuento;
         this.totalPagar = totalPagar;
         this.cliente = cliente;
         this.estado = estado;
+        this.condicion = condicion;
     }
 
     public int getIdPedido() {
@@ -85,6 +86,14 @@ public class Pedido {
         this.estado = estado;
     }
 
+    public String getCondicion() {
+        return condicion;
+    }
+
+    public void setCondicion(String condicion) {
+        this.condicion = condicion;
+    }
+
     public String tipoEstadoStr(){
         String text;
         if(this.estado){
@@ -111,10 +120,8 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return  "ID Pedido: " + idPedido + ", Fecha: " + this.formatoFecha(fecha) + ", Hora: " + hora + ", Estado: " + this.tipoEstadoStr() + ", Descuento: " + descuento + 
+        return  "ID Pedido: " + idPedido + ", Fecha: " + this.formatoFecha(fecha) + ", Hora: " + hora + ", Estado: " + this.tipoEstadoStr() + ", Condición: " + condicion + ", Descuento: " + descuento + 
             ", Total a Pagar: " + totalPagar + ", Cliente: " + cliente;
     }
-
-    
 
 }

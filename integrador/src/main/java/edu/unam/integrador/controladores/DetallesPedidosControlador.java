@@ -17,10 +17,10 @@ public class DetallesPedidosControlador {
     private final DetallesPedidosRepositorio detallesPedidosRepositorio;
 
     public DetallesPedidosControlador(PedidosRepositorio pedidosRepositorio, ClientesRepositorio clientesRepositorio,
-            DetallesPedidosRepositorio detallesPedidosRepositorio) {
-                this.pedidosRepositorio = pedidosRepositorio;
-                this.clientesRepositorio = clientesRepositorio;
-                this.detallesPedidosRepositorio = detallesPedidosRepositorio;
+        DetallesPedidosRepositorio detallesPedidosRepositorio) {
+            this.pedidosRepositorio = pedidosRepositorio;
+            this.clientesRepositorio = clientesRepositorio;
+            this.detallesPedidosRepositorio = detallesPedidosRepositorio;
     }
     
     public void listarDetalle(Context ctx) throws SQLException{
@@ -34,13 +34,12 @@ public class DetallesPedidosControlador {
         modelo.cuil = cliente.getCuil();
         modelo.domicilio = cliente.getDomicilio();
         modelo.telefono = cliente.getTelefono();
-        System.out.println("CLIENTE: " + cliente + ", PEDIDO: " + pedido);
         modelo.detallePedidos = detallesPedidosRepositorio.listar(ctx.pathParam("id", Integer.class).get());
         modelo.subtotal = 0;
         modelo.total = 0;
         modelo.descuento = 0; 
         for (DetallePedido detalle : modelo.detallePedidos) {
-            modelo.subtotal += detalle.getTotalFila();
+            modelo.subtotal += detalle.getSubTotal();
             modelo.descuento = (modelo.subtotal * modelo.valdescuento)/100;
             modelo.total = modelo.subtotal - modelo.descuento;
         }

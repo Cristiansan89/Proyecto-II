@@ -70,12 +70,10 @@
                 <div id="error" class="alert alert-danger col-sm-10 ocultar" role="alert">
                     Las Contraseñas no coinciden, vuelve a intentar !
                 </div>
-                <div id="ok" class="alert alert-success col-sm-10 ocultar" role="alert">
-                    Las Contraseñas coinciden ! (Procesando formulario ... )
-                </div>
+                
                 <!-- Fin Mensajes de Verificación -->
                 <div class="text-center" style="margin-right: 4em;">
-                    <button type="submit" id="login" class="btn btn-primary"> Guardar </button>
+                    <button type="submit" class="btn btn-primary"> Guardar </button>
                     <a href="/" type="button" class="btn btn-secondary"> Volver </a>
                 </div>
             </form>

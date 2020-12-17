@@ -36,7 +36,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
             var resultado = conn.createQuery(sql).executeAndFetchTable().asList();
             for (var o : resultado) {
                 var cliente = this.clientesRepositorio.obtener((int) o.get("idcliente"));
-                var pedido = new Pedido ((Date) o.get("fecha"), (String) o.get("hora"), (Double) o.get("descuento"), (Double) o.get("totalpagar"), cliente, (boolean) o.get("estado"));
+                var pedido = new Pedido ((Date) o.get("fecha"), (String) o.get("hora"), (Double) o.get("descuento"), (Double) o.get("totalpagar"), cliente, (boolean) o.get("estado"), (String) o.get("condicion"));
                 pedido.setIdPedido((int) o.get("idpedido"));
                 pedido.setCliente(cliente);
                 pedidos.add(pedido);
@@ -46,17 +46,17 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
             throw new RepositorioException();
         }
     }
-/*
+
     @Override
-    public List<Pedido> listarTodo(int idPedido) throws RepositorioException {
+    public List<Pedido> listarPedidoCliente(int idCliente) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM pedido where idPedido = :idPedido;";
-            return conn.createQuery(sql).addParameter("idPedido", idPedido).throwOnMappingFailure(false).executeAndFetch(Pedido.class);
+            String sql = "SELECT * FROM pedido where \"idCliente\" = :idCliente and estado = 'true';";
+            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false).executeAndFetch(Pedido.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
         }
     }
-*/
+    
     @Override
     public List<Producto> listarProducto() throws RepositorioException {
         try (Connection conn = sql2o.open()) {
@@ -70,7 +70,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public int crear(Pedido pedido) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Pedido (fecha, hora, descuento, totalPagar, \"idCliente\", estado) VALUES (current_date, CONCAT(extract(hour from now())::text,':', extract(minute from now())::text), :descuento, 0, :idCliente, false);";
+            String sql = "INSERT INTO Pedido (fecha, hora, descuento, totalPagar, \"idCliente\", estado, condicion) VALUES (current_date, CONCAT(extract(hour from now())::text,':', extract(minute from now())::text), :descuento, 0, :idCliente, false, 'En Espera');";
             return (int) conn.createQuery(sql).bind(pedido).addParameter("idCliente", pedido.getCliente().getIdCliente()).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -87,8 +87,6 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
             throw new RepositorioException();
         }
     }
-
-    
 
     @Override
     public Pedido obtenerCliente(int id) throws RepositorioException {
@@ -112,5 +110,29 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
         }
     }
 
-    
+    @Override
+    public void entragado(Pedido pedido) throws RepositorioException{
+        String sql = "UPDATE pedido SET condicion= 'Entregado' Where \"idPedido\" = :idPedido";
+        try (Connection conn = sql2o.open()) {
+            conn.createQuery(sql)
+                    .addParameter("idPedido", pedido.getIdPedido())
+                    .executeUpdate();
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
+    @Override
+    public void cancelar(Pedido pedido) throws RepositorioException{
+        String sql = "UPDATE pedido SET condicion= 'Cancelado' Where \"idPedido\" = :idPedido";
+        try (Connection conn = sql2o.open()) {
+            conn.createQuery(sql)
+                .addParameter("idPedido", pedido.getIdPedido())
+                .executeUpdate();
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
+
 }

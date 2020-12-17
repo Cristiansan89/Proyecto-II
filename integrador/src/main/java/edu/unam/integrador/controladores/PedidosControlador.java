@@ -34,12 +34,21 @@ public class PedidosControlador {
             this.clientesPreferencialRepositorio = clientesPreferencialRepositorio;
     }
 
-
     public void listar(Context ctx) throws SQLException {
         var modelo = new ModeloPedidos();
         modelo.pedidos = this.pedidosRepositorio.listar();
+        modelo.rol = ctx.cookie("rol");
         ctx.render("pedidos.jte", Collections.singletonMap("modelo", modelo));
     }
+
+    public void listarPedidoCliente(Context ctx) throws SQLException {
+        var modelo = new ModeloPedidos();
+        var cliente = this.clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
+        modelo.pedidos = this.pedidosRepositorio.listarPedidoCliente(cliente.getIdCliente());
+        modelo.rol = ctx.cookie("rol");
+        ctx.render("pedidos.jte", Collections.singletonMap("modelo", modelo));
+    }
+
 
     public void listarProducto(Context ctx) throws SQLException {
         var modelo = new ModeloProductos();
@@ -66,7 +75,7 @@ public class PedidosControlador {
         modelo.valdescuento = preferencial.getDescuento();
         for (DetallePedido detalle : modelo.detallePedidos) {
             modelo.subtotal += detalle.getSubTotal();
-            modelo.descuento = detalle.getTotalFila();;
+            modelo.descuento = (modelo.subtotal * modelo.valdescuento)/100;
             modelo.total = modelo.subtotal - modelo.descuento;
         }
         modelo.idPedido = id;
@@ -106,11 +115,23 @@ public class PedidosControlador {
     }
 
     public void finalizar(Context ctx) throws SQLException, RepositorioException {
+        var modelo = new ModeloDetallesPedidos();
         var pedido = this.pedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
         var detallePedidos = this.detallesPedidosRepositorio.listar(pedido.getIdPedido());
         var totalPagar = 0;
+        modelo.subtotal = 0;
+        modelo.descuento = 0;
+        var cliente = clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
+        var obtenerCliente = clientesRepositorio.obtener(cliente.getIdCliente());
+        modelo.nombre = obtenerCliente.getNombre();
+        modelo.apellido = obtenerCliente.getApellido();
+        var preferencial = clientesPreferencialRepositorio.obtenerCliente(cliente.getIdCliente());
+        modelo.valdescuento = preferencial.getDescuento();
         for (DetallePedido detalle : detallePedidos) {
-            totalPagar += detalle.getTotalFila();
+            modelo.subtotal += detalle.getSubTotal();
+            modelo.descuento = (modelo.subtotal * modelo.valdescuento)/100;
+            modelo.total = modelo.subtotal - modelo.descuento;
+            totalPagar += modelo.total;
         }
         pedido.setEstado(true);
         pedido.setTotalPagar(Double.valueOf(totalPagar));
@@ -118,4 +139,18 @@ public class PedidosControlador {
         ctx.redirect("/");
     }
     
+    public void entregado(Context ctx) throws SQLException {
+        var id = ctx.pathParam("id", Integer.class).get();
+        Pedido pedido = this.pedidosRepositorio.obtener(id);
+        this.pedidosRepositorio.entragado(pedido);
+        ctx.redirect("/pedidos/listapedido");
+    }
+
+    public void cancelar(Context ctx) throws SQLException {
+        var id = ctx.pathParam("id", Integer.class).get();
+        Pedido pedido = this.pedidosRepositorio.obtener(id);
+        System.out.println(pedido);
+        this.pedidosRepositorio.cancelar(pedido);
+        ctx.redirect("/pedido/listapedido/cliente/" + String.valueOf(id));
+    }
 }

@@ -63,7 +63,7 @@
                                         <td>${detallepedido.getProducto().toString()}</td>
                                         <td>${detallepedido.getCantidad()}</td>
                                         <td>${detallepedido.getProducto().getPrecioUnitario()}</td>
-                                        <td>${detallepedido.getTotalFila()}</td>
+                                        <td>${detallepedido.getSubTotal()}</td>
                                         <td> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${detallepedido.getIdDetallePedido()},${modelo.idPedido})"> Quitar </button></td>
                                     </tr>
                                 @endfor

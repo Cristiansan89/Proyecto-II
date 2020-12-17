@@ -8,4 +8,5 @@ public class ModeloPedidos {
     public int idCliente;
     public int idProducto;
     public List<Pedido> pedidos = new ArrayList<>();
+    public String rol;
 }

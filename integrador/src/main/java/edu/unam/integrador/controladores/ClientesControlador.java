@@ -37,6 +37,7 @@ public class ClientesControlador {
     }
 
     public void crear(Context ctx) throws SQLException {
+        System.out.println("Entre a crear cliente");
         var mail = ctx.formParam("mail", String.class).get();
         var nick = ctx.formParam("nick", String.class).get();
         var contrasena = ctx.formParam("contrasena", String.class).get();
@@ -53,7 +54,6 @@ public class ClientesControlador {
         var clientePreferencial = new ClientePreferencial(cliente);
         this.clientesPreferencialRepositorio.crear(clientePreferencial);
         ctx.redirect("/");
-
     }
 
     public void borrar(Context ctx) throws SQLException, RepositorioException {
@@ -64,7 +64,9 @@ public class ClientesControlador {
     public void modificar(Context ctx) throws SQLException, RepositorioException {
         var modelo = new ModeloCliente();
         var user = this.clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
+        System.out.println(user);
         modelo.cliente = this.clientesRepositorio.obtener(user.getIdCliente());
+        System.out.println(modelo.cliente);
         ctx.render("editarCliente.jte", Collections.singletonMap("modelo", modelo));
     }
 

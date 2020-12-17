@@ -19,13 +19,9 @@ function validarUsuario() {
 }
 
 function verificarPasswords(){
-     // Ontenemos los valores de los campos de contraseñas 
     pass1 = document.getElementById('contrasena');
     pass2 = document.getElementById('contrasena1');
-
-     // Verificamos si las constraseñas no coinciden 
     if (pass1.value != pass2.value) {
-        // Si las constraseñas no coinciden mostramos un mensaje 
         document.getElementById("error").classList.add("mostrar");
         return false;
     } else {  
@@ -33,11 +29,9 @@ function verificarPasswords(){
         document.getElementById("error").classList.remove("mostrar");
         // Mostramos un mensaje mencionando que las Contraseñas coinciden 
         document.getElementById("ok").classList.remove("ocultar");
-        // Desabilitamos el botón de login 
-        document.getElementById("login").disabled = true;
         // Refrescamos la página (Simulación de envío del formulario) 
         setTimeout(function() {
-            location.reload();
+            location.href('http://localhost:8000/');
         }, 3000);
         return true;
     }
