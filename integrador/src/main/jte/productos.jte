@@ -4,6 +4,7 @@
 
 <div id="estilo_list">
     <h2>Producto</h2>
+    <br>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>

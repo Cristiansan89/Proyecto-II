@@ -2,7 +2,7 @@
 
 @tag.header()
 
-<div id="estilo_list" >
+<div id="estilo_list">
     <h2>Clientes</h2>
     <br>
     <div class="table-responsive">

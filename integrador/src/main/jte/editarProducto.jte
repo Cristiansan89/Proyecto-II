@@ -2,11 +2,11 @@
 
 @tag.header()
 
-<div class="card" style="width: 42rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
+<div class="card" id="estilo_card""> 
     <div class="card-footer">
-        <div style="margin-left: 3em; ">
-            <h2><b>Editar Producto</b></h2>
-            <br>
+        <h2><b>Editar Producto</b></h2>
+        <br>
+        <div id="estilo_card_form">
             <form action="/productos/actualizar/${modelo.producto.getIdProducto()}" method="post">
                 <label for="codproducto" class="col-sm-8 col-form-label font-weight-bold" id="text-size">C&oacute;digo Producto</label>
                 <div class="form-group row">
@@ -56,7 +56,7 @@
                         <input class="form-control" type="text" name="detalle" value="${modelo.producto.getDetalle()}"/>
                     </div>
                 </div>
-                <div class="text-center" style="margin-right: 4em;">
+                <div class="text-center" id="estilo_bottom">
                     <button type="submit" class="btn btn-primary"> Modificar </button>
                     <a href="/" type="button" class="btn btn-secondary"> Volver </a>
                 </div>

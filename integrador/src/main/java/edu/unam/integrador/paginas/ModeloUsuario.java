@@ -5,4 +5,5 @@ public class ModeloUsuario {
     public Usuario usuario;
     public int idCliente;
     public String nick;
+    public String mail;
 }

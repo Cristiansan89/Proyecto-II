@@ -2,16 +2,17 @@
 
 @tag.header()
 
-<div class="card" style="width: 42rem; top: 7rem; left: 40rem; margin-bottom: 10rem;"> 
+<div class="card" id="estilo_card"> 
     <div class="card-footer">
-        <div style="margin-left: 3em; ">
+        <h2><b>Editar Usuario</b></h2>
+        <br>
+        <div id="estilo_card_form">
             <form action="/usuarios/actualizar/${modelo.usuario.getIdUsuario()}" method="post">
-                <h2><b>Editar Usuario</b></h2>
-                <br>
+                
                 <label for="mail" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Mail</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="email" name="mail" value="${modelo.mail}" required/>
+                        <input class="form-control" type="email" name="mail" value="${modelo.usuario.getMail()}" required/>
                     </div>
                 </div>
                 <label for="nick" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Usuario</label>    
@@ -41,7 +42,7 @@
                     Las Contraseñas coinciden ! (Procesando formulario ... )
                 </div>
                 <!-- Fin Mensajes de Verificación -->
-                <div class="text-center" style="margin-right: 4em;">
+                <div class="text-center" id="estilo_bottom">
                     <button type="submit" id="login" class="btn btn-primary"> Modificar </button>
                     <a href="/" type="button" class="btn btn-secondary"> Volver </a>
                 </div>

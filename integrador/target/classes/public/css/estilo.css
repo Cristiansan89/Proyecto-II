@@ -1,4 +1,8 @@
-#fondo_inicio{
+html{
+   overflow-x: hidden; 
+}
+
+#fondo_inicio {
     background-color: #EDEDED;
     position: absolute;
     top: 0;
@@ -9,7 +13,7 @@
     z-index: 1; 
 }
 
-div h2{
+div h2 {
     text-align: center;
     font-weight: bold;
     font-family: times;
@@ -41,14 +45,16 @@ div h2{
     }
 
     #estilo_card{
-        width: 40rem; 
-        top: 5rem; 
-        left: 40rem;
-        margin-bottom: 10rem;
+        width: 35rem; 
+        top: 8rem; 
+        left: 42rem;
+        margin-bottom: 20rem;
+        
     }
 
     #estilo_card_form{
         margin-left: 2px;
+        margin-right: -22px;
     }
 
 
@@ -86,7 +92,7 @@ div h2{
     }
 
     #estilo_list{
-        padding-top: 6em; 
+        margin-top: 7rem;
         margin-left: 15em; 
         margin-right: 15em;
     }
@@ -110,97 +116,8 @@ div h2{
         margin-left: 15em; 
         margin-right: 15em;
     }
-}
 
-@media (min-width: 1920px) and (max-width: 2080px) {
-    .format_fecha p{
-        display: inline-block;
-        line-height: 0.3em;
-    }
-
-    #text-size{
-        font-size: 18px;
-    }
-
-    #text-size-data{
-        font-size: 24px;
-    }
-    
-    form{
-        margin-left: 30px;
-    }
-    
-    #text_card{
-        margin-right: 50px;
-    }
-
-    #fondo_text{
-        font-family: Arial;
-        font-style: normal;
-        font-weight: bold;
-        font-family:cursive;
-        line-height: 50px;
-        font-size: 50px;
-        margin-top: 20px;
-    }
-    
-    #user_text{
-        font-family: Arial;
-        margin-right: 15px;
-        font-size: 16px;
-        text-align: end;
-    }
-    
-    #bar_menu{
-        margin-top:auto;
-        padding-top: 5em;
-        padding-right: 0px;
-        padding-bottom: 5em;
-        padding-left: 0px;
-    }
-    
-    #bar_principal{
-        margin-top:auto;
-        padding-top: 0.3em;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-    }
-
-    #estilo_list{
-        padding-top: 6em; 
-        margin-left: 15em; 
-        margin-right: 15em;
-    }
-
-    #estilo_card{
-        width: 40rem; 
-        top: 8rem; 
-        left: 54rem;
-        margin-bottom: 10rem;
-    }
-
-    #estilo_card_form{
-        margin-left: 3.5em;
-    }
-
-    #estilo_card_list{
-        width: 95%; 
-        left: 45px; 
-        right: 25px; 
-        margin-bottom: 3rem;
-    }
-
-    #estilo_card_pedido{
-        width: 50rem; 
-        top: 8rem; 
-        left: 35rem;
-        margin-bottom: 10rem;
-    }
-
-    #estilo_list_pedido{
-        margin-top: 3em; 
-        margin-left: 15em; 
-        margin-right: 15em;
+    #estilo_bottom{
+        margin-right: 4em;
     }
 }

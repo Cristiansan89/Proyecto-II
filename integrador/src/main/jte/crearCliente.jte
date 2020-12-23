@@ -3,10 +3,11 @@
 
 <div class="card" id="estilo_card"> 
     <div class="card-footer">
+        <h2>Datos del Usuario</h2>
+        <br>
         <div id="estilo_card_form"> 
             <form action="/clientes/crear" method="post" onsubmit="verificarPasswords(); return false">
-                <h2>Datos del Usuario</h2>
-                <br>
+                
                 <label for="mail" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Mail</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
@@ -72,7 +73,7 @@
                 </div>
                 
                 <!-- Fin Mensajes de Verificación -->
-                <div class="text-center" style="margin-right: 4em;">
+                <div class="text-center" id="estilo_bottom">
                     <button type="submit" class="btn btn-primary"> Guardar </button>
                     <a href="/" type="button" class="btn btn-secondary"> Volver </a>
                 </div>

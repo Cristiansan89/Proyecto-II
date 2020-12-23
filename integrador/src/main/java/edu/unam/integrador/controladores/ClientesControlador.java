@@ -64,9 +64,7 @@ public class ClientesControlador {
     public void modificar(Context ctx) throws SQLException, RepositorioException {
         var modelo = new ModeloCliente();
         var user = this.clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
-        System.out.println(user);
         modelo.cliente = this.clientesRepositorio.obtener(user.getIdCliente());
-        System.out.println(modelo.cliente);
         ctx.render("editarCliente.jte", Collections.singletonMap("modelo", modelo));
     }
 
