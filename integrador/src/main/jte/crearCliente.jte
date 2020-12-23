@@ -6,8 +6,7 @@
         <h2>Datos del Usuario</h2>
         <br>
         <div id="estilo_card_form"> 
-            <form action="/clientes/crear" method="post" onsubmit="verificarPasswords(); return false">
-                
+            <form action="/clientes/crear" method="post" onsubmit="verificarPasswords(); return false">  
                 <label for="mail" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Mail</label>
                 <div class="form-group row">
                     <div class="col-sm-10">

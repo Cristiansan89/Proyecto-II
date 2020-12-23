@@ -49,6 +49,14 @@ div h2 {
         top: 8rem; 
         left: 42rem;
         margin-bottom: 20rem;
+    }
+
+    #estilo_card_data{
+        width: 88rem;
+        top: .2rem; 
+        left: 1rem;
+        right: 1rem;
+        margin-bottom: 4rem;
         
     }
 
@@ -64,6 +72,16 @@ div h2 {
 
     #text-size{
         font-size: 18px;
+    }
+
+    #text-size-data{
+        font-size: 26px;
+        font-family: perpetua;
+    }
+
+    #text-size-titulo{
+        font-size: 28px;
+        font-family: times;
     }
     
     form{

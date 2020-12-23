@@ -85,7 +85,7 @@
                             </span>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white font-weight-bold h5 mb-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white font-weight-bold h5 mb-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 Cliente
                             </a>
                             <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
@@ -139,7 +139,7 @@
         <!-- Carousel ===> MARCA de Productos -->
         <div class="mt-5 ml-4 mr-4">
             <div id="carousel1" class="carousel slide" data-ride="carousel">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-interval="25000">
                     <div class="row ml-5">
                         <div class="col px-0">
                             <img src="/img/marca/7up.png" class="w-25 ml-4 mb-2 rounded-lg" alt="7up">
@@ -288,7 +288,7 @@
                         </div> 
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-interval="25000">
                     <div class="row ml-5">
                         <div class="col px-0">
                             <img src="/img/marca/newage.png" class="w-25 ml-4 mb-2 rounded-lg" alt="newage">
