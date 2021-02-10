@@ -33,8 +33,7 @@
                 </div>
                 <br>
                 <hr>
-                <h2>Datos de Cliente</h2>
-                <br>
+                <h2 id="text_h2">Datos de Cliente</h2>
                 <label for="nombre" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Nombre</label>
                 <div class="form-group row">
                     <div class="col-sm-10">

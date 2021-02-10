@@ -35,13 +35,16 @@ public class DetallesPedidosControlador {
         modelo.domicilio = cliente.getDomicilio();
         modelo.telefono = cliente.getTelefono();
         modelo.detallePedidos = detallesPedidosRepositorio.listar(ctx.pathParam("id", Integer.class).get());
-        modelo.subtotal = 0;
+        //modelo.subtotal = 0;
         modelo.total = 0;
         modelo.descuento = 0; 
+        double valorSubTotal = 0;
         for (DetallePedido detalle : modelo.detallePedidos) {
-            modelo.subtotal += detalle.getSubTotal();
-            modelo.descuento = (modelo.subtotal * modelo.valdescuento)/100;
-            modelo.total = modelo.subtotal - modelo.descuento;
+            //modelo.subtotal += detalle.getSubTotal();
+            valorSubTotal += detalle.getSubTotal();
+            modelo.subtotal = String.format("%.2f", valorSubTotal);
+            modelo.descuento = (valorSubTotal * modelo.valdescuento)/100;
+            modelo.total = Math.round((valorSubTotal - modelo.descuento) * 100)/100d;
         }
         ctx.render("listaDetallePedido.jte", Collections.singletonMap("modelo", modelo));
     }

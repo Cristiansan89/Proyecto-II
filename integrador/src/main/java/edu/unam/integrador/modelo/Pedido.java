@@ -1,6 +1,8 @@
 package edu.unam.integrador.modelo;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Pedido {
@@ -111,12 +113,6 @@ public class Pedido {
         return formatoFecha;
     }
 
-    public String formatoHora(String hora){
-        String formato = "HH:mm";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formato);
-        String formatoHora = simpleDateFormat.format(hora);
-        return formatoHora;     
-    }
 
     @Override
     public String toString() {

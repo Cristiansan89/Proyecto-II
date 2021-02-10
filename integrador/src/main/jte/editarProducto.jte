@@ -29,7 +29,7 @@
                 <label for="medida" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Medida</label>                
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="medida" value="${modelo.producto.getMedida()}"/>
+                        <input class="form-control" type="number" step="0.01" name="medida" value="${modelo.producto.getMedida()}"/>
                     </div>
                 </div>
                 <label for="unidad" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Unidad</label>
@@ -47,7 +47,7 @@
                 <label for="preciounitario" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Precio Unitario</label>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="number" name="preciounitario" value="${modelo.producto.getPrecioUnitario()}"/>
+                        <input class="form-control" type="number" step="0.01" name="preciounitario" value="${modelo.producto.getPrecioUnitario()}"/>
                     </div>
                 </div>
                 <label for="detalle" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Detalle</label>

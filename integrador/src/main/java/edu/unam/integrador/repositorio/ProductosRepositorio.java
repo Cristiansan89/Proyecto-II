@@ -10,4 +10,5 @@ public interface ProductosRepositorio {
     boolean modificar(Producto producto) throws RepositorioException;
     Producto obtener(int id) throws RepositorioException;
     void actualizar(Producto producto) throws RepositorioException;
+    
 }

@@ -2,7 +2,10 @@ package edu.unam.integrador.controladores;
 
 import io.javalin.http.Context;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.Collections;
+
+import java.util.Formatter;
 
 import edu.unam.integrador.modelo.Pedido;
 import edu.unam.integrador.modelo.DetallePedido;
@@ -49,7 +52,6 @@ public class PedidosControlador {
         ctx.render("pedidos.jte", Collections.singletonMap("modelo", modelo));
     }
 
-
     public void listarProducto(Context ctx) throws SQLException {
         var modelo = new ModeloProductos();
         modelo.productos = pedidosRepositorio.listarProducto();
@@ -64,7 +66,7 @@ public class PedidosControlador {
         var modelo = new ModeloDetallesPedidos();
         modelo.productos = pedidosRepositorio.listarProducto();
         modelo.detallePedidos = this.detallesPedidosRepositorio.listar(id);
-        modelo.subtotal = 0;
+        //modelo.subtotal = 0;
         modelo.total = 0;
         modelo.descuento = 0;  
         var cliente = clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
@@ -73,10 +75,13 @@ public class PedidosControlador {
         modelo.apellido = obtenerCliente.getApellido();
         var preferencial = clientesPreferencialRepositorio.obtenerCliente(cliente.getIdCliente());
         modelo.valdescuento = preferencial.getDescuento();
+        double valorSubTotal = 0;
         for (DetallePedido detalle : modelo.detallePedidos) {
-            modelo.subtotal += detalle.getSubTotal();
-            modelo.descuento = (modelo.subtotal * modelo.valdescuento)/100;
-            modelo.total = modelo.subtotal - modelo.descuento;
+            valorSubTotal += detalle.getSubTotal();
+            modelo.subtotal = String.format("%.2f", valorSubTotal);
+            //modelo.subtotal += detalle.getSubTotal();
+            modelo.descuento = (valorSubTotal * modelo.valdescuento)/100;
+            modelo.total = Math.round((valorSubTotal - modelo.descuento) * 100)/100d;
         }
         modelo.idPedido = id;
         ctx.render("formularioPedido.jte", Collections.singletonMap("modelo", modelo));
@@ -119,7 +124,7 @@ public class PedidosControlador {
         var pedido = this.pedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
         var detallePedidos = this.detallesPedidosRepositorio.listar(pedido.getIdPedido());
         var totalPagar = 0;
-        modelo.subtotal = 0;
+    //    modelo.subtotal = 0;
         modelo.descuento = 0;
         var cliente = clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
         var obtenerCliente = clientesRepositorio.obtener(cliente.getIdCliente());
@@ -127,10 +132,12 @@ public class PedidosControlador {
         modelo.apellido = obtenerCliente.getApellido();
         var preferencial = clientesPreferencialRepositorio.obtenerCliente(cliente.getIdCliente());
         modelo.valdescuento = preferencial.getDescuento();
+        double valorSubTotal = 0;
         for (DetallePedido detalle : detallePedidos) {
-            modelo.subtotal += detalle.getSubTotal();
-            modelo.descuento = (modelo.subtotal * modelo.valdescuento)/100;
-            modelo.total = modelo.subtotal - modelo.descuento;
+            valorSubTotal += detalle.getSubTotal();
+            modelo.subtotal = String.format("%.2f", valorSubTotal);
+            modelo.descuento = (valorSubTotal * modelo.valdescuento)/100;
+            modelo.total = Math.round((valorSubTotal - modelo.descuento) * 100)/100d;
             totalPagar += modelo.total;
         }
         pedido.setEstado(true);

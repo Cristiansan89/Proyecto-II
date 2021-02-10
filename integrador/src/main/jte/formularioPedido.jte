@@ -4,17 +4,16 @@
 
 <div class="card" id="estilo_card_pedido"> 
     <div class="card-footer">
-        <h2> Ingresar Pedido</h2>
-        <br>
-        <div id="estilo_card_form"> 
+        <h2>Ingresar Pedido</h2>
+        <div id="estilo_card_form">
             <form action="/pedidos/agregardetalle/${modelo.idPedido}" method="post">
                 <label for="unProducto" class="col-sm-8 col-form-label font-weight-bold" id="text-size">Producto</label>
                 <div class="form-group row">
                     <div class="col-sm-10">  
-                        <select name="producto" class="form-control">
+                        <select name="producto" class="custom-select">
                             <option> </option>
                             @for (var producto : modelo.productos)
-                                <option value="${producto.getIdProducto()}">${producto.getIdProducto()} - ${producto.getCodProducto()} - ${producto.getCategoria()} - ${producto.getMarca()} - ${producto.getMedida()} - ${producto.getUnidad()} - ${producto.getStock()} - ${producto.getPrecioUnitario()} - ${producto.getDetalle()} </option>
+                                <option value="${producto.getIdProducto()}">${producto.getIdProducto()} - ${producto.getCodProducto()} - ${producto.getCategoria()} - ${producto.getMarca()} - ${producto.getMedida()} - ${producto.getUnidad()} - ${producto.getStock()} - ${producto.precioDecimal()} - ${producto.getDetalle()} </option>
                             @endfor
                         </select>
                     </div>
@@ -31,7 +30,7 @@
                         <input class="form-control" type="number" name="cantidad"/>
                     </div>
                 </div>
-                <div class="text-center" style="margin-right: 4em;">
+                <div class="text-center" style="margin-right: 6em;">
                     <button type="submit" class="btn btn-success"> Agregar </button>
                 </div>
             </form>
@@ -41,9 +40,8 @@
 
 <div class="card" id="estilo_card_list"> 
     <div class="card-footer">
-        <div id="estilo_card_form">
+        <div>
             <h2> Lista de Pedido </h2>
-            <br>
             <form action="/pedidos/finalizar/${modelo.idPedido}" method="post">
                 <div id="estilo_list_pedido">
                     <div class="table-responsive">

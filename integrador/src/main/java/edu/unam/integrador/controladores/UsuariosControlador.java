@@ -68,10 +68,8 @@ public class UsuariosControlador {
         Usuario usuario = this.usuariosRepositorio.obtener(id);
         var mail = ctx.formParam("mail", String.class).get();
         var contrasena = ctx.formParam("contrasena", String.class).get();
-        
         usuario.setMail(mail);
         usuario.setContrasena(contrasena);
-
         this.usuariosRepositorio.actualizar(usuario);
         ctx.redirect("/");
     }

@@ -35,7 +35,7 @@
                         <td>${producto.getMedida()}</td>
                         <td>${producto.getUnidad()}</td>
                         <td>${producto.getStock()}</td>
-                        <td>${producto.getPrecioUnitario()}</td>
+                        <td>${producto.precioDecimal()}</td> 
                         <td>${producto.getDetalle()}</td>
                         @if (modelo.rol.equals("admin"))
                             <td> <a type="button" class="btn btn-info no-gutters" href="/productos/modificar/${producto.getIdProducto()}"> Editar </a></td>

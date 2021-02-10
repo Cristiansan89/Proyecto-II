@@ -84,7 +84,11 @@ public class Producto {
     }
 
     public double getPrecioUnitario() {
-        return precioUnitario;
+       return precioUnitario;
+    }
+
+    public String precioDecimal(){
+        return String.format("%.2f", getPrecioUnitario());
     }
 
     public void setPrecioUnitario(double precioUnitario) {

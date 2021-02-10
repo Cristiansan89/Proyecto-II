@@ -60,7 +60,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public List<Producto> listarProducto() throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM Producto;";
+            String sql = "SELECT * FROM Producto Order By \"idProducto\";";
             return conn.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Producto.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -70,7 +70,7 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     @Override
     public int crear(Pedido pedido) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "INSERT INTO Pedido (fecha, hora, descuento, totalPagar, \"idCliente\", estado, condicion) VALUES (current_date, CONCAT(extract(hour from now())::text,':', extract(minute from now())::text), :descuento, 0, :idCliente, false, 'En Espera');";
+            String sql = "INSERT INTO Pedido (fecha, hora, descuento, totalPagar, \"idCliente\", estado, condicion) VALUES (current_date, CONCAT(extract(hour from current_timestamp),':', extract(minute from current_timestamp)), :descuento, 0, :idCliente, false, 'En Espera');";
             return (int) conn.createQuery(sql).bind(pedido).addParameter("idCliente", pedido.getCliente().getIdCliente()).executeUpdate().getKey();
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -133,6 +133,5 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
             throw new RepositorioException();
         }
     }
-
 
 }

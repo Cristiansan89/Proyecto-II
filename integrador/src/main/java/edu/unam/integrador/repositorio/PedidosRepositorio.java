@@ -11,10 +11,11 @@ public interface PedidosRepositorio {
     List<Producto> listarProducto() throws RepositorioException;
     int nuevo(int id) throws RepositorioException;
     int crear(Pedido pedido) throws RepositorioException;
-    // boolean anular(Pedido pedido) throws RepositorioException;
     Pedido obtener(int id) throws RepositorioException;
     Pedido obtenerCliente(int id) throws RepositorioException;
     Pedido finalizar(Pedido pedido) throws RepositorioException;
     public void entragado(Pedido pedido) throws RepositorioException;
     public void cancelar(Pedido pedido) throws RepositorioException;
+
 }
+

@@ -137,263 +137,264 @@
         </div>
 
         <!-- Carousel ===> MARCA de Productos -->
-        <div class="mt-5 ml-4 mr-4">
+        <div class="mt-3 ml-4 mr-4">
             <div id="carousel1" class="carousel slide" data-ride="carousel">
                 <div class="carousel-item active" data-interval="25000">
-                    <div class="row ml-5">
+                    <div class="row" id="row_margen">
                         <div class="col px-0">
-                            <img src="/img/marca/7up.png" class="w-25 ml-4 mb-2 rounded-lg" alt="7up">
-                            <img src="/img/marca/1882.png" class="w-25 ml-4 mb-2 rounded-lg" alt="1882">
-                            <img src="/img/marca/absolut.png" class="w-25 ml-4 mb-2 rounded-lg" alt="absolut">
+                            <img src="/img/marca/7up.png" id="img_margen" alt="7up">
+                            <img src="/img/marca/1882.png" id="img_margen" alt="1882">
+                            <img src="/img/marca/absolut.png" id="img_margen" alt="absolut">
                             
-                            <img src="/img/marca/baggio.png" class="w-25 ml-4 mb-2 rounded-lg" alt="baggio">
-                            <img src="/img/marca/bagley.png" class="w-25 ml-4 mb-2 rounded-lg" alt="bagley">
-                            <img src="/img/marca/bianchi.png" class="w-25 ml-4 mb-2 rounded-lg" alt="bianchi">
+                            <img src="/img/marca/baggio.png" id="img_margen" alt="baggio">
+                            <img src="/img/marca/bagley.png" id="img_margen" alt="bagley">
+                            <img src="/img/marca/bianchi.png" id="img_margen" alt="bianchi">
 
-                            <img src="/img/marca/cif.png" class="w-25 ml-4 mb-2 rounded-lg" alt="cif">
-                            <img src="/img/marca/clight.png" class="w-25 ml-4 mb-2 rounded-lg" alt="clight">
-                            <img src="/img/marca/cocacola.png" class="w-25 ml-4 mb-2 rounded-lg" alt="cocacola">
+                            <img src="/img/marca/cif.png" id="img_margen" alt="cif">
+                            <img src="/img/marca/clight.png" id="img_margen" alt="clight">
+                            <img src="/img/marca/cocacola.png" id="img_margen" alt="cocacola">
                             
-                            <img src="/img/marca/donvalentin.png" class="w-25 ml-4 mb-2 rounded-lg" alt="donvalentin">
-                            <img src="/img/marca/doritos.png" class="w-25 ml-4 mb-2 rounded-lg" alt="doritos">
-                            <img src="/img/marca/dosanclas.png" class="w-25 ml-4 mb-2 rounded-lg" alt="dosanclas">
+                            <img src="/img/marca/donvalentin.png" id="img_margen" alt="donvalentin">
+                            <img src="/img/marca/doritos.png" id="img_margen" alt="doritos">
+                            <img src="/img/marca/dosanclas.png" id="img_margen" alt="dosanclas">
 
-                            <img src="/img/marca/gallo.png" class="w-25 ml-4 mb-2 rounded-lg" alt="gallo">
-                            <img src="/img/marca/gancia.png" class="w-25 ml-4 mb-2 rounded-lg" alt="gancia">
-                            <img src="/img/marca/gatorade.png" class="w-25 ml-4 mb-2 rounded-lg" alt="gatorade">
+                            <img src="/img/marca/gallo.png" id="img_margen" alt="gallo">
+                            <img src="/img/marca/gancia.png" id="img_margen" alt="gancia">
+                            <img src="/img/marca/gatorade.png" id="img_margen" alt="gatorade">
                             
-                            <img src="/img/marca/lacampagnola.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lacampagnola">
-                            <img src="/img/marca/lacaroyense.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lacaroyense">
-                            <img src="/img/marca/lapaulina.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lapaulina">
+                            <img src="/img/marca/lacampagnola.png" id="img_margen" alt="lacampagnola">
+                            <img src="/img/marca/lacaroyense.png" id="img_margen" alt="lacaroyense">
+                            <img src="/img/marca/lapaulina.png" id="img_margen" alt="lapaulina">
                             
-                            <img src="/img/marca/maizena.png" class="w-25 ml-4 mb-2 rounded-lg" alt="maizena">
-                            <img src="/img/marca/malibu.png" class="w-25 ml-4 mb-2 rounded-lg" alt="malibu">
-                            <img src="/img/marca/manaos.png" class="w-25 ml-4 mb-2 rounded-lg" alt="manaos">
+                            <img src="/img/marca/maizena.png" id="img_margen" alt="maizena">
+                            <img src="/img/marca/malibu.png" id="img_margen" alt="malibu">
+                            <img src="/img/marca/manaos.png" id="img_margen" alt="manaos">
                         </div>
                         <div class="col px-0">
-                            <img src="/img/marca/ace.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ace">
-                            <img src="/img/marca/aguadelasmisiones.png" class="w-25 ml-4 mb-2 rounded-lg" alt="aguadelasmisiones">
-                            <img src="/img/marca/ala.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ala">
+                            <img src="/img/marca/ace.png" id="img_margen" alt="ace">
+                            <img src="/img/marca/aguadelasmisiones.png" id="img_margen" alt="aguadelasmisiones">
+                            <img src="/img/marca/ala.png" id="img_margen" alt="ala">
                             
-                            <img src="/img/marca/bic.png" class="w-25 ml-4 mb-2 rounded-lg" alt="amanda">
-                            <img src="/img/marca/blancaflor.png" class="w-25 ml-4 mb-2 rounded-lg" alt="callia">
-                            <img src="/img/marca/brahma.png" class="w-25 ml-4 mb-2 rounded-lg" alt="danica">
+                            <img src="/img/marca/bic.png" id="img_margen" alt="amanda">
+                            <img src="/img/marca/blancaflor.png" id="img_margen" alt="callia">
+                            <img src="/img/marca/brahma.png" id="img_margen" alt="danica">
 
-                            <img src="/img/marca/cocinero.png" class="w-25 ml-4 mb-2 rounded-lg" alt="cocinero">
-                            <img src="/img/marca/colgate.png" class="w-25 ml-4 mb-2 rounded-lg" alt="colgate">
-                            <img src="/img/marca/corona.png" class="w-25 ml-4 mb-2 rounded-lg" alt="corona">
+                            <img src="/img/marca/cocinero.png" id="img_margen" alt="cocinero">
+                            <img src="/img/marca/colgate.png" id="img_margen" alt="colgate">
+                            <img src="/img/marca/corona.png" id="img_margen" alt="corona">
                             
-                            <img src="/img/marca/dove.png" class="w-25 ml-4 mb-2 rounded-lg" alt="dove">
-                            <img src="/img/marca/drive.png" class="w-25 ml-4 mb-2 rounded-lg" alt="drive">
-                            <img src="/img/marca/ecodelosandes.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ecodelosandes">
+                            <img src="/img/marca/dove.png" id="img_margen" alt="dove">
+                            <img src="/img/marca/drive.png" id="img_margen" alt="drive">
+                            <img src="/img/marca/ecodelosandes.png" id="img_margen" alt="ecodelosandes">
 
-                            <img src="/img/marca/gillete.png" class="w-25 ml-4 mb-2 rounded-lg" alt="gillete">
-                            <img src="/img/marca/head&shoulders.png" class="w-25 ml-4 mb-2 rounded-lg" alt="head&shoulders">
-                            <img src="/img/marca/heineken.png" class="w-25 ml-4 mb-2 rounded-lg" alt="heineken">
+                            <img src="/img/marca/gillete.png" id="img_margen" alt="gillete">
+                            <img src="/img/marca/head&shoulders.png" id="img_margen" alt="head&shoulders">
+                            <img src="/img/marca/heineken.png" id="img_margen" alt="heineken">
                             
-                            <img src="/img/marca/laprovidencia.png" class="w-25 ml-4 mb-2 rounded-lg" alt="laprovidencia">
-                            <img src="/img/marca/laserenisima.png" class="w-25 ml-4 mb-2 rounded-lg" alt="laserenisima">
-                            <img src="/img/marca/lavirginia.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lavirginia">
+                            <img src="/img/marca/laprovidencia.png" id="img_margen" alt="laprovidencia">
+                            <img src="/img/marca/laserenisima.png" id="img_margen" alt="laserenisima">
+                            <img src="/img/marca/lavirginia.png" id="img_margen" alt="lavirginia">
                             
-                            <img src="/img/marca/marolio.png" class="w-25 ml-4 mb-2 rounded-lg" alt="marolio">
-                            <img src="/img/marca/martini.png" class="w-25 ml-4 mb-2 rounded-lg" alt="martini">
-                            <img src="/img/marca/matarazzo.png" class="w-25 ml-4 mb-2 rounded-lg" alt="matarazzo">
+                            <img src="/img/marca/marolio.png" id="img_margen" alt="marolio">
+                            <img src="/img/marca/martini.png" id="img_margen" alt="martini">
+                            <img src="/img/marca/matarazzo.png" id="img_margen" alt="matarazzo">
                         </div>
                         <div class="col px-0">
-                            <img src="/img/marca/alicante.png" class="w-25 ml-4 mb-2 rounded-lg" alt="alicante">
-                            <img src="/img/marca/almamora.png" class="w-25 ml-4 mb-2 rounded-lg" alt="almamora">
-                            <img src="/img/marca/amanda.png" class="w-25 ml-4 mb-2 rounded-lg" alt="amanda">
+                            <img src="/img/marca/alicante.png" id="img_margen" alt="alicante">
+                            <img src="/img/marca/almamora.png" id="img_margen" alt="almamora">
+                            <img src="/img/marca/amanda.png" id="img_margen" alt="amanda">
                             
-                            <img src="/img/marca/branca.png" class="w-25 ml-4 mb-2 rounded-lg" alt="branca">
-                            <img src="/img/marca/budweiser.png" class="w-25 ml-4 mb-2 rounded-lg" alt="budweiser">
-                            <img src="/img/marca/callia.png" class="w-25 ml-4 mb-2 rounded-lg" alt="callia">
+                            <img src="/img/marca/branca.png" id="img_margen" alt="branca">
+                            <img src="/img/marca/budweiser.png" id="img_margen" alt="budweiser">
+                            <img src="/img/marca/callia.png" id="img_margen" alt="callia">
 
-                            <img src="/img/marca/cusenier.png" class="w-25 ml-4 mb-2 rounded-lg" alt="cusenier">
-                            <img src="/img/marca/dada.png" class="w-25 ml-4 mb-2 rounded-lg" alt="dada">
-                            <img src="/img/marca/danica.png" class="w-25 ml-4 mb-2 rounded-lg" alt="danica">
+                            <img src="/img/marca/cusenier.png" id="img_margen" alt="cusenier">
+                            <img src="/img/marca/dada.png" id="img_margen" alt="dada">
+                            <img src="/img/marca/danica.png" id="img_margen" alt="danica">
                             
-                            <img src="/img/marca/elite.png" class="w-25 ml-4 mb-2 rounded-lg" alt="elite">
-                            <img src="/img/marca/elvive.png" class="w-25 ml-4 mb-2 rounded-lg" alt="elvive">
-                            <img src="/img/marca/estrella.png" class="w-25 ml-4 mb-2 rounded-lg" alt="estrella">
+                            <img src="/img/marca/elite.png" id="img_margen" alt="elite">
+                            <img src="/img/marca/elvive.png" id="img_margen" alt="elvive">
+                            <img src="/img/marca/estrella.png" id="img_margen" alt="estrella">
 
-                            <img src="/img/marca/hellmanns.png" class="w-25 ml-4 mb-2 rounded-lg" alt="hellmanns">
-                            <img src="/img/marca/higienol.png" class="w-25 ml-4 mb-2 rounded-lg" alt="higienol">
-                            <img src="/img/marca/huggies.png" class="w-25 ml-4 mb-2 rounded-lg" alt="huggies">
+                            <img src="/img/marca/hellmanns.png" id="img_margen" alt="hellmanns">
+                            <img src="/img/marca/higienol.png" id="img_margen" alt="higienol">
+                            <img src="/img/marca/huggies.png" id="img_margen" alt="huggies">
                             
-                            <img src="/img/marca/lays.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lays">
-                            <img src="/img/marca/ledesma.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ledesma">
-                            <img src="/img/marca/levex.png" class="w-25 ml-4 mb-2 rounded-lg" alt="levex">
+                            <img src="/img/marca/lays.png" id="img_margen" alt="lays">
+                            <img src="/img/marca/ledesma.png" id="img_margen" alt="ledesma">
+                            <img src="/img/marca/levex.png" id="img_margen" alt="levex">
                             
-                            <img src="/img/marca/medianaranja.png" class="w-25 ml-4 mb-2 rounded-lg" alt="medianaranja">
-                            <img src="/img/marca/milkaut.png" class="w-25 ml-4 mb-2 rounded-lg" alt="milkaut">
-                            <img src="/img/marca/molinocanuelas.png" class="w-25 ml-4 mb-2 rounded-lg" alt="molinocanuelas">
+                            <img src="/img/marca/medianaranja.png" id="img_margen" alt="medianaranja">
+                            <img src="/img/marca/milkaut.png" id="img_margen" alt="milkaut">
+                            <img src="/img/marca/molinocanuelas.png" id="img_margen" alt="molinocanuelas">
                         </div>
                         <div class="col px-0">
-                            <img src="/img/marca/aquarius.png" class="w-25 ml-4 mb-2 rounded-lg" alt="aquarius">
-                            <img src="/img/marca/arcor.png" class="w-25 ml-4 mb-2 rounded-lg" alt="arcor">
-                            <img src="/img/marca/ariel.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ariel">
+                            <img src="/img/marca/aquarius.png" id="img_margen" alt="aquarius">
+                            <img src="/img/marca/arcor.png" id="img_margen" alt="arcor">
+                            <img src="/img/marca/ariel.png" id="img_margen" alt="ariel">
                             
-                            <img src="/img/marca/canale.png" class="w-25 ml-4 mb-2 rounded-lg" alt="canale">
-                            <img src="/img/marca/celusal.png" class="w-25 ml-4 mb-2 rounded-lg" alt="celusal">
-                            <img src="/img/marca/chandon.png" class="w-25 ml-4 mb-2 rounded-lg" alt="chandon">
+                            <img src="/img/marca/canale.png" id="img_margen" alt="canale">
+                            <img src="/img/marca/celusal.png" id="img_margen" alt="celusal">
+                            <img src="/img/marca/chandon.png" id="img_margen" alt="chandon">
 
-                            <img src="/img/marca/danone.png" class="w-25 ml-4 mb-2 rounded-lg" alt="danone">
-                            <img src="/img/marca/dermaglos.png" class="w-25 ml-4 mb-2 rounded-lg" alt="dermaglos">
-                            <img src="/img/marca/dogchow.png" class="w-25 ml-4 mb-2 rounded-lg" alt="dogchow">
+                            <img src="/img/marca/danone.png" id="img_margen" alt="danone">
+                            <img src="/img/marca/dermaglos.png" id="img_margen" alt="dermaglos">
+                            <img src="/img/marca/dogchow.png" id="img_margen" alt="dogchow">
                             
-                            <img src="/img/marca/exquisita.png" class="w-25 ml-4 mb-2 rounded-lg" alt="exquisita">
-                            <img src="/img/marca/fanta.png" class="w-25 ml-4 mb-2 rounded-lg" alt="fanta">
-                            <img src="/img/marca/favorita.png" class="w-25 ml-4 mb-2 rounded-lg" alt="favorita">
+                            <img src="/img/marca/exquisita.png" id="img_margen" alt="exquisita">
+                            <img src="/img/marca/fanta.png" id="img_margen" alt="fanta">
+                            <img src="/img/marca/favorita.png" id="img_margen" alt="favorita">
 
-                            <img src="/img/marca/ilolay.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ilolay">
-                            <img src="/img/marca/imperial.png" class="w-25 ml-4 mb-2 rounded-lg" alt="imperial">
-                            <img src="/img/marca/jackdaniels.png" class="w-25 ml-4 mb-2 rounded-lg" alt="jackdaniels">
+                            <img src="/img/marca/ilolay.png" id="img_margen" alt="ilolay">
+                            <img src="/img/marca/imperial.png" id="img_margen" alt="imperial">
+                            <img src="/img/marca/jackdaniels.png" id="img_margen" alt="jackdaniels">
                             
-                            <img src="/img/marca/lifebuoy.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lifebuoy">
-                            <img src="/img/marca/luchetti.png" class="w-25 ml-4 mb-2 rounded-lg" alt="luchetti">
-                            <img src="/img/marca/lux.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lux">
+                            <img src="/img/marca/lifebuoy.png" id="img_margen" alt="lifebuoy">
+                            <img src="/img/marca/luchetti.png" id="img_margen" alt="luchetti">
+                            <img src="/img/marca/lux.png" id="img_margen" alt="lux">
                             
-                            <img src="/img/marca/monster.png" class="w-25 ml-4 mb-2 rounded-lg" alt="monster">
-                            <img src="/img/marca/mortimer.png" class="w-25 ml-4 mb-2 rounded-lg" alt="mortimer">
-                            <img src="/img/marca/mrmusculo.png" class="w-25 ml-4 mb-2 rounded-lg" alt="mrmusculo">
+                            <img src="/img/marca/monster.png" id="img_margen" alt="monster">
+                            <img src="/img/marca/mortimer.png" id="img_margen" alt="mortimer">
+                            <img src="/img/marca/mrmusculo.png" id="img_margen" alt="mrmusculo">
                         </div>  
                         <div class="col pl-0 pr-5 mr-5">
-                            <img src="/img/marca/axe.png" class="w-25 ml-4 mb-2 rounded-lg" alt="axe">
-                            <img src="/img/marca/ayudin.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ayudin">
-                            <img src="/img/marca/bacardi.png" class="w-25 ml-4 mb-2 rounded-lg" alt="bacardi">
+                            <img src="/img/marca/axe.png" id="img_margen" alt="axe">
+                            <img src="/img/marca/ayudin.png" id="img_margen" alt="ayudin">
+                            <img src="/img/marca/bacardi.png" id="img_margen" alt="bacardi">
                             
-                            <img src="/img/marca/cheetos.png" class="w-25 ml-4 mb-2 rounded-lg" alt="cheetos">
-                            <img src="/img/marca/chivasregal.png" class="w-25 ml-4 mb-2 rounded-lg" alt="chivasregal">
-                            <img src="/img/marca/cica.png" class="w-25 ml-4 mb-2 rounded-lg" alt="cica">
+                            <img src="/img/marca/cheetos.png" id="img_margen" alt="cheetos">
+                            <img src="/img/marca/chivasregal.png" id="img_margen" alt="chivasregal">
+                            <img src="/img/marca/cica.png" id="img_margen" alt="cica">
 
-                            <img src="/img/marca/dogui.png" class="w-25 ml-4 mb-2 rounded-lg" alt="dogui">
-                            <img src="/img/marca/donfelipe.png" class="w-25 ml-4 mb-2 rounded-lg" alt="donfelipe">
-                            <img src="/img/marca/donsatur.png" class="w-25 ml-4 mb-2 rounded-lg" alt="donsatur">
+                            <img src="/img/marca/dogui.png" id="img_margen" alt="dogui">
+                            <img src="/img/marca/donfelipe.png" id="img_margen" alt="donfelipe">
+                            <img src="/img/marca/donsatur.png" id="img_margen" alt="donsatur">
                             
-                            <img src="/img/marca/fluidomanchester.png" class="w-25 ml-4 mb-2 rounded-lg" alt="fluidomanchester">
-                            <img src="/img/marca/frizze.png" class="w-25 ml-4 mb-2 rounded-lg" alt="frizze">
-                            <img src="/img/marca/fuyi.png" class="w-25 ml-4 mb-2 rounded-lg" alt="fuyi">
+                            <img src="/img/marca/fluidomanchester.png" id="img_margen" alt="fluidomanchester">
+                            <img src="/img/marca/frizze.png" id="img_margen" alt="frizze">
+                            <img src="/img/marca/fuyi.png" id="img_margen" alt="fuyi">
 
-                            <img src="/img/marca/johnsonjohnson.png" class="w-25 ml-4 mb-2 rounded-lg" alt="johnsonjohnson">
-                            <img src="/img/marca/kahlua.png" class="w-25 ml-4 mb-2 rounded-lg" alt="kahlua">
-                            <img src="/img/marca/knoll.png" class="w-25 ml-4 mb-2 rounded-lg" alt="knoll">
+                            <img src="/img/marca/johnsonjohnson.png" id="img_margen" alt="johnsonjohnson">
+                            <img src="/img/marca/kahlua.png" id="img_margen" alt="kahlua">
+                            <img src="/img/marca/knoll.png" id="img_margen" alt="knoll">
                             
-                            <img src="/img/marca/lysoform.png" class="w-25 ml-4 mb-2 rounded-lg" alt="lysoform">
-                            <img src="/img/marca/maggi.png" class="w-25 ml-4 mb-2 rounded-lg" alt="maggi">
-                            <img src="/img/marca/magistral.png" class="w-25 ml-4 mb-2 rounded-lg" alt="magistral">
+                            <img src="/img/marca/lysoform.png" id="img_margen" alt="lysoform">
+                            <img src="/img/marca/maggi.png" id="img_margen" alt="maggi">
+                            <img src="/img/marca/magistral.png" id="img_margen" alt="magistral">
                             
-                            <img src="/img/marca/natura.png" class="w-25 ml-4 mb-2 rounded-lg" alt="natura">
-                            <img src="/img/marca/nescafe.png" class="w-25 ml-4 mb-2 rounded-lg" alt="nescafe">
-                            <img src="/img/marca/nestle.png" class="w-25 ml-4 mb-2 rounded-lg" alt="nestle">
+                            <img src="/img/marca/natura.png" id="img_margen" alt="natura">
+                            <img src="/img/marca/nescafe.png" id="img_margen" alt="nescafe">
+                            <img src="/img/marca/nestle.png" id="img_margen" alt="nestle">
                         </div> 
                     </div>
                 </div>
                 <div class="carousel-item" data-interval="25000">
-                    <div class="row ml-5">
+                    <div class="row" id="row_margen">
                         <div class="col px-0">
-                            <img src="/img/marca/newage.png" class="w-25 ml-4 mb-2 rounded-lg" alt="newage">
-                            <img src="/img/marca/nivea.png" class="w-25 ml-4 mb-2 rounded-lg" alt="nivea">
-                            <img src="/img/marca/norton.png" class="w-25 ml-4 mb-2 rounded-lg" alt="norton">
+                            <img src="/img/marca/newage.png" id="img_margen" alt="newage">
+                            <img src="/img/marca/nivea.png" id="img_margen" alt="nivea">
+                            <img src="/img/marca/norton.png" id="img_margen" alt="norton">
                             
-                            <img src="/img/marca/poett.png" class="w-25 ml-4 mb-2 rounded-lg" alt="poett">
-                            <img src="/img/marca/primicia.png" class="w-25 ml-4 mb-2 rounded-lg" alt="primicia">
-                            <img src="/img/marca/pringles.png" class="w-25 ml-4 mb-2 rounded-lg" alt="pringles">
+                            <img src="/img/marca/poett.png" id="img_margen" alt="poett">
+                            <img src="/img/marca/primicia.png" id="img_margen" alt="primicia">
+                            <img src="/img/marca/pringles.png" id="img_margen" alt="pringles">
 
-                            <img src="/img/marca/sabrositos.png" class="w-25 ml-4 mb-2 rounded-lg" alt="sabrositos">
-                            <img src="/img/marca/sancor.png" class="w-25 ml-4 mb-2 rounded-lg" alt="sancor">
-                            <img src="/img/marca/santaana.png" class="w-25 ml-4 mb-2 rounded-lg" alt="santaana">
+                            <img src="/img/marca/sabrositos.png" id="img_margen" alt="sabrositos">
+                            <img src="/img/marca/sancor.png" id="img_margen" alt="sancor">
+                            <img src="/img/marca/santaana.png" id="img_margen" alt="santaana">
                             
-                            <img src="/img/marca/stellaartois.png" class="w-25 ml-4 mb-2 rounded-lg" alt="stellaartois">
-                            <img src="/img/marca/sussex.png" class="w-25 ml-4 mb-2 rounded-lg" alt="sussex">
-                            <img src="/img/marca/tang.png" class="w-25 ml-4 mb-2 rounded-lg" alt="tang">
+                            <img src="/img/marca/stellaartois.png" id="img_margen" alt="stellaartois">
+                            <img src="/img/marca/sussex.png" id="img_margen" alt="sussex">
+                            <img src="/img/marca/tang.png" id="img_margen" alt="tang">
 
-                            <img src="/img/marca/wassington.png" class="w-25 ml-4 mb-2 rounded-lg" alt="wassington">
-                            <img src="/img/marca/zorro.png" class="w-25 ml-4 mb-2 rounded-lg" alt="zorro">
+                            <img src="/img/marca/wassington.png" id="img_margen" alt="wassington">
+                            <img src="/img/marca/zorro.png" id="img_margen" alt="zorro">
                         </div>
                         <div class="col px-0">
-                            <img src="/img/marca/off.png" class="w-25 ml-4 mb-2 rounded-lg" alt="off">
-                            <img src="/img/marca/oralb.png" class="w-25 ml-4 mb-2 rounded-lg" alt="oralb">
-                            <img src="/img/marca/oreo.png" class="w-25 ml-4 mb-2 rounded-lg" alt="oreo">
+                            <img src="/img/marca/off.png" id="img_margen" alt="off">
+                            <img src="/img/marca/oralb.png" id="img_margen" alt="oralb">
+                            <img src="/img/marca/oreo.png" id="img_margen" alt="oreo">
                             
-                            <img src="/img/marca/procenex.png" class="w-25 ml-4 mb-2 rounded-lg" alt="procenex">
-                            <img src="/img/marca/protex.png" class="w-25 ml-4 mb-2 rounded-lg" alt="protex">
-                            <img src="/img/marca/pureza.png" class="w-25 ml-4 mb-2 rounded-lg" alt="pureza">
+                            <img src="/img/marca/procenex.png" id="img_margen" alt="procenex">
+                            <img src="/img/marca/protex.png" id="img_margen" alt="protex">
+                            <img src="/img/marca/pureza.png" id="img_margen" alt="pureza">
 
-                            <img src="/img/marca/santaisabel.png" class="w-25 ml-4 mb-2 rounded-lg" alt="santaisabel">
-                            <img src="/img/marca/santajulia.png" class="w-25 ml-4 mb-2 rounded-lg" alt="santajulia">
-                            <img src="/img/marca/santelmo.png" class="w-25 ml-4 mb-2 rounded-lg" alt="santelmo">
+                            <img src="/img/marca/santaisabel.png" id="img_margen" alt="santaisabel">
+                            <img src="/img/marca/santajulia.png" id="img_margen" alt="santajulia">
+                            <img src="/img/marca/santelmo.png" id="img_margen" alt="santelmo">
 
-                            <img src="/img/marca/taragui.png" class="w-25 ml-4 mb-2 rounded-lg" alt="taragui">
-                            <img src="/img/marca/terma.png" class="w-25 ml-4 mb-2 rounded-lg" alt="terma">
-                            <img src="/img/marca/terrabusi.png" class="w-25 ml-4 mb-2 rounded-lg" alt="terrabusi">
+                            <img src="/img/marca/taragui.png" id="img_margen" alt="taragui">
+                            <img src="/img/marca/terma.png" id="img_margen" alt="terma">
+                            <img src="/img/marca/terrabusi.png" id="img_margen" alt="terrabusi">
                         </div>
                         <div class="col px-0">
-                            <img src="/img/marca/paladini.png" class="w-25 ml-4 mb-2 rounded-lg" alt="paladini">
-                            <img src="/img/marca/palmolive.png" class="w-25 ml-4 mb-2 rounded-lg" alt="palmolive">
-                            <img src="/img/marca/pampers.png" class="w-25 ml-4 mb-2 rounded-lg" alt="pampers">
+                            <img src="/img/marca/paladini.png" id="img_margen" alt="paladini">
+                            <img src="/img/marca/palmolive.png" id="img_margen" alt="palmolive">
+                            <img src="/img/marca/pampers.png" id="img_margen" alt="pampers">
                             
-                            <img src="/img/marca/quaker.png" class="w-25 ml-4 mb-2 rounded-lg" alt="quaker">
-                            <img src="/img/marca/quilmes.png" class="w-25 ml-4 mb-2 rounded-lg" alt="quilmes">
-                            <img src="/img/marca/raid.png" class="w-25 ml-4 mb-2 rounded-lg" alt="raid">
+                            <img src="/img/marca/quaker.png" id="img_margen" alt="quaker">
+                            <img src="/img/marca/quilmes.png" id="img_margen" alt="quilmes">
+                            <img src="/img/marca/raid.png" id="img_margen" alt="raid">
 
-                            <img src="/img/marca/schneider.png" class="w-25 ml-4 mb-2 rounded-lg" alt="schneider">
-                            <img src="/img/marca/scott.png" class="w-25 ml-4 mb-2 rounded-lg" alt="scott">
-                            <img src="/img/marca/sedal.png" class="w-25 ml-4 mb-2 rounded-lg" alt="sedal">
+                            <img src="/img/marca/schneider.png" id="img_margen" alt="schneider">
+                            <img src="/img/marca/scott.png" id="img_margen" alt="scott">
+                            <img src="/img/marca/sedal.png" id="img_margen" alt="sedal">
                             
-                            <img src="/img/marca/tiernitos.png" class="w-25 ml-4 mb-2 rounded-lg" alt="tiernitos">
-                            <img src="/img/marca/trapiche.png" class="w-25 ml-4 mb-2 rounded-lg" alt="trapiche">
-                            <img src="/img/marca/tregar.png" class="w-25 ml-4 mb-2 rounded-lg" alt="tregar">
+                            <img src="/img/marca/tiernitos.png" id="img_margen" alt="tiernitos">
+                            <img src="/img/marca/trapiche.png" id="img_margen" alt="trapiche">
+                            <img src="/img/marca/tregar.png" id="img_margen" alt="tregar">
                         </div>
                         <div class="col px-0">
-                            <img src="/img/marca/pantene.png" class="w-25 ml-4 mb-2 rounded-lg" alt="pantene">
-                            <img src="/img/marca/pasosdelostoros.png" class="w-25 ml-4 mb-2 rounded-lg" alt="pasosdelostoros">
-                            <img src="/img/marca/paty.png" class="w-25 ml-4 mb-2 rounded-lg" alt="paty">
+                            <img src="/img/marca/pantene.png" id="img_margen" alt="pantene">
+                            <img src="/img/marca/pasosdelostoros.png" id="img_margen" alt="pasosdelostoros">
+                            <img src="/img/marca/paty.png" id="img_margen" alt="paty">
                             
-                            <img src="/img/marca/redbull.png" class="w-25 ml-4 mb-2 rounded-lg" alt="redbull">
-                            <img src="/img/marca/reinharina.png" class="w-25 ml-4 mb-2 rounded-lg" alt="reinharina">
-                            <img src="/img/marca/rexona.png" class="w-25 ml-4 mb-2 rounded-lg" alt="rexona">
+                            <img src="/img/marca/redbull.png" id="img_margen" alt="redbull">
+                            <img src="/img/marca/reinharina.png" id="img_margen" alt="reinharina">
+                            <img src="/img/marca/rexona.png" id="img_margen" alt="rexona">
 
-                            <img src="/img/marca/ser.png" class="w-25 ml-4 mb-2 rounded-lg" alt="ser">
-                            <img src="/img/marca/skip.png" class="w-25 ml-4 mb-2 rounded-lg" alt="skip">
-                            <img src="/img/marca/skyy.png" class="w-25 ml-4 mb-2 rounded-lg" alt="skyy">
+                            <img src="/img/marca/ser.png" id="img_margen" alt="ser">
+                            <img src="/img/marca/skip.png" id="img_margen" alt="skip">
+                            <img src="/img/marca/skyy.png" id="img_margen" alt="skyy">
                             
-                            <img src="/img/marca/veritas.png" class="w-25 ml-4 mb-2 rounded-lg" alt="veritas">
-                            <img src="/img/marca/villadelsur.png" class="w-25 ml-4 mb-2 rounded-lg" alt="villadelsur">
-                            <img src="/img/marca/villavicencio.png" class="w-25 ml-4 mb-2 rounded-lg" alt="villavicencio">
+                            <img src="/img/marca/veritas.png" id="img_margen" alt="veritas">
+                            <img src="/img/marca/villadelsur.png" id="img_margen" alt="villadelsur">
+                            <img src="/img/marca/villavicencio.png" id="img_margen" alt="villavicencio">
                         </div>  
                         <div class="col pl-0 pr-5 mr-5">
-                            <img src="/img/marca/pedigree.png" class="w-25 ml-4 mb-2 rounded-lg" alt="pedigree">
-                            <img src="/img/marca/pepsi.png" class="w-25 ml-4 mb-2 rounded-lg" alt="pepsi">
-                            <img src="/img/marca/plusbelle.png" class="w-25 ml-4 mb-2 rounded-lg" alt="plusbelle">
+                            <img src="/img/marca/pedigree.png" id="img_margen" alt="pedigree">
+                            <img src="/img/marca/pepsi.png" id="img_margen" alt="pepsi">
+                            <img src="/img/marca/plusbelle.png" id="img_margen" alt="plusbelle">
                             
-                            <img src="/img/marca/rik.png" class="w-25 ml-4 mb-2 rounded-lg" alt="rik">
-                            <img src="/img/marca/romance.png" class="w-25 ml-4 mb-2 rounded-lg" alt="romance">
-                            <img src="/img/marca/rosamonte.png" class="w-25 ml-4 mb-2 rounded-lg" alt="rosamonte">
+                            <img src="/img/marca/rik.png" id="img_margen" alt="rik">
+                            <img src="/img/marca/romance.png" id="img_margen" alt="romance">
+                            <img src="/img/marca/rosamonte.png" id="img_margen" alt="rosamonte">
 
-                            <img src="/img/marca/smirnoff.png" class="w-25 ml-4 mb-2 rounded-lg" alt="smirnoff">
-                            <img src="/img/marca/speed.png" class="w-25 ml-4 mb-2 rounded-lg" alt="speed">
-                            <img src="/img/marca/sprite.png" class="w-25 ml-4 mb-2 rounded-lg" alt="sprite">
+                            <img src="/img/marca/smirnoff.png" id="img_margen" alt="smirnoff">
+                            <img src="/img/marca/speed.png" id="img_margen" alt="speed">
+                            <img src="/img/marca/sprite.png" id="img_margen" alt="sprite">
                             
-                            <img src="/img/marca/vim.png" class="w-25 ml-4 mb-2 rounded-lg" alt="vim">
-                            <img src="/img/marca/vinadelbalbo.png" class="w-25 ml-4 mb-2 rounded-lg" alt="vinadelbalbo">
-                            <img src="/img/marca/vivere.png" class="w-25 ml-4 mb-2 rounded-lg" alt="vivere">
+                            <img src="/img/marca/vim.png" id="img_margen" alt="vim">
+                            <img src="/img/marca/vinadelbalbo.png" id="img_margen" alt="vinadelbalbo">
+                            <img src="/img/marca/vivere.png" id="img_margen" alt="vivere">
                         </div> 
                     </div>
                 </div>
-            </div>    
+            </div> 
+   
             <!--Controles NEXT y PREV-->
             <div >
                 <a class="carousel-control-prev position-relative" href="#carousel1" role="button" data-slide="prev">
-                    <span aria-hidden="true" style="margin-top: 18rem; margin-left: -14rem;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#283747" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <span aria-hidden="true" id="flecha_left">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="flecha_size" fill="#283747" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
                         </svg>
                     </span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next position-relative" href="#carousel1" role="button" data-slide="next">
-                    <span aria-hidden="true" style="margin-top: -4rem; margin-right: -212rem;">
-                        <svg class="dark" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#283747" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <span aria-hidden="true" id="flecha_right">
+                        <svg class="dark" xmlns="http://www.w3.org/2000/svg" id="flecha_size" fill="#283747" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
                         </svg>
                     </span>
@@ -435,7 +436,7 @@
         </div>
         <div class="card" id="estilo_card"> 
             <div class="card-footer">
-                <div id="estilo_card_form">
+                <div id="estilo_card_sesion">
                     <h3 class="text-center font-weight-bold"> Iniciar Sesi&oacute;n </h3>
                     <br>  
                     <form action="/" method="post" onsubmit="validarUsuario();" class="text-center">
@@ -447,7 +448,9 @@
                             <label class="col-sm-3 col-form-label font-weight-bold" id="text-size"> Contraseña </label>
                             <input class="form-control col-sm-8" type="password" name="contrasena"/>
                         </div>
-                        <button class="btn btn-primary"> Ingresar </button>
+                        <div id="boton_ingresar">
+                            <button class="btn btn-primary mr-5" > Ingresar </button>
+                        </div>
                     </form>
                 </div>
             </div>

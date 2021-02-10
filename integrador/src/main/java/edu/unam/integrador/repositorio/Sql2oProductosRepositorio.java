@@ -19,7 +19,7 @@ public class Sql2oProductosRepositorio implements ProductosRepositorio {
     @Override
     public List<Producto> listar() throws RepositorioException {
         try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM Producto;";
+            String sql = "SELECT * FROM Producto ORDER BY \"idProducto\";";
             return conn.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Producto.class);
         } catch (Sql2oException e) {
             throw new RepositorioException();
@@ -79,4 +79,5 @@ public class Sql2oProductosRepositorio implements ProductosRepositorio {
             throw new RepositorioException();
         }
     }
+
 }
