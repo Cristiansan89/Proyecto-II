@@ -1,5 +1,7 @@
 package edu.unam.integrador.modelo;
 
+import java.text.DecimalFormat;
+
 public class Producto {
 
     private int idProducto;
@@ -84,11 +86,12 @@ public class Producto {
     }
 
     public double getPrecioUnitario() {
-       return precioUnitario;
+        return precioUnitario;
     }
 
     public String precioDecimal(){
-        return String.format("%.2f", getPrecioUnitario());
+        String valorPrecioUnitario = String.format("%.2f", this.getPrecioUnitario());
+        return valorPrecioUnitario;
     }
 
     public void setPrecioUnitario(double precioUnitario) {

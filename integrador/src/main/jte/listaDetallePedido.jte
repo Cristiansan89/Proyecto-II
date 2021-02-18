@@ -53,7 +53,7 @@
                 <tr>
                     <td>${detallepedido.getProducto().toString()}</td>
                     <td>${detallepedido.getCantidad()}</td>
-                    <td>${detallepedido.getProducto().getPrecioUnitario()}</td>
+                    <td>${detallepedido.getProducto().precioDecimal()}</td>
                     <td>${detallepedido.getSubTotal()}</td>
                 </tr>
             @endfor

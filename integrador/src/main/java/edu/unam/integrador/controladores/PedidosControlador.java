@@ -66,9 +66,6 @@ public class PedidosControlador {
         var modelo = new ModeloDetallesPedidos();
         modelo.productos = pedidosRepositorio.listarProducto();
         modelo.detallePedidos = this.detallesPedidosRepositorio.listar(id);
-        //modelo.subtotal = 0;
-        modelo.total = 0;
-        modelo.descuento = 0;  
         var cliente = clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
         var obtenerCliente = clientesRepositorio.obtener(cliente.getIdCliente());
         modelo.nombre = obtenerCliente.getNombre();
@@ -76,12 +73,15 @@ public class PedidosControlador {
         var preferencial = clientesPreferencialRepositorio.obtenerCliente(cliente.getIdCliente());
         modelo.valdescuento = preferencial.getDescuento();
         double valorSubTotal = 0;
+        double totalDescuento = 0;
+        double precioTotal = 0;
         for (DetallePedido detalle : modelo.detallePedidos) {
             valorSubTotal += detalle.getSubTotal();
             modelo.subtotal = String.format("%.2f", valorSubTotal);
-            //modelo.subtotal += detalle.getSubTotal();
-            modelo.descuento = (valorSubTotal * modelo.valdescuento)/100;
-            modelo.total = Math.round((valorSubTotal - modelo.descuento) * 100)/100d;
+            totalDescuento = (valorSubTotal * modelo.valdescuento)/100;
+            modelo.descuento = String.format("%.2f", totalDescuento);
+            precioTotal = Math.round((valorSubTotal - totalDescuento) * 100)/100d;
+            modelo.total = String.format("%.2f", precioTotal);
         }
         modelo.idPedido = id;
         ctx.render("formularioPedido.jte", Collections.singletonMap("modelo", modelo));
@@ -123,7 +123,7 @@ public class PedidosControlador {
         var modelo = new ModeloDetallesPedidos();
         var pedido = this.pedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
         var detallePedidos = this.detallesPedidosRepositorio.listar(pedido.getIdPedido());
-        var totalPagar = 0;
+        Double totalPagar = 0.0;
     //    modelo.subtotal = 0;
         modelo.descuento = 0;
         var cliente = clientesRepositorio.obtenerCliente(ctx.cookie("nick"));
@@ -138,8 +138,8 @@ public class PedidosControlador {
             modelo.subtotal = String.format("%.2f", valorSubTotal);
             modelo.descuento = (valorSubTotal * modelo.valdescuento)/100;
             modelo.total = Math.round((valorSubTotal - modelo.descuento) * 100)/100d;
-            totalPagar += modelo.total;
         }
+        totalPagar += Double.valueOf(modelo.total);
         pedido.setEstado(true);
         pedido.setTotalPagar(Double.valueOf(totalPagar));
         this.pedidosRepositorio.finalizar(pedido);
@@ -160,4 +160,5 @@ public class PedidosControlador {
         this.pedidosRepositorio.cancelar(pedido);
         ctx.redirect("/pedido/listapedido/cliente/" + String.valueOf(id));
     }
+
 }

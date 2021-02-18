@@ -18,7 +18,7 @@ public class ModeloDetallesPedidos {
     public List<DetallePedido> detallePedidos = new ArrayList<>();
     public List<Producto> productos = new ArrayList<>();
     public double valdescuento;
-    public double descuento;
+    public String descuento;
     public String subtotal;
-    public double total;
+    public String total;
 }

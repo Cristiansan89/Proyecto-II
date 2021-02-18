@@ -1,5 +1,11 @@
 package edu.unam.integrador.modelo;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
 public class DetallePedido {
     private int idDetallePedido;
     private int cantidad;
@@ -28,11 +34,25 @@ public class DetallePedido {
     }
 
     public double getSubTotal(){
-        return this.getProducto().getPrecioUnitario() * this.getCantidad();
+        double subTotal = this.getProducto().getPrecioUnitario() * this.getCantidad();
+        double redondeoSubTotal = Math.round(subTotal * 100) / 100d;
+        return redondeoSubTotal;
     }
 
     public double getTotalFila() {
-        return (((this.getProducto().getPrecioUnitario() * this.getCantidad()) * this.pedido.getDescuento()) / 100);
+        double totalFila = (((this.getProducto().getPrecioUnitario() * this.getCantidad()) * this.pedido.getDescuento()) / 100);
+        double redondeoTotalFila = Math.round(totalFila * 100) / 100d;
+        return redondeoTotalFila;
+    }
+
+    public String stringSubTotal(){
+        String valorSubTotal = String.format("%.2f", this.getSubTotal());
+        return valorSubTotal;
+    }
+
+    public String stringTotalFila(){
+        String valorTotalFila = String.format("%.2f", this.getTotalFila());
+        return valorTotalFila;
     }
 
     public void setCantidad(int cantidad) {
