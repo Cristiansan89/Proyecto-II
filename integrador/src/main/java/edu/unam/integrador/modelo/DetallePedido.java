@@ -33,6 +33,27 @@ public class DetallePedido {
         return cantidad;
     }
 
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public Producto getProducto() {
+        return this.producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
+
     public double getSubTotal(){
         double subTotal = this.getProducto().getPrecioUnitario() * this.getCantidad();
         double redondeoSubTotal = Math.round(subTotal * 100) / 100d;
@@ -53,27 +74,6 @@ public class DetallePedido {
     public String stringTotalFila(){
         String valorTotalFila = String.format("%.2f", this.getTotalFila());
         return valorTotalFila;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public Producto getProducto() {
-        return this.producto;
-    }
-
-    public void setProducto(Producto producto) {
-        this.producto = producto;
-    }
-
-
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
     }
 
     @Override

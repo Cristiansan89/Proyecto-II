@@ -89,11 +89,6 @@ public class Producto {
         return precioUnitario;
     }
 
-    public String precioDecimal(){
-        String valorPrecioUnitario = String.format("%.2f", this.getPrecioUnitario());
-        return valorPrecioUnitario;
-    }
-
     public void setPrecioUnitario(double precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
@@ -104,6 +99,11 @@ public class Producto {
 
     public void setDetalle(String detalle) {
         this.detalle = detalle;
+    }
+
+    public String precioDecimal(){
+        String valorPrecioUnitario = String.format("%.2f", this.getPrecioUnitario());
+        return valorPrecioUnitario;
     }
 
     @Override

@@ -28,6 +28,8 @@ public class DetallesPedidosControlador {
         var pedido = pedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());
         var obtenerCliente = clientesRepositorio.obtenerClientePedido(pedido.getIdPedido());
         var cliente = clientesRepositorio.obtener(obtenerCliente.getIdCliente());
+        modelo.idCliente = cliente.getIdCliente();
+        modelo.rol = ctx.cookie("rol");
         modelo.valdescuento = pedido.getDescuento();
         modelo.apellido = cliente.getApellido();
         modelo.nombre = cliente.getNombre();

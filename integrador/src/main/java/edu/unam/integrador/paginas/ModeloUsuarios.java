@@ -10,6 +10,4 @@ public class ModeloUsuarios {
     public List<Usuario> usuarios = new ArrayList<>();
     public int idCliente;
     public String rol;
-
-    
 }

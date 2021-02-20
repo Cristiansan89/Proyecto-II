@@ -6,7 +6,7 @@ import edu.unam.integrador.modelo.Pedido;
 
 public class ModeloPedidos {
     public int idCliente;
+    public String rol;
     public int idProducto;
     public List<Pedido> pedidos = new ArrayList<>();
-    public String rol;
 }

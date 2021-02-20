@@ -15,6 +15,8 @@ public class ModeloDetallesPedidos {
     public String cuil;
     public String domicilio;
     public String telefono;
+    public int idCliente;
+    public String rol;
     public List<DetallePedido> detallePedidos = new ArrayList<>();
     public List<Producto> productos = new ArrayList<>();
     public double valdescuento;

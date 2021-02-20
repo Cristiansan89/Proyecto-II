@@ -79,9 +79,15 @@
             </tr>
         </thead>
     </table>
-    <center>
-        <a href="/pedidos/listapedido" type="button" class="btn btn-primary justify-content-center align-items-center"> Volver </a>
-    </center>
+    @if (modelo.rol.equals("admin"))
+        <center>
+            <a href="/pedidos/listapedido" type="button" class="btn btn-primary justify-content-center align-items-center"> Volver </a>
+        </center>
+    @elseif (modelo.rol.equals("cliente"))    
+        <center>
+            <a href="/pedido/listapedido/cliente/${modelo.idCliente}" type="button" class="btn btn-primary justify-content-center align-items-center"> Volver </a>
+        </center>
+    @endif
 </div>
 
 

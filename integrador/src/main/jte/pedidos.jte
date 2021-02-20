@@ -28,7 +28,7 @@
                     <td>${pedido.getHora()}</td>
                     <td>${pedido.tipoEstadoStr()}</td>
                     <td>${pedido.getCondicion()}</td>
-                    <td>${pedido.getTotalPagar()}</td> 
+                    <td>${pedido.stringTotalPagar()}</td> 
                     <td> <a type="button" class="btn btn-success no-gutters" href="/pedidos/listadetalle/${pedido.getIdPedido()}"> Ver </a></td>    
                     @if ((modelo.rol.equals("admin")) && (pedido.getCondicion().equals("En Espera")))
                         <td> <a type="button" class="btn btn-info no-gutters" href="/pedidos/entregado/${pedido.getIdPedido()}"> Entregado </a></td>    

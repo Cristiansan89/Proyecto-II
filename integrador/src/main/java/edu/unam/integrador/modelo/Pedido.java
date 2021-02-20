@@ -113,11 +113,15 @@ public class Pedido {
         return formatoFecha;
     }
 
+    public String stringTotalPagar(){
+        String valorTotalPagar = String.format("%.2f", this.getTotalPagar());
+        return valorTotalPagar;
+    }
 
     @Override
     public String toString() {
         return  "ID Pedido: " + idPedido + ", Fecha: " + this.formatoFecha(fecha) + ", Hora: " + hora + ", Estado: " + this.tipoEstadoStr() + ", Condición: " + condicion + ", Descuento: " + descuento + 
-            ", Total a Pagar: " + totalPagar + ", Cliente: " + cliente;
+            ", Total a Pagar: " + this.stringTotalPagar() + ", Cliente: " + cliente;
     }
 
 }
