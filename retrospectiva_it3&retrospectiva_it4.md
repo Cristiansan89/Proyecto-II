@@ -3,7 +3,7 @@
 <h2>Objetivos Cumplidos</h2>
 <br>
 
-* <b>Historia de Usuario</b> ("Producto", "Cliente", "Pedido", "Detalle Pedido", "Cliente Prefencial", "Usuario").
+* <b>Historia de Usuario</b> ("Producto", "Cliente", "Pedido", "Detalle Pedido", "Cliente Preferencial", "Usuario").
 * <b>Código</b>
   * Modelo de Clase ("Producto", "Cliente") en la 1° Iteración completado al 95%.
   * Controladores de la 1° Iteración completado al 90%.
