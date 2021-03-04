@@ -1,7 +1,4 @@
 package edu.unam.integrador.modelo;
-
-
-
 public class ClientePreferencial {
     private int idClientePreferencial;
     private double descuento;
@@ -46,7 +43,7 @@ public class ClientePreferencial {
 
     @Override
     public String toString() {
-        return "ID Cliente Preferencial: " + idClientePreferencial + ", Descuento: " + descuento;
+        return idClientePreferencial + ", " + descuento;
     }
 
 }

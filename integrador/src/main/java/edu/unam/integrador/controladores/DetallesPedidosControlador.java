@@ -23,6 +23,7 @@ public class DetallesPedidosControlador {
             this.detallesPedidosRepositorio = detallesPedidosRepositorio;
     }
     
+    // Lista los Producto en el Detalle Pedido por Pedido del Cliente
     public void listarDetalle(Context ctx) throws SQLException{
         var modelo = new ModeloDetallesPedidos();
         var pedido = pedidosRepositorio.obtener(ctx.pathParam("id", Integer.class).get());

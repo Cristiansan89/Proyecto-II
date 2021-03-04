@@ -21,6 +21,7 @@ public class UsuariosControlador {
         this.clientesRepositorio = clientesRepositorio;
     }
 
+    // Valida si ya existe el Usuario-Cliente
     public void validarUsuario(Context ctx) throws SQLException {
         String nick = ctx.formParam("nick", String.class).get();
         String clave = ctx.formParam("contrasena", String.class).get();
@@ -38,6 +39,7 @@ public class UsuariosControlador {
 
     }
 
+    // Inicio la Sesión
     public void mostrarIndex(Context ctx) {
         var modelo = new ModeloUsuarios();
         // controlo por cookie
@@ -51,11 +53,13 @@ public class UsuariosControlador {
         ctx.render("inicio.jte", Collections.singletonMap("modelo", modelo));
     }
 
+    // Cerrar la Sesion
     public void cerrarSesion(Context ctx){
         ctx.removeCookie("nick", "/");
         ctx.redirect("/");
     }
 
+    // Modificar los datos de un Usuario
     public void modificar(Context ctx){
         var modelo = new ModeloUsuario();
         modelo.usuario = this.usuariosRepositorio.obtener(ctx.cookie("nick"));
@@ -63,6 +67,7 @@ public class UsuariosControlador {
         ctx.render("editarUsuario.jte", Collections.singletonMap("modelo", modelo));
     }
 
+    // Actualiza los datos modificado del Usuario
     public void actualizar(Context ctx) throws SQLException {
         var id = ctx.pathParam("id", Integer.class).get();
         Usuario usuario = this.usuariosRepositorio.obtener(id);

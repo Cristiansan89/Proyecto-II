@@ -65,12 +65,6 @@ public class App {
         app.delete("/productos/borrar/:id", productosControlador::borrar);
 
         // Pedido y Detalle Pedido
-        //Para Admin
-        app.get("/pedidos/listapedido", pedidosControlador::listar);
-        // Para Cliente
-        app.get("/pedido/listapedido/cliente/:id", pedidosControlador::listarPedidoCliente);
-        // Para todo
-        app.get("/pedidos/listadetalle/:id", detallesPedidosControlador::listarDetalle);
         app.get("/pedidos/crear", pedidosControlador::crear);
         app.post("/pedidos/agregardetalle/:id", pedidosControlador::agregar);
         app.get("/pedidos/nuevo/:id", pedidosControlador::nuevo);
@@ -80,6 +74,15 @@ public class App {
         app.get("/pedidos/entregado/:id", pedidosControlador::entregado);
         app.get("/pedidos/cancelar/:id", pedidosControlador::cancelar);
         
+         //Para Admin
+        app.get("/pedidos/listapedido", pedidosControlador::listar);
+
+         // Para Cliente
+        app.get("/pedido/listapedido/cliente/:id", pedidosControlador::listarPedidoCliente);
+        
+         // Para todo
+        app.get("/pedidos/listadetalle/:id", detallesPedidosControlador::listarDetalle);
+
         // Usuario
         app.get("/usuarios/modificar/:id", usuariosControlador::modificar);
         app.post("/usuarios/actualizar/:id", usuariosControlador::actualizar);

@@ -1,7 +1,7 @@
 package edu.unam.integrador.modelo;
 
 import java.util.Date;
- 
+
 public class Cliente {
 
     private int idCliente;
@@ -92,9 +92,8 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "ID Cliente: " + idCliente  + ", Nombre: " + nombre + ", Apellido: " + apellido  + ", Cuil: " + cuil + 
-            ", Domicilio: " + domicilio  +  ", Telefono: " + telefono + ", Fecha Ingreso: " + fechaIngreso;
+        return idCliente  + ", " + nombre + ", " + apellido  + ", " + cuil + ", " + domicilio  +  ", " + telefono + ", " + fechaIngreso;
     }
 
-    
+
 }

@@ -29,45 +29,6 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
     }
 
     @Override
-    public List<Pedido> listar() throws RepositorioException {
-        try (Connection conn = sql2o.open()) {
-            var pedidos = new ArrayList<Pedido>();
-            String sql = "SELECT * FROM pedido where estado = 'true';";
-            var resultado = conn.createQuery(sql).executeAndFetchTable().asList();
-            for (var o : resultado) {
-                var cliente = this.clientesRepositorio.obtener((int) o.get("idcliente"));
-                var pedido = new Pedido ((Date) o.get("fecha"), (String) o.get("hora"), (Double) o.get("descuento"), (Double) o.get("totalpagar"), cliente, (boolean) o.get("estado"), (String) o.get("condicion"));
-                pedido.setIdPedido((int) o.get("idpedido"));
-                pedido.setCliente(cliente);
-                pedidos.add(pedido);
-            }
-            return pedidos;
-        } catch (Sql2oException e) {
-            throw new RepositorioException();
-        }
-    }
-
-    @Override
-    public List<Pedido> listarPedidoCliente(int idCliente) throws RepositorioException {
-        try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM pedido where \"idCliente\" = :idCliente and estado = 'true';";
-            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false).executeAndFetch(Pedido.class);
-        } catch (Sql2oException e) {
-            throw new RepositorioException();
-        }
-    }
-    
-    @Override
-    public List<Producto> listarProducto() throws RepositorioException {
-        try (Connection conn = sql2o.open()) {
-            String sql = "SELECT * FROM Producto Order By \"idProducto\";";
-            return conn.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Producto.class);
-        } catch (Sql2oException e) {
-            throw new RepositorioException();
-        }
-    }
-
-    @Override
     public int crear(Pedido pedido) throws RepositorioException {
         try (Connection conn = sql2o.open()) {
             String sql = "INSERT INTO Pedido (fecha, hora, descuento, totalPagar, \"idCliente\", estado, condicion) VALUES (current_date, CONCAT(extract(hour from current_timestamp),':', extract(minute from current_timestamp)), :descuento, 0, :idCliente, false, 'En Espera');";
@@ -133,5 +94,45 @@ public class Sql2oPedidosRepositorio implements PedidosRepositorio {
             throw new RepositorioException();
         }
     }
+
+    @Override
+    public List<Pedido> listar() throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            var pedidos = new ArrayList<Pedido>();
+            String sql = "SELECT * FROM pedido where estado = 'true';";
+            var resultado = conn.createQuery(sql).executeAndFetchTable().asList();
+            for (var o : resultado) {
+                var cliente = this.clientesRepositorio.obtener((int) o.get("idcliente"));
+                var pedido = new Pedido ((Date) o.get("fecha"), (String) o.get("hora"), (Double) o.get("descuento"), (Double) o.get("totalpagar"), cliente, (boolean) o.get("estado"), (String) o.get("condicion"));
+                pedido.setIdPedido((int) o.get("idpedido"));
+                pedido.setCliente(cliente);
+                pedidos.add(pedido);
+            }
+            return pedidos;
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
+    @Override
+    public List<Pedido> listarPedidoCliente(int idCliente) throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM pedido where \"idCliente\" = :idCliente and estado = 'true';";
+            return conn.createQuery(sql).addParameter("idCliente", idCliente).throwOnMappingFailure(false).executeAndFetch(Pedido.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+    
+    @Override
+    public List<Producto> listarProducto() throws RepositorioException {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM Producto Order By \"idProducto\";";
+            return conn.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Producto.class);
+        } catch (Sql2oException e) {
+            throw new RepositorioException();
+        }
+    }
+
 
 }
