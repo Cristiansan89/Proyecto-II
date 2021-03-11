@@ -47,7 +47,7 @@ div h2 {
     #estilo_card{
         width: 35rem; 
         top: 6rem; 
-        left: 30rem;
+        left: 25.3rem;
         margin-bottom: 15rem;
     }
 
@@ -57,7 +57,7 @@ div h2 {
     }
 
     #estilo_card_data{
-        width: 71rem;
+        width: 70.7rem;
         top: .2rem; 
         left: 0rem;
         right: 1rem;
@@ -135,10 +135,14 @@ div h2 {
     }
 
     #estilo_card_pedido{
-        width: 40rem; 
+        width: 78.6rem; 
         top: 6rem; 
-        left: 27.4rem;
+        left: 3.4rem;
         margin-bottom: 8rem;
+    }
+
+    #formulario{
+        font-size: 14px;
     }
 
     #estilo_list_pedido{
@@ -178,7 +182,7 @@ div h2 {
 
     #flecha_right{
         margin-top: -3.1rem; 
-        margin-right: -166rem;
+        margin-right: -148rem;
     }
 
     #flecha_size{
@@ -225,7 +229,7 @@ div h2 {
     #estilo_card{
         width: 35rem; 
         top: 8rem; 
-        left: 49rem;
+        left: 42rem;
         margin-bottom: 20rem;
     }
 
@@ -234,8 +238,12 @@ div h2 {
         margin-right: 75px;
     }
 
+    #formulario{
+        font-size: inherit;
+    }
+
     #estilo_card_data{
-        width: 103rem;
+        width: 90rem;
         top: .2rem; 
         left: 0rem;
         right: 1rem;
@@ -312,9 +320,9 @@ div h2 {
     }
 
     #estilo_card_pedido{
-        width: 40rem; 
+        width: 88rem; 
         top: 8rem; 
-        left: 47rem;
+        left: 16.1rem;
         margin-bottom: 10rem;
     }
 
@@ -350,12 +358,12 @@ div h2 {
 
     #flecha_left{
         margin-top: 23rem;
-        margin-left: -17rem;
+        margin-left: -15rem;
     }
 
     #flecha_right{
         margin-top: -3.8rem; 
-        margin-right: -238rem;
+        margin-right: -212rem;
     }
 
     #flecha_size{

@@ -54,8 +54,20 @@ public class PedidosControlador {
         var producto = this.productosRepositorio.obtener(idproducto);
         if (producto.getStock() > cantidad) {
             var pedido = this.pedidosRepositorio.obtener(idpedido);
-            var detalle = new DetallePedido(cantidad, pedido, producto);
-            this.detallesPedidosRepositorio.crear(detalle);
+            // Validar que no hayan producto repetido en la lista de detalle pedido
+            var detallePedidos = this.detallesPedidosRepositorio.listar(pedido.getIdPedido());
+            boolean validarProducto = true;
+            for(DetallePedido detalle : detallePedidos){
+                if(detalle.getProducto().getCodProducto() == producto.getCodProducto()){
+                    validarProducto = false;
+                    System.out.println("Producto Repetido");
+                    break;
+                }
+            }
+            if(validarProducto == true){
+                var detalle = new DetallePedido(cantidad, pedido, producto);
+                this.detallesPedidosRepositorio.crear(detalle);    
+            }
             ctx.redirect("/pedidos/nuevo/" + String.valueOf(idpedido));
         } else {
             ctx.redirect("/pedidos/nuevo/" + String.valueOf(idpedido));
