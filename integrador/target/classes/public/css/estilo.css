@@ -147,8 +147,8 @@ div h2 {
 
     #estilo_list_pedido{
         margin-top: 3em; 
-        margin-left: 15em; 
-        margin-right: 15em;
+        margin-left: 5em; 
+        margin-right: 5em;
     }
 
     #estilo_card_form{
@@ -311,8 +311,8 @@ div h2 {
     }
 
     #estilo_card_list{
-        width: 95%; 
-        left: 50px; 
+        width: 74%; 
+        left: 250px; 
         right: 50px;
         top: 2px;
         margin-left: 5px; 
